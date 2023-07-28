@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta property="og:url" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>2020클라우드 서비스 온라인 박람회</title>
+
+  <!-- 공통 css -->
+  <link rel="stylesheet" href="../css/import.css">
+
+  <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".btn-m-menu").click(function(){
+        $("#nav ul").css("right","0")
+        $(".bg-nav").show()
+      });
+      $(".bg-nav").click(function(){
+        $("#nav ul,.bg-nav").removeAttr("style")
+      });
+
+        $(window).resize(function(){
+          var winW = $(window).width()
+          console.log(winW)
+          if(winW >789){
+            $("#nav ul,.bg-nav").removeAttr("style")
+          }
+        });
+      });
+
+
+    function menuClose(){
+
+    }
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header" class="main-section-01">
+        <div class="top-menu">
+
+            <div class="header-top">
+              <div class="box-area">
+                <ul>
+                  <li><a href="#" class="btn-blue">로그인</a></li>
+                  <li><a href="#" class="btn-blue">회원가입</a></li>
+                  <li><a href="#">ENG</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="nav">
+                <div class="box-area">
+                <h1><a href="/"><img src="../images/common/logo.png" title="정보통신산업진흥원" /></a></h1>
+                <div class="btn-m-menu fa fa-bars"></div>
+                <ul>
+                  <li class="m-logo"><a href="/"><img src="../images/common/logo_white.png" title="정보통신산업진흥원" /></a></li>
+                  <li class="m-menu"><a href="#">로그인</a></li>
+                  <li class="m-menu"><a href="#">회원가입</a></li>
+                  <li class="m-menu"><a href="#">ENG</a></li>
+                  <li class="menu"><a href="#">행사개요</a></li>
+                  <li class="menu"><a href="#">참여기업</a></li>
+                  <li class="menu"><a href="#">마이페이지</a></li>
+                  <li class="menu"><a href="#">화상회의 신청</a></li>
+                </ul>
+              </div>
+              <div class="bg-nav"></div>
+            </div>
+          </div>
+        </div>
+
+    <!-- 탑메뉴 -->
+
+
+
+
+    <div id="container">
+      <!-- 메인컨텐츠 -->
+      <div id="visual">
+        <div class="visual-bg">
+          <img src="../images/common/bg_visual_02.png" />
+        </div>
+        <div class="visual-text">
+          <span>2020</span>
+          <h2><strong>클라우드 서비스</strong> 온라인 박람회</h2>
+          <p>정보통신산업진흥원에서 클라우드 솔루션을 보유한 국내 우수기업<br /> 15개사를 소개하고 잠재 고객과의 새로운 기회를 만들어갈<br /> 클라우드 서비스 온라인 박람회를 개최합니다 </p>
+        </div>
+      </div>
+
+      <!-- 메인링크 -->
+      <div id="main-contents">
+        <div class="box-area">
+          <div class="section">
+            <div id="mainLink">
+              <ul>
+                <li>
+                  <a href="#"></a>
+                  <h4>박람회 <span>소개</span></h4>
+                  <p>NIPA지원사업 알아보세요</p>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <h4>온라인 <span>소개</span></h4>
+                  <p>NIPA지원사업 알아보세요</p>
+                </li>
+                <li>
+                  <a href="#"></a>
+                  <h4>박람회 <span>소개</span></h4>
+                  <p>NIPA지원사업 알아보세요</p>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        <!-- 메인링크끝 -->
+
+        <!-- 참여기업 -->
+          <div class="section">
+            <div id="company">
+              <div class="title">
+                <h3>참여<span>기업</span></h3>
+                <div class="title-line"></div>
+              </div>
+
+
+              <div class="company-list">
+                <ul>
+                  <li>
+                    <div class="img-box">
+                      <img src="../images/common/logo_company_01.png"/>
+                    </div>
+                    <h5>(주)기원테크</h5>
+                    <p>AI 기반 이메일 보안서비스</p>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="../images/common/logo_company_02.png"/>
+                    </div>
+                    <h5>모니터랩</h5>
+                    <p>웹방화벽, 웹게이트웨이, 웹보안</p>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="../images/common/logo_company_03.png"/>
+                    </div>
+                    <h5>제이씨원</h5>
+                    <p>전자서식 문서관리 솔루션</p>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="../images/common/logo_company_04.png"/>
+                    </div>
+                    <h5>인프라닉스</h5>
+                    <p>IT자원 감시∙관리, S/W 개발</p>
+                  </li>
+                </ul>
+              </div>
+                <a href="#" class="btn-more">참여기업 더보기</a>
+              <div class="btn-download">
+                <a href="">기업 디렉토리<span>다운로드</span></a>
+              </div>
+            </div>
+
+          </div>
+          <!-- 참여기업 끝 -->
+
+        </div>
+      </div><!-- E : main-contents -->
+
+    </div><!-- E : container -->
+
+    <div id="footer">
+      <div class="box-area" style="overflow:visible;">
+        <div class="footerContent">
+          <address>
+            <p>T :02) 2082-3366 , F : 02) 2082-3368</p>
+            <p>08390 구로구 디지털로 288. 609호 (대륭포스트타워1차) 02) 2082-3366</p>
+            <copyright>Copyright(c)2015 KOFAC All Rights Reserved.</copyright>
+          </address>
+
+        </div>
+      </div><!-- E : box-area -->
+    </div><!-- E : footer -->
+  </div><!-- E : wrapper -->
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta property="og:url" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+
+  <title>JUNG HYUN | PORTFOLIO</title>
+
+  <!-- 공통 css -->
+  <link rel="stylesheet" href="css/import.css">
+
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/works.js"></script>
+  <script>
+    $(document).ready(function(){
+      var typingBool = false;
+      var typingIdx = 0;
+      var typingTxt = "PORTFOLIO"
+      typingTxt=typingTxt.split("");
+      if(typingBool==false){
+         typingBool=true;
+         var tyInt = setInterval(typing,150);
+       }
+
+       function typing(){
+         if(typingIdx<typingTxt.length){
+           $(".top-text h2").append(typingTxt[typingIdx]);
+           typingIdx++;
+         } else{
+           clearInterval(tyInt);
+         }
+       }
+
+      $('html,body').scroll(function(){
+          var srt = $('body').scrollTop()
+          var topHe = $('.top-menu').height();
+          if(srt > topHe){
+            $('.top-menu').addClass('menu-scroll')
+          } else{
+            $('.top-menu').removeClass('menu-scroll')
+          }
+      })
+
+      $(".btn-m-menu").click(function(){
+        $("#nav ul").css("right","0")
+        $(".bg-nav").show()
+      });
+      $(".bg-nav").click(function(){
+        $("#nav ul,.bg-nav").removeAttr("style")
+      });
+
+        $(window).resize(function(){
+          var winW = $(window).width()
+          if(winW >789){
+            $("#nav ul,.bg-nav").removeAttr("style")
+          }
+        });
+
+
+
+      });
+  </script>
+</head>
+
+<body>
+  <!-- header -->
+  <div id="header">
+    <div class="top-menu">
+      <div id="nav">
+        <div class="rows">
+          <h1><a href="/"><strong>JUNG</strong>HYUN</a></h1>
+          <div class="btn-m-menu fa fa-bars"></div>
+        </div>
+        <div class="bg-nav"></div>
+      </div>
+    </div>
+  </div>
+  <!-- // header -->
+  <!-- nav -->
+  <nav>
+		<ul class="nav-list sections-nav-animated">
+			<li class="sections-nav-item">
+				<a href="#section_01" class="nav-link active" title="Top">
+					<span class="sections-nav-counter">01</span>
+					Top
+				</a>
+			</li>
+
+      <li class="sections-nav-item">
+				<a href="#section_02" class="nav-link" title="ABOUT ME">
+					<span class="sections-nav-counter">02</span>
+					ABOUT ME
+				</a>
+			</li>
+
+      <li class="sections-nav-item">
+				<a href="#section_03" class="nav-link" title="SKILLS">
+					<span class="sections-nav-counter">03</span>
+					PROJECT
+				</a>
+			</li>
+
+      <li class="sections-nav-item">
+				<a href="#section_04" class="nav-link" title="SKILLS">
+					<span class="sections-nav-counter">04</span>
+					EXPERIENCES
+				</a>
+			</li>
+		</ul>
+	</nav>
+   <!--// nav -->
+  <!-- contents -->
+  <main class="contents">
+    <div class="rows">
+      <section id="section_01">
+        <div id="top">
+          <div class="top-text display-animated-in display-animated">
+            <h2></h2>
+            <span class="name">문정현</span>
+          </div>
+          <p class="greeting">안녕하세요. 저의 홈페이지를 방문해 주셔서 감사합니다.</p>
+        </div>
+        <div class="section-footer animation-translate animation-item-4">
+          <a class="section-next goto-section" href="#section_02">
+            <span class="section-next-counter">01/05</span>
+            <span class="section-next-label">Next chapter</span>
+            <span class="section-next-icon"></span>
+          </a>
+        </div>
+      </section>
+
+      <section id="section_02">
+        <div id="aboutMe">
+          <h2 class="section-title">ABOUT ME</h2>
+          <article class="about-article">
+            <h3 class="article-title">매일 발전하는 웹 퍼블리셔 문정현 입니다.</h3>
+            <p class="about-txt">UI/UX에 관심이 많으며, 늘 새로운 영역을 탐구하는 것을 좋아합니다.</p>
+            <p class="about-txt">웹 표준과 웹 접근성을 고려한 마크업을 중시하며, <br>웹 접근성 인증마크 획득을 한 프로젝트 경험도 다수 있습니다.<br>늘 사용자들이 사용하기 쉬운 UX/UI를 만들기 위해 항상 고민합니다.</p>
+            <p class="about-txt">항상 겸손한 마음을 가지며, 배움에는 끝이 없다고 생각합니다.<br>빠르게 변화하는 트렌드에 맞춰 항상 노력하겠습니다.</p>
+          </article>
+        </div>
+        <div class="section-footer animation-translate animation-item-4">
+          <a class="section-next goto-section" href="#section_02">
+            <span class="section-next-counter">02/05</span>
+            <span class="section-next-label">Next chapter</span>
+            <span class="section-next-icon"></span>
+          </a>
+        </div>
+      </section>
+      <section id="section_03">
+        <div id="project">
+          <h2 class="section-title">PROJECT</h2>
+          <article class="project-article">
+            <div>
+              <a href="#">
+                <div class="project-img">
+                  <img src="images/temp/project_01.jpg" />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">프로젝트1</h4>
+                  <span class="project-company">업체명</span>
+                  <p class="project-tags">Frontend</p>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <div class="project-img">
+                  <img src="images/temp/project_01.jpg" />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">프로젝트1</h4>
+                  <span class="project-company">업체명</span>
+                  <p class="project-tags">Frontend</p>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a href="#">
+                <div class="project-img">
+                  <img src="images/temp/project_01.jpg" />
+                </div>
+                <div class="project-info">
+                  <h4 class="project-title">프로젝트1</h4>
+                  <span class="project-company">업체명</span>
+                  <p class="project-tags">Frontend</p>
+                </div>
+              </a>
+            </div>
+          </article>
+        </div>
+        <div class="section-footer animation-translate animation-item-4">
+          <a class="section-next goto-section" href="#section_02">
+            <span class="section-next-counter">03/05</span>
+            <span class="section-next-label">Next chapter</span>
+            <span class="section-next-icon"></span>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- // contents -->
+</body>
+
+</html>
