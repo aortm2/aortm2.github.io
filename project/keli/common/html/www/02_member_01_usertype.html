@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국고용노동교육원</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+});
+</script>
+</head>
+<body>
+<div class="ctm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<div id="content">
+		<div class="sign_up">
+			<div class="rows">
+				<div class="head">
+					<h3 class="ms_title">회원 가입</h3>
+					<div class="guide_box">
+						<ul>
+							<li>한국고용노동교육원은 고용·노동 분야의 전문적이고 체계적인 교육을 다양한 교육 대상자에게 실시하고 있습니다.</li>
+							<li>본인에게 맞는 회원 유형을 선택하셔서 회원을 가입하여 주시기 바랍니다.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="con">
+					<div class="user_type">
+						<div class="u_row">
+							<div class="ut_box col_5">
+								<div class="txt type_01">
+									<span class="tit">일반</span>
+									<p class="gid">고용노동 교육에 관심있던 분은 <span>누구나 가입</span>하실 수 있습니다.</p>
+								</div>
+								<!-- <div>
+									<span>관련 직무</span>
+									<p>
+										교사/강사, 학생/청소년, 소규모사업, 취약노동자, 배달노동자, 프리랜서, 중소·중견기업
+										직원, 공공기관직원 일반공무직 종사자, 교육공무직 종사자 기타 직종에 있으신 분
+									</p>
+								</div> -->
+								
+								<div class="j_box">
+									<a href="02_member_02_certification.html" class="c_btn blue">가입하기</a>
+								</div>
+							</div>
+
+							<!-- <div class="ut_box col_3">
+								<div class="txt type_04">
+									<span class="tit">공무원</span>
+									<p  class="gid">고용노동 교육을 받아야 하는 <span>공무원분 들이 가입</span>하실 수 있습니다.</p>
+								</div>
+								<div>
+									<span>관련 직무</span>
+									<p>
+										중앙부처 공무원, 지자체 공무원, 경찰 공무원, 소방 공무원, 교육기관 공 무원, 교원, 기타 공무원이신 분
+									</p>
+								</div>
+
+								<div class="j_box">
+									<a href="02_member_02_certification.html" class="c_btn blue">가입하기</a>
+								</div>
+							</div> -->
+
+							<div class="ut_box col_5">
+								<div class="txt type_03">
+									<span class="tit">14세 미만</span>
+									<p class="gid">만 <span>14세 미만</span> 으로 법정대리인의 동의를 받아야 하는 합니다.</p>
+								</div>
+								<div class="j_box">
+									<a href="02_member_02_certification.html" class="c_btn blue">가입하기</a>
+								</div>
+							</div>
+							<div class="ut_box">
+								<div class="txt n_i">
+									<span class="tit f_cy">기관/기업 소속 회원 가입 안내</span>
+									<p class="gid"><span>고용노동부, 교육부 산하 지청, 직업계 고등학교 교사 혹은 소속 기관이 한국고용노동교육원 회원사</span>인 경우에만 회원가입이 가능합니다.
+									</p>
+								</div>
+								<div class="j_box">
+									<a href="02_member_02_certification.html" class="c_btn blue">가입하기</a>
+								</div>
+							</div>
+							<!-- <div class="ut_box col_3">
+								<div class="txt type_03">
+									<span class="tit">고용노동부</span>
+									<p class="gid">고용노동부의 <span>의무교육 대상이신 고용노동부 직원</span>만 가입하실 수 있습니다. 회원가입 후에는 고용노동부 담당자의 승인 절차가 있습니다.</p>
+								</div>
+								<div class="j_box">
+									<a href="#" onclick="REQ.next('OM')" class="c_btn blue">가입하기</a>
+								</div>
+							</div>
+							<div class="ut_box col_3">
+								<div class="txt type_05">
+									<span class="tit">회원사 소속</span>
+									<p class="gid"><span>재직하고 계신 기관에서 가입 방법을 받으신 분</span>만 가입하실 수 있습니다.</p>
+								</div>
+								<div class="j_box">
+									<a href="#" onclick="REQ.next('OC')" class="c_btn blue">가입하기</a>
+								</div>
+							</div>
+							<div class="ut_box col_3">
+								<div class="txt type_05">
+									<span class="tit">직업계 고등학교 교사</span>
+									<p class="gid">현장실습생을 위한 산업안전·보건 및 노동인권 교육대상인 <span>직업계 고등학교의 담당교사만 가입</span>하실 수 있습니다.</p>
+								</div>
+								<div class="j_box">
+									<a href="#" onclick="REQ.next('OS')" class="c_btn blue">가입하기</a>
+								</div>
+							</div> -->
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

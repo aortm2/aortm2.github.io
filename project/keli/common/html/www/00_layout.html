@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국고용노동교육원</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	
+});
+function openAmend(item){
+	$(".ct_dialog").fadeIn()
+}
+
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm gray">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="rows">
+			<div class="content_left">
+				<div class="tit">
+					<span>레이아웃</span>
+				</div>
+				<ul>
+					<li>
+						<a href="#">레이아웃 및 디자인 가이드</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content_wrap">
+			<!-- 콘텐츠 -->
+			<div class="sub_top">
+				<h3 class="ct_title">레이아웃 및 디자인 가이드</h3>
+				<div class="path">
+					<div><span>홈</span></div>
+					<div><span>레이아웃</span></div>
+				</div>
+			</div>
+			<div class="design_guide">
+				<div class="dg_box">
+					<h4 class="la_tit">배지</h4>
+					<div class="sort">
+						<span class="stand">집체</span>
+						<span class="pay">유료</span>
+						<span class="free">무료</span>
+						<span class="time">2시간 30분</span>
+					</div>
+				</div>
+
+				<div class="dg_box">
+					<h4 class="la_tit">버튼(기본형)</h4>
+					<div>
+						<a href="#" class="c_btn yw">버튼(yw)</a>
+						<a href="#" class="c_btn green">버튼(green)</a>
+						<a href="#" class="c_btn blue">버튼(blue)</a>
+						<a href="#" class="c_btn gray">버튼(gray)</a>
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">버튼(라인형)</h4>
+					<div>
+						<a href="#" class="c_btn yell_ln">버튼(yell_ln)</a>
+						<a href="#" class="c_btn green_ln">버튼(green_ln)</a>
+						<a href="#" class="c_btn blue_ln">버튼(blue_ln)</a>
+						<a href="#" class="c_btn gray_ln">버튼(gray_ln)</a>
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">버튼(사이즈별)</h4>
+					<div>
+						<a href="#" class="c_btn yw ssm">버튼(ssm)</a>
+						<a href="#" class="c_btn green sm">버튼(sm)</a>
+						<a href="#" class="c_btn blue">버튼(blue)</a>
+						<a href="#" class="c_btn mid">버튼(mid)</a>
+						<a href="#" class="c_btn gray lg">버튼(lg)</a>
+					</div>
+				</div>
+
+				<div class="dg_box">
+					<h4 class="la_tit">하단 버튼 적용 (버튼 div에 b_box 클래스 적용)</h4>
+					<div class="b_box">
+						<a href="#" class="c_btn ">버튼</a>
+						<a href="#" class="c_btn blue">버튼</a>
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">여백</h4>
+					<table class="tbl_col">
+						<colgroup>
+							<col width="14%">
+							<col width="*">
+							<col width="*">
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th></th>
+								<th>위쪽 여백</th>
+								<th>아래쪽 여백</th>
+								<th>비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>클래스</td>
+								<td>mt</td>
+								<td>mb</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>수치</td>
+								<td>30~70</td>
+								<td>30~70</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>클래스 적용</td>
+								<td>mt_수치</td>
+								<td>mb_수치</td>
+								<td>ex)mt_40(margin-top:40px;)<br>
+									mt_60(margin-bottom:60px;)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">콘텐츠 검색</h4>
+					<div>
+						<div class="c_search" style="margin:0;">
+							<select>
+								<option>유료</option>
+							</select>
+							<select>
+								<option>온라인</option>
+							</select>
+							<div class="in_search">
+								<input type="text" title="검색창" placeholder="검색어를 입력하세요 ">
+								<a href="#" class="b_sh_or">검색</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">탭</h4>
+					<p>탭 개수에 따른 클래스 추가(3개 : wd3, 4개 : wd3, 5개 : wd5, 6개 : wd6, 6개 : wd7, 7개 : wd7)</p>
+
+					<div>
+						<ul class="nav_tabs">
+							<li class="on"><a href="#hs_01">일반</a></li>
+							<li><a href="#hs_02">공무원</a></li>
+							<li><a href="#hs_03">고용노동부 직원</a></li>
+							<li><a href="#hs_04">기관 / 기업</a></li>
+							<li><a href="#hs_05">학교</a></li>
+						</ul>	
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">탭(링크형)</h4>
+					<div>
+						<ul class="nav_tabs_n">
+							<li class="on"><a href="#">일반</a></li>
+							<li><a href="#">공무원</a></li>
+							<li><a href="#">고용노동부 직원</a></li>
+							<li><a href="#">기관 / 기업</a></li>
+							<li><a href="#">학교</a></li>
+						</ul>	
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">게시판 페이징</h4>
+					<div>
+						<div class="paginate">
+							<div class="inner">
+								<!-- <a href="#" class="img start"><span class="sr_only">처음</span></a> -->
+								<a href="#" class="img prev dis"><span class="sr_only">이전</span></a>
+								<div>
+									<a class="on">01</a>
+									<a href="#">02</a>
+									<a href="#">03</a>
+									<a href="#">04</a>
+									<a href="#">05</a>
+								</div>
+								<a href="#" class="img next"><span class="sr_only">다음</span></a>
+								<!-- <a href="#" class="img end"><span class="sr_only">마지막</span></a> -->
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="dg_box">
+					<h4 class="la_tit">테이블</h4>
+					<div>
+						<div class="fx_box mid">
+							<table class="tbl_col">
+								<caption>학습목차</caption>
+								<colgroup>
+									<col width="10%">
+									<col width="*">
+									<col width="10%">
+									<col width="20%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>차시</th>
+										<th>차시명</th>
+										<th>필수여부</th>
+										<th>맛보기</th>
+									</tr>
+								</thead>
+							
+								<tbody>
+									<tr>
+										<td>1차시</td>
+										<td class="al">노동인권 경각심 키우기</td>
+										<td>필수</td>
+										<td><a href="#" class="c_btn yell_ln sm">과정맛보기</a></td>
+									</tr>
+							
+									<tr>
+										<td>2차시</td>
+										<td class="al">근로시간의 중요성</td>
+										<td>필수</td>
+										<td><a href="#" class="c_btn yell_ln sm">과정맛보기</a></td>
+									</tr>
+							
+									<tr>
+										<td>3차시</td>
+										<td class="al">근로시간의 중요성</td>
+										<td>필수</td>
+										<td><a href="#" class="c_btn yell_ln sm">과정맛보기</a></td>
+									</tr>
+							
+								</tbody></table>
+						</div>	
+					</div>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	
+	<div class="ct_dialog" style="display:none;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">댓글 수정</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<div class="txt_box">
+								<textarea title="댓글 입력창" placeholder="댓글을 입력하세요">댓글 수정</textarea>
+								<div class="b_box">
+									<a href="#" class="c_btn blue">수정</a>
+									<a href="#" class="c_btn">닫기</a>
+								</div>
+							</div>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

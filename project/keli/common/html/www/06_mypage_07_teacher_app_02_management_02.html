@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국고용노동교육원</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+	
+});
+
+function onInfoView(idNum){
+	$("#" + idNum).fadeIn()
+}
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm gray">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="rows">
+			<div class="content_left">
+				<div class="tit">
+					<span>마이페이지</span>
+				</div>
+				<ul>
+					<li>
+						<a href="#">수강현황</a>
+					</li>
+					<li>
+						<a href="#">마이크로 러닝 현황</a>
+					</li>
+<li>
+						<a href="#">3차현업적용도 설문</a>
+					</li>
+					<li>
+						<a href="#">현장지원교육 신청현황</a>
+					</li>
+					<li>
+						<a href="#">추천과정</a>
+					</li>
+					<li>
+						<a href="#" class="c_sub">참여활동 현황</a>
+					</li>
+					<li>
+						<a href="#">나의 교육후기</a>
+					</li>
+					<li>
+						<a href="#">강사신청/현황</a>
+					</li>
+					<li>
+						<a href="#" class="c_sub">회원사 관리자 과정관리</a>
+					</li>
+					<li>
+						<a href="#" class="c_sub">튜터 과정관리</a>
+					</li>
+					<li>
+						<a href="#" class="c_sub">강사 과정관리</a>
+					</li>
+					<li>
+						<a href="#">개인정보수정</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content_wrap">
+			<!-- 콘텐츠 -->
+				<div class="sub_top">
+					<h3 class="ct_title">강사신청 및 현황</h3>
+					<div class="path">
+						<div><span>홈</span></div>
+						<div><span>마이페이지</span></div>
+						<div><span>강사신청 및 현황</span></div>
+					</div>
+				</div>
+				<div class="teacher_app">
+					<span class="sb_tit mt_40">신청정보</span>
+					<table class="tbl_row">
+						<colgroup>
+							<col width="20%">
+							<col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>강사권한신청</th>
+								<td>대기 / 반려</td>
+							</tr>
+							<tr>
+								<th>강사권한 신청일</th>
+								<td>2022-10-22</td>
+							</tr>
+							<tr>
+								<th>강사권한 취득일</th>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<span class="sb_tit mt_40">강사정보 관리</span>
+					<ul class="nav_tabs_n wd5 fl_wrap">
+						<li><a href="06_mypage_07_teacher_app_02_management_01_01.html">인적정보</a></li>
+						<li class="on"><a href="06_mypage_07_teacher_app_02_management_02.html">학력 및 경력정보</a></li>
+						<li><a href="06_mypage_07_teacher_app_02_management_03.html">출강일정</a></li>
+						<li><a href="06_mypage_07_teacher_app_02_management_04.html">출강이력</a></li>
+						<li><a href="06_mypage_07_teacher_app_02_management_05.html">만족도</a></li>
+						<li><a href="06_mypage_07_teacher_app_02_management_06.html">QR코드 확인</a></li>
+					</ul>
+
+					<div class="tab_con">
+						<table class="tbl_row sm">
+							<colgroup>
+								<col width="15%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><span class="lab">학력정보</span><a href="javascript:void(0)" class="c_btn blue ssm" onclick="javascript:onInfoView('education');">추가</a></th>
+									<td>
+										<table class="tbl_col">
+											<colgroup>
+												<col width="19%">
+												<col width="15%">
+												<col width="12%">
+												<col width="*">
+												<col width="9%">
+												<col width="12%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>학교명</th>
+													<th>전공</th>
+													<th>졸업여부</th>
+													<th>입학/졸업일자</th>
+													<th>소재지</th>
+													<th>수정</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>서울대학교 대학원</td>
+													<td>경영학</td>
+													<td>졸업</td>
+													<td>
+														2022-10-22 ~ 2022-10-22
+
+													</td>
+													<td>서울</td>
+													<td><a href="javascript:void(0)" class="c_btn blue ssm" onclick="javascript:onInfoView('education');">수정</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th><span class="lab">주요저서</span><a href="javascript:void(0)" class="c_btn blue ssm" onclick="javascript:onInfoView('book');">추가</a></th>
+									<td>
+										<table class="tbl_col">
+											<colgroup>
+												<col width="15%">
+												<col width="*">
+												<col width="12%">
+												<col width="13%">
+												<col width="20%">
+												<col width="12%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>발간일자</th>
+													<th>도서명</th>
+													<th>발간부수</th>
+													<th>발간처</th>
+													<th>발간처 전화번호</th>
+													<th>수정</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>2022-10-22</td>
+													<td>고용노동법 기본 개념</td>
+													<td>10,000</td>
+													<td>한국출판사</td>
+													<td>02-2329-3464</td>
+													<td><a href="javascript:void(0)" class="c_btn blue ssm" onclick="javascript:onInfoView('book');">수정</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="fx_box mid mt_40">
+							<table class="tbl_col sm">
+								<colgroup>
+									<col width="*">
+									<col width="12%">
+									<col width="10%">
+									<col width="20%">
+									<col width="12%">
+									<col width="12%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>학교명</th>
+										<th>전공</th>
+										<th>졸업여부</th>
+										<th>입학/졸업일자</th>
+										<th>소재지</th>
+										<th>수정</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="6">등록된 항목이 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			<!-- //콘텐츠 -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	
+	<div class="ct_dialog" id="education" style="display:none;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">학력정보</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<table class="tbl_row">
+								<colgroup>
+									<col width="20%">
+									<col width="*">
+									<col width="20%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>학교명</th>
+										<td><input type="text" title="학교명" class="wd100"></td>
+										<th>전공</th>
+										<td><input type="text" title="전공" class="wd100"></td>
+									</tr>
+									<tr>
+										<th>졸업여부</th>
+										<td colspan="3">
+											<select>
+												<option>졸업</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>입학졸업일자</th>
+										<td colspan="3">
+											<div class="ip_gp">
+												<div class="ad_datepicker">
+													<input type="text" placeholder="시작일" data-role="datepicker" class="hasDatepicker"><button type="button" class="ui-datepicker-trigger"></button>
+												</div>
+												~
+												<div class="ad_datepicker">
+													<input type="text" placeholder="종료일" data-role="datepicker" class="hasDatepicker"><button type="button" class="ui-datepicker-trigger"></button>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>소재지</th>
+										<td colspan="3"><input type="text" title="소재지" class="wd100"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ct_dialog" id="book" style="display:block;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">주요저서</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<table class="tbl_row">
+								<colgroup>
+									<col width="20%">
+									<col width="*">
+									<col width="20%">
+									<col width="*">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>도서명</th>
+										<td><input type="text" title="도서명" class="wd100"></td>
+										<th>발간부수</th>
+										<td><input type="text" title="발간부수" class="wd100"></td>
+									</tr>
+									<tr>
+										<th>발간처</th>
+										<td><input type="text" title="발간처" class="wd100"></td>
+										<th>발간부수</th>
+										<td><input type="text" title="발간처 전화번호" class="wd100"></td>
+									</tr>
+									<tr>
+										<th>발간일</th>
+										<td colspan="3">
+											<div class="ip_gp">
+												<div class="ad_datepicker">
+													<input type="text" placeholder="발간일" data-role="datepicker">
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국고용노동교육원</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	//샘플코드
+	$(".btn_see").on('click',function(){
+		event.preventDefault(url);
+		var url= $(this).attr('href');
+		if($(this).is(".pop_full")){
+			var popup = window.open(url, '팝업', 'width=1920px,height=1000px,scrollbars=yes');
+		}else if(url == '#'){
+			var popup = "";
+		}else{
+			var popup = window.open(url, '팝업', 'width=950px,height=1000px,scrollbars=yes');
+		}
+		console.log(url)
+	});
+});
+
+function openAmend(item){
+	$(".ct_dialog").fadeIn()
+}
+
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm gray">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="rows">
+			<div class="content_left">
+				<div class="tit">
+					<span>정보공개</span>
+				</div>
+				<ul>
+					<li>
+						<a href="#" class="c_sub">정보공개</a>
+						<div class="left_sub" >
+							<div><a href="#">정보공개제도소개</a></div>
+							<div class="on"><a href="#">정보공개청구</a></div>
+							<div><a href="#">사전정보공표</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#">경영공시</a>
+					</li>
+					<li>
+						<a href="#">공공데이터개방</a>
+					</li>
+					<li>
+						<a href="#">사업실명제</a>
+					</li>
+					<li>
+						<a href="#" class="c_sub">고객헌장</a>
+						<div class="left_sub">
+							<div><a href="#">고객헌장</a></div>
+							<div><a href="#">핵심서비스 이행표준</a></div>
+							<div class="on"><a href="#">고객응대 서비스 이행 표준</a></div>
+						</div>
+					</li>
+					<li class="on">
+						<a href="#" class="c_sub">윤리경영</a>
+						<div class="left_sub">
+							<div><a href="#">인권경영선언문</a></div>
+							<div><a href="#">인권경영규정</a></div>
+							<div><a href="#">임직원윤리강령</a></div>
+							<div class="on"><a href="#">임직원행동강령</a></div>
+							<div><a href="#">부패/공익신고</a></div>
+						</div>
+					</li>
+					<li>
+						<a href="#">혁신마당</a>
+					</li>
+					<li>
+						<a href="#">친인척 채용현황</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content_wrap">
+				<div class="sub_top">
+					<h3 class="ct_title">경영공시</h3>
+					<div class="path">
+						<div><span>홈</span></div>
+						<div><span>정보공개</span></div>
+						<div><span>경영공시</span></div>
+					</div>
+				</div>
+				<!-- 콘텐츠 -->
+				<div class="container">
+					<div class="disclosure">
+						<span class="sb_tit mb mt_40">항목별 보고서</span>
+						<div class="b_box right mt">
+							<a href="https://alio.go.kr/organ/organDisclosureDtl.do?apbaId=C1319&apba_id=C1319" target="_blank" title="새 창으로 열림" class="c_btn blue">경영공시 바로가기</a>
+						</div>
+						<div class="fx_area mid">
+							<table class="tbl_col3 bor mt_40">
+								<colgroup>
+									<col style="width: 10%;">
+									<col style="width: 12%;">
+									<col style="width: 12%;">
+									<col style="width: 25%;">
+									<col>
+									<col style="width: 10%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th><span>항목번호</span></th>
+										<th><span>대분류</span></th>
+										<th><span>중분류</span></th>
+										<th><span>공시항목</span></th>
+										<th><span>세항목</span></th>
+									
+										<th><span>보기</span></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><span>1</span></td>
+										<td rowspan="28"><span>기관운영</span></td>
+										<td rowspan="2"><span>일반현황</span></td>
+										<td><span>일반현황</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=10101&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>2</span></td>
+										<td><span>내부규정</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=21110" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>3</span></td>
+										<td rowspan="10"><span>인력관리</span></td>
+										<td><span>임직원 수</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2020&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>4</span></td>
+										<td><span>임원현황</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=20305" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>5</span></td>
+										<td><span>신규채용 현황</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2040&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>6-1</span></td>
+										<td rowspan="2"><span>임·직원 채용정보</span></td>
+										<td><span>임원 모집공고</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1010" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>6-2</span></td>
+										<td><span>직원 채용정보</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1020" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>7-1</span></td>
+										<td rowspan="2"><span>퇴직 임·직원 재취업 현황</span></td>
+										<td><span>퇴직 임·직원 재취업 현황</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=3192&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>7-2</span></td>
+										<td><span>남녀 이직자 비율</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21801&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>8-1</span></td>
+										<td rowspan="2"><span>징계현황</span></td>
+										<td><span>징계제도 운영현황</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2120&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>8-2</span></td>
+										<td><span>징계처분 결과</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2121&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>9</span></td>
+										<td><span>임원 국외출장 내역</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=20905" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>10</span></td>
+										<td rowspan="3"><span>보수관리</span></td>
+										<td><span>임원 연봉</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2050&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>11</span></td>
+										<td><span>직원 평균보수</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2060&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>12</span></td>
+										<td><span>기관장 업무추진비</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=20701&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>13</span></td>
+										<td rowspan="3"><span>복리후생</span></td>
+										<td><span>복리후생비</span></td>
+										<td><span></span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=20801&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>14-1</span></td>
+										<td rowspan="2"><span>그 밖의 복리후생제도 등의 운영현황</span></td>
+										<td><span>그 밖의 복리후생제도 등의 운영현황</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=63701&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>14-2</span></td>
+										<td><span>복리후생 자체점검 결과</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1280" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-1</span></td>
+										<td rowspan="8"><span>노동조합</span></td>
+										<td rowspan="8"><span>노동조합 관련현황</span></td>
+										<td><span>노동조합 가입정보</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2102&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-2</span></td>
+										<td><span>복수노조 교섭창구 단일화 정보</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=21025" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-3</span></td>
+										<td><span>단체협약 정보</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=21026" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-4</span></td>
+										<td><span>임금협약 정보</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=21027" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-5</span></td>
+										<td><span>노사협의회 의결사항</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=21028" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-6</span></td>
+										<td><span>제도 운영 상황</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=63787" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-7</span></td>
+										<td><span>단체협약상 별도 합의사항</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=63795" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>15-8</span></td>
+										<td><span>단체협약 외의 별도 합의사항</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=63796" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>16-1</span></td>
+										<td rowspan="2"><span>소송 및 자문</span></td>
+										<td rowspan="2"><span>소송 및 법률자문 현황</span></td>
+										<td><span>소송 및 소송대리인 현황</span></td>
+										
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2130&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>16-2</span></td>
+										<td><span>고문변호사 및 법률자문 현황</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=2131&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>17</span></td>
+										<td rowspan="24"><span>ESG운영</span></td>
+										<td><span>ESG 현황</span></td>
+										<td><span>ESG 경영 현황</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTermPrev.do?apbaId=C1319&reportFormRootNo=80104&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-1</span></td>
+										<td rowspan="7"><span>E(환경)</span></td>
+										<td rowspan="7"><span>환경보호</span></td>
+										<td><span>온실가스 감축실적</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTermPrev.do?apbaId=C1319&reportFormRootNo=70423&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-2</span></td>
+										<td><span>에너지 사용량</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21621&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-3</span></td>
+										<td><span>폐기물 발생량</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21631&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-4</span></td>
+										<td><span>용수 사용량</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21641&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-5</span></td>
+										<td><span>환경법규 위반 현황</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1270" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-6</span></td>
+										<td><span>저공해 자동차 현황</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21662&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>18-7</span></td>
+										<td><span>녹색제품 구매실적</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTermPrev.do?apbaId=C1319&reportFormRootNo=70412&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>19-1</span></td>
+										<td rowspan="11"><span>S(사회)</span></td>
+										<td rowspan="3"><span>안전관리 및 정보보호</span></td>
+										<td><span>안전경영책임보고서</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=70401&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>19-1</span></td>
+										<td><span>공공기관 안전관리등급</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=70442&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>19-2</span></td>
+										<td><span>개인정보보호</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=70432&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>20</span></td>
+										<td><span>사회공헌 활동</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21502&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>21</span></td>
+										<td><span>인권경영</span></td>
+										<td><span></span></td>
+	
+										<td><a href="javascript:void(0);" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>22</span></td>
+										<td><span>일·가정 양립 지원제도 운영현황</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=21702&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>23</span></td>
+										<td><span>동반성장 평가결과</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=40102&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>24</span></td>
+										<td><span>장애인 고용현황</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=80202&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>25-1</span></td>
+										<td rowspan="3"><span>구매실적</span></td>
+										<td><span>혁신조달 구매실적</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=70312&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>25-2</span></td>
+										<td><span>중증장애인 생산품 구매실적</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=70322&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>25-3</span></td>
+										<td><span>중소기업 생산품 구매실적</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=80332&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>26-1</span></td>
+										<td rowspan="5"><span>G(지배구조)</span></td>
+										<td rowspan="3"><span>이사회</span></td>
+										<td><span>이사회 회의록</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=43005" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>26-2</span></td>
+										<td><span>개별 비상임이사 활동내용</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=43009" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>26-3</span></td>
+										<td><span>ESG 운영위원회</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=43001&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>27</span></td>
+										<td><span>자체 감사부서 현황</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=32311&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>28</span></td>
+										<td><span>청렴도 평가결과</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=40212&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>29</span></td>
+										<td rowspan="20"><span>경영성과</span></td>
+										<td rowspan="10"><span>재무성과</span></td>
+										<td><span>요약 재무상태표</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=3120&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>30</span></td>
+										<td><span>요약손익계산서(또는 요약 포괄손익계산서)</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=3130&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>31</span></td>
+										<td><span>수입·지출현황</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=31401&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>32</span></td>
+										<td><span>자본금 및 주주현황</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=31701&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>33</span></td>
+										<td><span>장단기 차입금 현황</span></td>
+										<td><span></span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=3180&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>34-1</span></td>
+										<td rowspan="2"><span>감사보고서</span></td>
+										<td><span>외부회계 감사보고서</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=32301&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>34-2</span></td>
+										<td><span>내부·외부 감사결과</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=43006" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>35-1</span></td>
+										<td rowspan="3"><span>납세정보현황</span></td>
+										<td><span>법인세</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=32211&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>35-2</span></td>
+										<td><span>세무 확정내역</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=32225" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>35-3</span></td>
+										<td><span>조세포탈현황(유죄판결 확정내역)</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=32226" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>36</span></td>
+										<td rowspan="6"><span>사업 및 투자</span></td>
+										<td><span>주요사업</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=31501&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>37</span></td>
+										<td><span>투자집행내역</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=3160&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>38-1</span></td>
+										<td rowspan="4"><span>투자 및 출자·출연 현황</span></td>
+										<td><span>투자 및 출자 현황</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=31901&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>38-2</span></td>
+										<td><span>대규모 거래내역</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=31935" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>38-4</span></td>
+										<td><span>신규 시설 투자</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=31965" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>38-5</span></td>
+										<td><span>출연 현황</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=32001&disclosureNo=" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>39-1</span></td>
+										<td rowspan="4"><span>중장기 재무관리</span></td>
+										<td rowspan="2"><span>경영부담비용 추계</span></td>
+										<td><span>경영부담비용 추계</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=32101&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>39-2</span></td>
+										<td><span>기타 경영상 부담이 될 사항</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=32135" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>40</span></td>
+										<td><span>중장기 재무관리계획</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTermPrev.do?apbaId=C1319&reportFormRootNo=32603&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>41</span></td>
+										<td><span>12개 주요기관의 상세부채 정보</span></td>
+										<td><span></span></td>
+										<td><a href="#" onclick="alert('주요 12개 대상기관이 아닙니다.')" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>42-1</span></td>
+										<td rowspan="11"><span>대내외 평가 등</span></td>
+										<td rowspan="7"><span>대내외 평가</span></td>
+										<td rowspan="2"><span>경영 평가결과</span></td>
+										<td><span>경영실적 평가결과</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1230" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>42-2</span></td>
+										<td><span>감사직무실적 평가결과</span></td>
+	
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1250" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>43-1</span></td>
+										<td rowspan="4"><span>국회 등 외부평가</span></td>
+										<td><span>국회지적사항</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1210" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>43-2</span></td>
+										<td><span>감사원 지적사항</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1220-P2200" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>43-3</span></td>
+										<td><span>주무부처 지적사항</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1220-P2300" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>43-4</span></td>
+										<td><span>경영평가 지적사항</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTermPrev.do?apbaId=C1319&reportFormRootNo=4270&disclosureNo=" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>44</span></td>
+										<td><span>고객만족도 조사결과</span></td>
+										<td><span></span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1240" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>45-1</span></td>
+										<td rowspan="4"><span>정보공개</span></td>
+										<td rowspan="2"><span>계약정보</span></td>
+										<td><span>공개입찰</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1030" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>45-2</span></td>
+										<td><span>수의계약</span></td>
+										<td><a href="https://alio.go.kr/item/itemReportTerm.do?apbaId=C1319&reportFormRootNo=7030&disclosureNo=" class="btn_see c_btn blue_ln"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>46-1</span></td>
+										<td rowspan="2"><span>연구보고서</span></td>
+										<td><span>자체 연구 보고서</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1040" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+									<tr>
+										<td><span>46-2</span></td>
+										<td><span>외부용역 연구 보고서</span></td>
+										<td><a href="https://alio.go.kr/item/itemOrganList.do?apbaId=C1319&reportFormRootNo=B1260" class="btn_see c_btn blue_ln pop_full"><i class="icc visibility"></i>보기</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //콘텐츠 -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	
+	<div class="ct_dialog" style="display:none;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">댓글 수정</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<div class="txt_box">
+								<textarea title="댓글 입력창" placeholder="댓글을 입력하세요">댓글 수정</textarea>
+								<div class="b_box">
+									<a href="#" class="c_btn blue">수정</a>
+									<a href="#" class="c_btn">닫기</a>
+								</div>
+							</div>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

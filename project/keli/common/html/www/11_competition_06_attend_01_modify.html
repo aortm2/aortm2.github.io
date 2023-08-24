@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국고용노동교육원</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	
+});
+function openAmend(item){
+	$(".ct_dialog").fadeIn()
+}
+
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm gray">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="rows">
+			<div class="content_left">
+				<div class="tit">
+					<span>고객마당</span>
+				</div>
+				<ul>
+					<li>
+						<a href="#">고객의 소리</a>
+					</li>
+					<li>
+						<a href="#">자주하는 질문</a>
+					</li>
+					<li>
+						<a href="#">커뮤니티</a>
+					</li>
+					<li>
+						<a href="#">공모전</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content_wrap">
+			<!-- 콘텐츠 -->
+			<div class="sub_top">
+				<h3 class="ct_title">공모전</h3>
+				<div class="path">
+					<div><span>홈</span></div>
+					<div><span>고객마당</span></div>
+					<div><span>공모전</span></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="step_table st_04">
+					<ul>
+						<li>
+							<div class="on">
+								<span class="step">STEP 1</span>
+								<span class="state">기본정보입력</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span class="step">STEP 2</span>
+								<span class="state">정보제공동의</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span class="step">STEP 3</span>
+								<span class="state">사례정보입력</span>
+							</div>
+						</li>
+						<li>
+							<div>
+								<span class="step">STEP 4</span>
+								<span class="state">신청완료</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<span class="sb_tit mt_40">참가구분 및 분야선택</span>
+				<table class="tbl_row mt_40">
+					<colgroup>
+						<col width="20%">
+						<col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>참가구분<em class="f_r">*</em></th>
+							<td>개인</td>
+						</tr>
+						<tr>
+							<th>공모분야<em class="f_r">*</em></th>
+							<td>고용복지연계형</td>
+						</tr>
+					</tbody>
+				</table>
+				<span class="sb_tit mt_40">응모정보</span>
+				<table class="tbl_row">
+					<colgroup>
+						<col width="20%">
+						<col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>성명<em class="f_r">*</em></th>
+							<td>홍길동</td>
+						</tr>
+						<tr>
+							<th>소속<em class="f_r">*</em></th>
+							<td><input type="text" title="소속" class="wd100" placeholder="소속을 입력해 주세요"></td>
+						</tr>
+						<tr>
+							<th>연락처(핸드폰)<em class="f_r">*</em></th>
+							<td>
+								<div class="ip_ph">
+									<select title="휴대전화 앞자리" class="wd_s">
+										<option>010</option>
+									</select>
+									<input type="text" class="wd_sm ac" title="휴대전화 중간자리">
+									<input type="text" class="wd_sm ac" title="휴대전화 뒷자리">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>연락처(사무실)<em class="f_r">*</em></th>
+							<td>
+								<div class="ip_ph">
+									<select title="휴대전화 앞자리" class="wd_s">
+										<option>010</option>
+									</select>
+									<input type="text" class="wd_sm ac" title="휴대전화 중간자리">
+									<input type="text" class="wd_sm ac" title="휴대전화 뒷자리">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>이메일<em class="f_r">*</em></th>
+							<td>
+								<div class="ip_mail">
+									<div class="ip_gp">
+										<div class="input">
+											<input type="text" class="wd_md" title="이메일 아이디">
+										</div>
+										<span class="at">@</span>
+										<div class="input">
+											<input type="text" class="wd_md" title="이메일 도메인주소">
+										</div>
+									</div>
+									<select name="" id="">
+										<option value="0">이메일 직접입력</option>
+										<option value="hhi.co.kr">hhi.co.kr</option>
+										<option value="hyundai-ce.com">hyundai-ce.com</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>비밀번호<em class="f_r">*</em></th>
+							<td><input type="password" title="비밀번호" class="wd100" placeholder="비밀번호를 입력해 주세요"></td>
+						</tr>
+						<tr>
+							<th>비밀번호 확인<em class="f_r">*</em></th>
+							<td><input type="password" title="비밀번호 확인" class="wd100" placeholder="비밀번호를 확인해 주세요"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="b_box">
+					<a href="#" class="c_btn blue_ln">이전</a>
+					<a href="#" class="c_btn blue">다음</a>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	
+	<div class="ct_dialog" style="display:none;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">댓글 수정</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<div class="txt_box">
+								<textarea title="댓글 입력창" placeholder="댓글을 입력하세요">댓글 수정</textarea>
+								<div class="b_box">
+									<a href="#" class="c_btn blue">수정</a>
+									<a href="#" class="c_btn">닫기</a>
+								</div>
+							</div>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
