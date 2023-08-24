@@ -50,7 +50,6 @@ function Page_updateIndicatorActive() {
         var scrollTop = $("body").scrollTop();
         var $node = $(this);
         var offsetTop = parseInt($node.attr('data-offset-top'));
-        console.log(offsetTop)
         if ( scrollTop >= offsetTop - 130) {
             $('nav .nav-link.active').removeClass('active');
             var currentPageIndex = $node.index();
