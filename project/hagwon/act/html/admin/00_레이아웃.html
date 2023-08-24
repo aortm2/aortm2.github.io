@@ -1,0 +1,311 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>active 4C</title>
+<link rel="stylesheet" type="text/css" href="../../font/NanumGothic.css" />
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" href="../../css/admin/base.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/layout.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/content.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/common.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/style.css" type="text/css"/>
+<!-- kendoui -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<!-- //kendoui -->
+<link rel="stylesheet" href="../../css/admin/kendoui-custom.css" type="text/css"/>
+<style type="text/css">
+html {overflow:visible;}
+</style>
+<!-- kendoui -->
+<script src="../../../js/3rdparty/kendoui/js/jquery.min.js"></script>
+<script src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<!-- //kendoui -->
+<script type="text/javascript" src="../../js/admin/design.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!--mainhead-->
+	<div class="mainhead">
+		<h1 class="logo"><a href="#"><img src="../../images/admin/common/logo.png" alt="active4c"></a></h1>
+		<div class="headtop-menu">
+			<dl class="headtop-box box01">
+				<dt><div><div class="adminpic"><img src="../../images/admin/temp/admin_temp.jpg" alt="관리자사진"><span class="round"></span></div>관리자[ADM] <span class="ipnum">(211.25.34.12)</span></div></dt>
+				<dd>
+					<p class="adminmail">admin@4csoft.com</p>
+					<ul class="admininfo">
+						<li class="admininfo01"><a href="#">개인정보수정</a></li>
+						<li class="admininfo02"><a href="#">로그아웃</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<div class="visitdate">
+				<span class="visit">최근접속일자 : </span><span class="date">2015.04.28.06:23:43</span>
+			</div>
+			<dl class="headtop-box box02">
+				<dt><div>시스템관리그룹</div></dt>
+				<dd>
+					<ul>
+						<li><a href="#">관리그룹1</a></li>
+						<li><a href="#">관리그룹2</a></li>
+						<li><a href="#">관리그룹3</a></li>
+						<li><a href="#">관리그룹4</a></li>
+						<li><a href="#">관리그룹5</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<div class="icon-menu-wrap">
+				<div class="icon-menu">
+					<!-- 20170802 : 이미지 수정1 -->
+					<a href="#"><img src="../../images/admin/common/iconmenu01_blue.png" alt="로드맵"></a>
+					<!-- //20170802 : 이미지 수정1 -->
+				</div>
+				<div class="icon-menu">
+					<!-- 20170802 : 이미지 수정2 -->
+					<a href="#"><img src="../../images/admin/common/iconmenu02_blue.png" alt="즐겨찾기"></a>
+					<!-- //20170802 : 이미지 수정2 -->
+					<div class="over">
+						<p class="title"><span>102</span>개의 메세지가 있습니다.</p>
+						<ul>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~! 안녕하세요?반갑습니다~!  안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+						</ul>
+						<p class="allview"><a href="#">쪽지전체보기</a></p>
+					</div>
+				</div>
+				<div  class="icon-menu">
+					<a href="#" class="msg"><img src="../../images/admin/common/iconmenu03_blue.png" alt="메세지"><span class="count">99+</span></a>
+					<div class="over">
+						<p class="title"><span>102</span>개의 메세지가 있습니다.</p>
+						<ul>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~! 안녕하세요?반갑습니다~! 안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+						</ul>
+						<p class="allview"><a href="#">쪽지전체보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//mainhead-->
+	<!-- 20170822 : 메뉴 -->
+	<div class="gnb_wrap">
+		<ul id="nav_mn">
+			<li class="on board">
+				<a href="#">게시판관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>게시판관리</strong>
+						<div class="deco"></div>
+					</div>
+					<ul>
+						<li>
+							<a href="#">대시보드</a>
+						</li>
+						<li class="on">
+							<a href="#">접속현황</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">페이지뷰</a></li>
+									<li><a href="#">회원가입</a></li>
+									<li><a href="#">로그인</a></li>
+									<li><a href="#">접속 디바이스</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">수강</a>
+						</li>
+						<li>
+							<a href="#">학습</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">학습창</a></li>
+									<li><a href="#">패턴</a></li>
+									<li><a href="#">평판</a></li>
+									<li><a href="#">공유</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">검색</a>
+						</li>
+						<li>
+							<a href="#">학습컨텐츠</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="user">
+				<a href="#">사용자관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>사용자관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="site">
+				<a href="#">사이트운영</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>사이트운영</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="course">
+				<a href="#">과정관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>과정관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="cnt">
+				<a href="#">콘텐츠POOL 관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>콘텐츠POOL 관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="ebook">
+				<a href="#">e-Book 관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>e-Book 관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="urab">
+				<a href="#">U-RAB 관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>U-RAB 관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="stats">
+				<a href="#">통계현황</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>통계현황</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="sms">
+				<a href="#">자동메일/SMS 관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>자동메일/SMS 관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="finish">
+				<a href="#">수료관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>수료관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="appraisal">
+				<a href="#">평가관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>평가관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="mail">
+				<a href="#">그룹메일관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>그룹메일관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+			<li class="history">
+				<a href="#">컨텐츠이력관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>컨텐츠이력관리</strong>
+						<div class="deco"></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- //20170822 : 메뉴 -->
+	<!--container-->
+	<div id="container">
+		<!--location-->
+		<div class="location-wrap">
+			<h2 class="location-title">시스템그룹관리</h2>
+			<div class="location"> <a href="#" class="home">HOME</a><a href="#" class="here">시스템그룹관리</a><a href="#">그룹관리</a></div>
+		</div>
+		<!--//location-->
+		<!--content-->
+		<div class="content">
+			<h2 class="content-title">타이틀입니다</h2>
+			<div class="tx_box bot">
+				<ul class="ord">
+				<li>
+				<span class="num">1.</span>과목명,section 은 30자 까지 등록 가능합니다.
+				</li>
+				<li>
+				<span class="num">2.</span>모의고사 교시,Raw,Scaled 는 숫자만 가능합니다.
+				</li>
+				<li>
+				<span class="num">3.</span>모의고사 교시 는 1,2,3,4 만 등록 가능합니다.
+				</li>
+				<li>
+				<span class="num">4.</span>모의고사 교시,Raw 증복 등록이 불가능합니다.
+				</li>
+				<li>
+				<span class="num">5.</span>모의고사 교시,Raw 0 보다 큰 숫자만 등록 되며 3자리 숫자만 등록 가능합니다.
+				</li>
+				</ul>
+			</div>
+		</div>
+		<!--//content-->
+	</div>
+	<!--//container-->
+	<!--footer-->
+	<div class="footer">
+		<p class="copyright">Copyright ⓒ <strong>4csoft</strong>ALL Rights Reserved.</p>
+	</div>
+	<!--//footer-->
+</div>
+</body>
+</html>

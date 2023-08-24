@@ -1,0 +1,473 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko" class="en">
+<!--<![endif]--><head>
+<?php
+include "inc/meta.html";
+?>
+<script>
+jQuery(function($){
+	$('a[href="#member_type"], a[href="#edit_info"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+	$('.login .enter').on('click', function(e){
+		e.preventDefault();
+		if ($(this).parents('.login').hasClass('after')) {
+			$(this).parents('.login').hide().prev().show();
+		} else {
+			$(this).parents('.login').hide().next().show();
+		}
+	})
+});
+</script>
+</head>
+<body class="main">
+<a id="skip" href="#content">본문 바로가기</a>
+<!-- header -->
+<div id="header">
+	<?php
+	include "inc/header_en.html";
+	?>
+</div>
+<!-- //header -->
+<!-- 모바일 메뉴 -->
+<div class="side_bar" id="sidr">
+	<?php
+	include "inc/sidr.html";
+	?>
+</div>
+<!-- //모바일 메뉴 -->
+<div id="content">
+	<div class="front">
+		<div class="visual">
+			<div class="sd">
+				<div>
+					<a href="#" class="cnt">
+						<img src="../../images/www/temp/img_sd_01_en.png" alt="STUDENT EMPOWERMENT Environment for-Sustainable Learnin">
+					</a>
+				</div>
+				<div>
+					<a href="#" class="cnt">
+						<img src="../../images/www/temp/img_sd_02_en.png" alt="STUDENT EMPOWERMENT Environment for-Sustainable Learnin">
+					</a>
+				</div>
+				<div>
+					<a href="#" class="cnt">
+						<img src="../../images/www/temp/img_sd_03_en.png" alt="STUDENT EMPOWERMENT Environment for-Sustainable Learnin">
+					</a>
+				</div>
+			</div>
+			<div class="bar">
+				<div class="dot">
+					<div class="control">
+						<button class="icc pause" title="pause">pause</button>
+						<button class="icc play on" title="play">play</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="member">
+			<div class="rows">
+				<div class="login" style="display:none;">
+					<span class="name">Account</span>
+					<!-- 20190129 : 로그인 문구 삭제
+					<p class="guide">로그인을 하시면<br>현재 학습중과정 및 취득과정을<br>한눈에 보실 수 있습니다.</p>
+					 -->
+					<div class="form">
+						<div class="ip id">
+							<input type="text" placeholder="ID" title="ID">
+						</div>
+						<div class="ip pw">
+							<input type="password" maxlength="20" placeholder="Password" title="Password">
+						</div>
+						<a href="#" class="enter">Log In</a>
+						<ul class="help">
+							<li><a href="#member_type">Sign Up</a></li>
+							<li><a href="01_portal_04_find_idpw.html">or Forgot Password</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 20190122 : 로그인 후 -->
+				<div class="login after">
+					<span class="name">Account</span>
+					<div class="form">
+						<p class="user">
+							<span class="em">김호진김호진김호진</span><span>님, 방문을 환영합니다.</span>
+						</p>
+						<a href="03_menu_02_mypage_01_main_01_stu.html" class="wt">Enter Classroom</a>
+						<a href="#" class="enter">Log Out</a>
+						<a href="#edit_info" class="text">Modify Profiles</a>
+					</div>
+				</div>
+				<!-- //20190122 : 로그인 후 -->
+			</div>
+		</div>
+	</div>
+	<div class="section edu">
+		<div class="rows">
+			<div class="bind">
+				<div class="side">
+					<div class="head">
+						<h2>Technical education course</h2>
+						<p>Technical education course<br>By enhancing our employees' competency</p>
+					</div>
+					<div class="ban">
+						<!-- 20190128 : 배너 구조 수정 -->
+						<div>
+							<div class="frm">
+								<img src="../../images/www/temp/img_mban_01.png" alt="">
+							</div>
+						</div>
+						<!-- //20190128 : 배너 구조 수정 -->
+						<div>
+							<div class="frm">
+								<img src="../../images/www/temp/img_mban_01.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="edu_li">
+					<li>
+						<div class="inner">
+							<span class="img">
+								<img src="../../images/www/temp/img_course_01.png" alt="">
+							</span>
+							<div class="con">
+								<div class="top">
+									<span class="type green">사이버</span>
+									<strong class="sub">내연기관(윤활, 냉각, 연료, 흡/배기, 과급, 디젤엔진, 배출가스장치)정비</strong>
+								</div>
+								<div class="c_rating">
+									<div class="view">
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star_half"></i>
+										<i class="icc star_border"></i>
+									</div>
+									<span class="ave">
+										<span class="grade">3.5</span>
+										<span class="count">(1,042)</span>
+									</span>
+								</div>
+							</div>
+							<div class="bar">
+								<a href="04_course_02_detail.html">Overview</a>
+								<a href="#" class="c_pop gray">Enroll</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<span class="img">
+								<img src="../../images/www/temp/img_course_02.png" alt="">
+							</span>
+							<div class="con">
+								<div class="top">
+									<span class="type green">사이버</span>
+									<strong class="sub">건설기계장치</strong>
+								</div>
+								<div class="c_rating">
+									<div class="view">
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star_half"></i>
+										<i class="icc star_border"></i>
+									</div>
+									<span class="ave">
+										<span class="grade">3.5</span>
+										<span class="count">(1,042)</span>
+									</span>
+								</div>
+							</div>
+							<div class="bar">
+								<a href="04_course_02_detail.html">Overview</a>
+								<a href="#" class="c_pop gray">Enroll</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<span class="img">
+								<img src="../../images/www/temp/img_course_03.png" alt="">
+							</span>
+							<div class="con">
+								<div class="top">
+									<span class="type blue">집합</span>
+									<strong class="sub">소형건설기계 운전 (3톤미만 지게차,굴삭기)</strong>
+								</div>
+								<div class="c_rating">
+									<div class="view">
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star_half"></i>
+										<i class="icc star_border"></i>
+									</div>
+									<span class="ave">
+										<span class="grade">3.5</span>
+										<span class="count">(1,042)</span>
+									</span>
+								</div>
+							</div>
+							<div class="bar">
+								<a href="04_course_02_detail.html">Overview</a>
+								<a href="#" class="c_pop gray">Enroll</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<span class="img">
+								<img src="../../images/www/temp/img_course_01.png" alt="">
+							</span>
+							<div class="con">
+								<div class="top">
+									<span class="type green">사이버</span>
+									<strong class="sub">내연기관(윤활, 냉각, 연료, 흡/배기, 과급, 디젤엔진, 배출가스장치)정비</strong>
+								</div>
+								<div class="c_rating">
+									<div class="view">
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star_half"></i>
+										<i class="icc star_border"></i>
+									</div>
+									<span class="ave">
+										<span class="grade">3.5</span>
+										<span class="count">(1,042)</span>
+									</span>
+								</div>
+							</div>
+							<div class="bar">
+								<a href="04_course_02_detail.html">Overview</a>
+								<a href="#" class="c_pop gray">Enroll</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<span class="img">
+								<img src="../../images/www/temp/img_course_02.png" alt="">
+							</span>
+							<div class="con">
+								<div class="top">
+									<span class="type green">사이버</span>
+									<strong class="sub">건설기계장치</strong>
+								</div>
+								<div class="c_rating">
+									<div class="view">
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star_half"></i>
+										<i class="icc star_border"></i>
+									</div>
+									<span class="ave">
+										<span class="grade">3.5</span>
+										<span class="count">(1,042)</span>
+									</span>
+								</div>
+							</div>
+							<div class="bar">
+								<a href="04_course_02_detail.html">Overview</a>
+								<a href="#" class="c_pop gray">Enroll</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="inner">
+							<span class="img">
+								<img src="../../images/www/temp/img_course_03.png" alt="">
+							</span>
+							<div class="con">
+								<div class="top">
+									<span class="type blue">집합</span>
+									<strong class="sub">소형건설기계 운전 (3톤미만 지게차,굴삭기)</strong>
+								</div>
+								<div class="c_rating">
+									<div class="view">
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star"></i>
+										<i class="icc star_half"></i>
+										<i class="icc star_border"></i>
+									</div>
+									<span class="ave">
+										<span class="grade">3.5</span>
+										<span class="count">(1,042)</span>
+									</span>
+								</div>
+							</div>
+							<div class="bar">
+								<a href="04_course_02_detail.html">Overview</a>
+								<a href="#" class="c_pop gray">Enroll</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section board">
+		<div class="rows">
+			<div class="bind">
+				<div class="gp notice">
+					<div class="top">
+						<ul class="tab">
+							<li class="on"><a href="#notice">Notice</a></li>
+							<li><a href="#data">Resources</a></li>
+						</ul>
+					</div>
+					<div class="frm">
+						<div id="notice">
+							<ul class="list">
+								<li>
+									<a href="03_menu_04_cs_01_notice_02_detail.html">
+										<p class="sub">
+											<span class="new">N</span>
+											<span class="text">기술교류 간담회 실시 안내 기술교류 간담회 실시 안내 기술교류 간담회 실시 안내</span>
+										</p>
+										<span class="date">2018-06-27</span>
+									</a>
+								</li>
+								<li>
+									<a href="03_menu_04_cs_01_notice_02_detail.html">
+										<p class="sub">
+											<span class="new">N</span>
+											<span class="text">2019년 소형건설기계 면허과정 교육실시</span>
+										</p>
+										<span class="date">2018-06-27</span>
+									</a>
+								</li>
+								<li>
+									<a href="03_menu_04_cs_01_notice_02_detail.html">
+										<p class="sub">
+											<span class="text">2018년 소형건설기계 면허과정 교육실시</span>
+										</p>
+										<span class="date">2018-06-27</span>
+									</a>
+								</li>
+								<li>
+									<a href="03_menu_04_cs_01_notice_02_detail.html">
+										<p class="sub">
+											<span class="text">2018년 소형건설기계 면허과정 교육실시</span>
+										</p>
+										<span class="date">2018-06-27</span>
+									</a>
+								</li>
+								<li>
+									<a href="03_menu_04_cs_01_notice_02_detail.html">
+										<p class="sub">
+											<span class="text">2018년 12월 현대중공업 건설장비 신제품 시연회 개최</span>
+										</p>
+										<span class="date">2018-06-27</span>
+									</a>
+								</li>
+							</ul>
+							<a href="03_menu_04_cs_01_notice_01_list.html" class="more">More +</a>
+						</div>
+						<div id="data">
+							<p class="e_box">내용이 없습니다.</p>
+							<a href="03_menu_04_cs_01_notice_01_list.html" class="more">More +</a>
+						</div>
+					</div>
+				</div>
+				<div class="customer">
+					<!-- <div class="gp as">
+						<h3>Value-added education service</h3>
+						<ul>
+							<li><a href="03_menu_03_course_04_technical_training_01_list.html">Monthly technical education plan</a></li>
+							<li><a href="03_menu_04_cs_05_learning_guide.html">Guide on learning methods</a></li>
+							<li><a href="03_menu_01_intro_03_entering.html">How to reach the education center</a></li>
+						</ul>
+					</div> -->
+					<div class="gp center">
+						<!-- <h3>Education Center <span class="em">Call Support</span></h3> -->
+						<h3>E-Training Academy</h3>
+						<a href="#" class="tel">Contact Us</a>
+						<p class="info">
+							<span class="em">Weekdays</span> 08:00 ~ 17:00
+							<br>(Closed on weekends and national holidays)
+						</p>
+						<div class="link">
+							<a href="03_menu_04_cs_03_qna_01_list.html">Q&A</a>
+							<a href="03_menu_04_cs_02_faq_01_list.html">FAQ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="quickmenu">
+	<?php
+	include "inc/quick_en.html";
+	?>
+</div>
+<!-- footer -->
+<div id="footer">
+	<?php
+	include "inc/footer_en.html";
+	?>
+</div>
+<!-- //footer -->
+<div class="c_dialog" id="member_type" style="display:none;">
+	<div class="mask"></div>
+	<div class="outer" style="width:480px;height:500px;"><!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+		<div class="top">
+			<p class="title">회원유형 선택</p>
+			<a href="#" class="p_close">닫기</a>
+		</div>
+		<div class="ct">
+			<!-- 컨텐츠 -->
+			<div class="member_type">
+				<div class="logo"><img src="../../images/www/common/logo.png" alt="HYUNDAI CONSTRUCTION EQUIPMENT"></div>
+				<p class="guide">현대건설기계 회원가입 서비스입니다.<br><strong>회원유형을 선택</strong>해 주세요.</p>
+				<ul class="type">
+					<li class="learner"><a href="01_portal_03_join_01_type.html">학습자</a></li>
+					<li class="teacher"><a href="01_portal_03_join_01_type.html">교육강사</a></li>
+				</ul>
+			</div>
+			<!-- //컨텐츠 -->
+		</div>
+	</div>
+</div>
+<div class="c_dialog" id="edit_info" style="display:none;">
+	<div class="mask"></div>
+	<div class="outer" style="width:500px;height:380px;"><!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+		<div class="top">
+			<p class="title">비밀번호 확인</p>
+			<a href="#" class="p_close">닫기</a>
+		</div>
+		<div class="ct">
+			<!-- 컨텐츠 -->
+			<div class="gd_box gray none">
+				<ul class="list">
+					<li>개인정보 열람을 위해서는 비밀번호를 입력하셔야 합니다.</li>
+					<li>설정된 비밀번호를 아래 입력칸에 입력하시기 바랍니다.</li>
+					<li>비밀번호를 모르실 경우 비밀번호변경메뉴를 통해 변경 후 입력해 주시기 바랍니다.</li>
+				</ul>
+			</div>
+			<div class="ip_form blank">
+				<dl>
+					<dt>비밀번호</dt>
+					<dd>
+						<form id="FormUpdate" name="FormUpdate" method="post" onsubmit="return false;">
+							<input class="wide" type="password" autocomplete="off" name="nowPassword" maxlength="20" title="비밀번호">
+						</form>
+					</dd>
+				</dl>
+			</div>
+			<div class="b_box">
+				<a href="01_portal_07_member_information.html" class="c_btn blue lg">인증하기</a>
+			</div>
+			<!-- //컨텐츠 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

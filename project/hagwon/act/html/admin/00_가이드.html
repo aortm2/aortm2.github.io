@@ -1,0 +1,903 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>active 4C</title>
+<link rel="stylesheet" href="../../css/admin/base.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/layout.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/content.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/common.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/style.css" type="text/css"/>
+<!-- kendoui -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<!-- //kendoui -->
+<link rel="stylesheet" href="../../css/admin/kendoui-custom.css" type="text/css"/>
+<style type="text/css">
+html {overflow:visible;}
+</style>
+<!-- kendoui -->
+<script src="../../../js/3rdparty/kendoui/js/jquery.min.js"></script>
+<script src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<!-- //kendoui -->
+<script type="text/javascript" src="../../js/admin/design.js"></script>
+<script>
+jQuery(function($){
+	$("#files").kendoUpload();
+})
+</script>
+</head>
+<body>
+<div class="wrap">
+	<!--mainhead-->
+	<div class="mainhead">
+		<h1 class="logo"><a href="#"><img src="../../images/admin/common/logo.png" alt="active4c"></a></h1>
+		<div class="headtop-menu">
+			<dl class="headtop-box box01">
+				<dt><div><div class="adminpic"><img src="../../images/admin/temp/admin_temp.jpg" alt="관리자사진"><span class="round"></span></div>관리자[ADM] <span class="ipnum">(211.25.34.12)</span></div></dt>
+				<dd>
+					<p class="adminmail">admin@4csoft.com</p>
+					<ul class="admininfo">
+						<li class="admininfo01"><a href="#">개인정보수정</a></li>
+						<li class="admininfo02"><a href="#">로그아웃</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<div class="visitdate">
+				<span class="visit">최근접속일자 : </span><span class="date">2015.04.28.06:23:43</span>
+			</div>
+			<dl class="headtop-box box02">
+				<dt><div>시스템관리그룹</div></dt>
+				<dd>
+					<ul>
+						<li><a href="#">관리그룹1</a></li>
+						<li><a href="#">관리그룹2</a></li>
+						<li><a href="#">관리그룹3</a></li>
+						<li><a href="#">관리그룹4</a></li>
+						<li><a href="#">관리그룹5</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<div class="icon-menu-wrap">
+				<div class="icon-menu">
+					<a href="#"><img src="../../images/admin/common/iconmenu01_blue.png" alt="로드맵"></a>
+				</div>
+				<div class="icon-menu">
+					<a href="#"><img src="../../images/admin/common/iconmenu02_blue.png" alt="즐겨찾기"></a>
+					<div class="over">
+						<p class="title"><span>102</span>개의 메세지가 있습니다.</p>
+						<ul>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~! 안녕하세요?반갑습니다~!  안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+						</ul>
+						<p class="allview"><a href="#">쪽지전체보기</a></p>
+					</div>
+				</div>
+				<div  class="icon-menu">
+					<a href="#" class="msg"><img src="../../images/admin/common/iconmenu03_blue.png" alt="메세지"><span class="count">99+</span></a>
+					<div class="over">
+						<p class="title"><span>102</span>개의 메세지가 있습니다.</p>
+						<ul>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~! 안녕하세요?반갑습니다~! 안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다.</a><span class="date">2015-04-28 13:23:12</span></li>
+							<li><a href="#">안녕하세요?반갑습니다~!</a><span class="date">2015-04-28 13:23:12</span></li>
+						</ul>
+						<p class="allview"><a href="#">쪽지전체보기</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--//mainhead-->
+	<div class="gnb_wrap">
+		<ul id="nav_mn">
+			<li class="on my">
+				<a href="#">마이페이지</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>마이페이지</strong>
+						<div class="deco"></div>
+					</div>
+					<ul>
+						<li>
+							<a href="#">대시보드</a>
+						</li>
+						<li class="on">
+							<a href="#">접속현황</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">페이지뷰</a></li>
+									<li><a href="#">회원가입</a></li>
+									<li><a href="#">로그인</a></li>
+									<li><a href="#">접속 디바이스</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">수강</a>
+						</li>
+						<li>
+							<a href="#">학습</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">학습창</a></li>
+									<li><a href="#">패턴</a></li>
+									<li><a href="#">평판</a></li>
+									<li><a href="#">공유</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">검색</a>
+						</li>
+						<li>
+							<a href="#">학습컨텐츠</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="member">
+				<a href="#">회원관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>회원관리</strong>
+						<div class="deco"></div>
+					</div>
+					<ul>
+						<li>
+							<a href="#">접속현황</a>
+						</li>
+						<li>
+							<a href="#">수강</a>
+						</li>
+						<li>
+							<a href="#">학습</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">학습창</a></li>
+									<li><a href="#">패턴</a></li>
+									<li><a href="#">평판</a></li>
+									<li><a href="#">공유</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">검색</a>
+						</li>
+						<li>
+							<a href="#">학습컨텐츠</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">저작도구</a></li>
+									<li><a href="#">동영상</a></li>
+									<li><a href="#">퀴즈</a></li>
+									<li><a href="#">의견쓰기</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="system">
+				<a href="#">시스템관리</a>
+				<div class="d1">
+					<div class="bg"></div>
+					<div class="guide">
+						<strong>시스템관리</strong>
+						<div class="deco"></div>
+					</div>
+					<ul>
+						<li>
+							<a href="#">접속현황</a>
+							<div class="d2">
+								<ul>
+									<li><a href="#">페이지뷰</a></li>
+									<li><a href="#">접속 디바이스</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="#">검색</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--container-->
+	<div id="container">
+		<!--location-->
+		<div class="location-wrap">
+			<h2 class="location-title">시스템그룹관리</h2>
+			<div class="location"> <a href="#" class="home">HOME</a><a href="#" class="here">시스템그룹관리</a><a href="#">그룹관리</a></div>
+		</div>
+		<!--//location-->
+		<!--content-->
+		<div class="content">
+			<p class="content-title">텍스트 박스</p>
+			<div class="gd_box gray">
+				<ul class="list">
+					<li>이 메뉴에서는 오직 e-Book 구성파일의 물리적인 교체만 수행합니다. 교체할 e-Book 구성파일을 입력하십시요.</li>
+					<li>DRM 적용 관계로 e-Book 구성파일의 경우 파일단위 교체 및 수정이 지원되지 않으며 반드시 전체 구성파일을 교체하여야 합니다.</li>
+				</ul>
+			</div>
+			<p class="content-title">검색</p>
+			<div class="d_search">
+				<span class="lab">단어검색</span>
+				<select>
+					<option>선택</option>
+					<option>이름</option>
+					<option>전체</option>
+				</select>
+				<input type="text" style="width:300px;">
+				<a href="#" class="enter">검색</a>
+			</div>
+			<div class="d_search">
+				<span class="lab">단어검색</span>
+				<select>
+					<option>선택</option>
+					<option>이름</option>
+					<option>전체</option>
+				</select>
+				<input type="text" style="width:300px;">
+				<span class="lab sp">기간</span>
+				<input type="text" style="width:200px;">
+				<button type="button" class="cal">기간선택</button>
+				<span class="wave">~</span>
+				<input type="text" style="width:200px;">
+				<button type="button" class="cal">기간선택</button>
+				<div class="add">
+					<a href="#" class="enter">검색</a>
+				</div>
+			</div>
+			<div class="c_panel search">
+				<div class="p_head">조건 설정</div>
+				<div class="p_body">
+					<div class="row">
+						<div class="col_md_4">
+							<select class="wide">
+								<option>등록년도</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류1</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류2</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류3</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류4</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류5</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_8 ph">
+							<label class="lab" for="c_01_01">SCO ID 입력</label>
+							<input id="c_01_01" class="wide" type="text">
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>적합성여부</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_12 ph">
+							<label class="lab" for="c_01_02">SCO 명</label>
+							<input id="c_01_02" class="wide" type="text">
+						</div>
+					</div>
+					<div class="add">
+						<a href="#" class="enter"><span>검색</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="c_panel search">
+				<div class="p_head">조건 설정</div>
+				<div class="p_body">
+					<div class="row">
+						<div class="col_md_4">
+							<select class="wide">
+								<option>등록년도</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류1</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류2</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류3</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류4</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_4 ph">
+							<label class="lab" for="c_02_01">LO 코드</label>
+							<input id="c_02_01" class="wide" type="text">
+						</div>
+						<div class="col_md_4 ph">
+							<label class="lab" for="c_02_02">LO ID</label>
+							<input id="c_02_02" class="wide" type="text">
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>유효성여부</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_12 ph">
+							<label class="lab" for="c_02_03">제목 (LO명)</label>
+							<input id="c_02_03" class="wide" type="text">
+						</div>
+					</div>
+					<div class="add">
+						<a href="#" class="enter"><span>검색</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="c_panel search">
+				<div class="p_head">조건 설정</div>
+				<div class="p_body">
+					<div class="row">
+						<div class="col_md_4">
+							<select class="wide">
+								<option>등록년도</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류1</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류2</option>
+							</select>
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>분류3</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_8 ph">
+							<label class="lab" for="c_03_01">과정명</label>
+							<input id="c_03_01" class="wide" type="text">
+						</div>
+						<div class="col_md_4">
+							<select class="wide">
+								<option>유효성여부</option>
+							</select>
+						</div>
+					</div>
+					<div class="add">
+						<a href="#" class="enter"><span>검색</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="c_panel search">
+				<div class="p_body">
+					<div class="row">
+						<div class="col_md_12">
+							<span class="lab">단어검색</span>
+							<select>
+								<option>선택</option>
+								<option>이름</option>
+								<option>전체</option>
+							</select>
+							<input type="text" style="width:300px;">
+							<a href="#" class="app"><span>상세검색</span></a>
+						</div>
+					</div>
+					<div class="detail">
+						<div class="row">
+							<div class="col_md_4">
+								<select class="wide">
+									<option>등록년도</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col_md_4">
+								<select class="wide">
+									<option>분류1</option>
+								</select>
+							</div>
+							<div class="col_md_4">
+								<select class="wide">
+									<option>분류2</option>
+								</select>
+							</div>
+							<div class="col_md_4">
+								<select class="wide">
+									<option>분류3</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col_md_8 ph">
+								<label class="lab" for="c_03_01">과정명</label>
+								<input id="c_03_01" class="wide" type="text">
+							</div>
+							<div class="col_md_4">
+								<select class="wide">
+									<option>유효성여부</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="add">
+						<a href="#" class="enter"><span>검색</span></a>
+					</div>
+				</div>
+			</div>
+			<div class="d_search">
+				<div class="row">
+					<div class="col_md_12">
+						<span class="lab">검색</span>
+						<select>
+							<option>선택</option>
+							<option>이름</option>
+							<option>전체</option>
+						</select>
+						<input type="text" style="width:300px;">
+						<a href="#d_01" class="app"><span>상세검색</span></a>
+					</div>
+				</div>
+				<div class="detail" id="d_01">
+					<div class="row">
+						<div class="col_md_6">
+							<span class="lab">서비스방식</span>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+						<div class="col_md_6">
+							<span class="lab">매체유형</span>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_6">
+							<span class="lab">제목</span>
+							<input type="text" style="width:200px;">
+						</div>
+						<div class="col_md_6">
+							<span class="lab">관련주제어</span>
+							<input type="text" style="width:200px;">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_6">
+							<span class="lab">ID</span>
+							<input type="text" title="ID" style="width:200px;">
+						</div>
+						<div class="col_md_6">
+							<span class="lab">Code Value</span>
+							<input type="text" title="Code Value" style="width:200px;">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_12">
+							<span class="lab">분류</span>
+							<select>
+								<option>전체</option>
+							</select>
+							<select>
+								<option>전체</option>
+							</select>
+							<select>
+								<option>전체</option>
+							</select>
+							<select>
+								<option>전체</option>
+							</select>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_12">
+							<span class="lab">부가설명</span>
+							<input type="text" style="width:600px;">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_3">
+							<span class="lab">라이센스</span>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+						<div class="col_md_3">
+							<span class="lab">대여등급</span>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+						<div class="col_md_3">
+							<span class="lab">저작자</span>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+						<div class="col_md_3">
+							<span class="lab">출판자</span>
+							<select>
+								<option>전체</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col_md_12">
+							<span class="lab">등록기간</span>
+							<input type="text" style="width:200px;">
+							<button type="button" class="cal">기간선택</button>
+							<span class="wave">~</span>
+							<input type="text" style="width:200px;">
+							<button type="button" class="cal">기간선택</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<div class="c_search lg">
+				<select>
+					<option>아이디</option>
+					<option>학번</option>
+				</select>
+				<label for="a_01">아이디</label>
+				<div class="word">
+					<input id="a_01" class="text" type="text">
+					<a href="#" class="enter">검색</a>
+				</div>
+			</div>
+			<br>
+			<p class="content-title">알림</p>
+			<p class="c_note">이 시험지의 문항들에서 사용될 점수들을 먼저 생성하세요.</p>
+			<br>
+			<p class="content-title">버튼, 버튼콤보</p>
+			<div class="sq_box one">
+				<dl class="tbl first">
+					<dt>색상</dt>
+					<dd>
+						<a href="#" class="c_btn lt_gray">gray</a>
+						<a href="#" class="c_btn gray">gray</a>
+						<a href="#" class="c_btn d_gray">d_gray</a>
+						<a href="#" class="c_btn blue">blue</a>
+						<a href="#" class="c_btn d_blue">d_blue</a>
+						<a href="#" class="c_btn purple">purple</a>
+						<a href="#" class="c_btn orange">orange</a>
+						<a href="#" class="c_btn red">red</a>
+						<a href="#" class="c_btn d_red">d_red</a>
+						<a href="#" class="c_btn green">green</a>
+						<a href="#" class="c_btn yellow">yellow</a>
+					</dd>
+				</dl>
+				<dl class="tbl">
+					<dt>크기</dt>
+					<dd>
+						<a href="#" class="c_btn blue sm">sm</a>
+						<a href="#" class="c_btn blue">관리자 디폴트 (24px)</a>
+						<a href="#" class="c_btn blue lg">lg</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="b_box">
+				<a href="#" class="c_btn blue">저장</a>
+				<a href="#" class="c_btn gray">목록</a>
+			</div>
+			<div class="b_box">
+				<div class="left">
+					<a href="#" class="c_btn blue">저장</a>
+					<a href="#" class="c_btn gray">목록</a>
+				</div>
+			</div>
+			<div class="b_box">
+				<div class="right">
+					<a href="#" class="c_btn blue">저장</a>
+					<a href="#" class="c_btn gray">목록</a>
+				</div>
+			</div>
+			<div class="b_box">
+				<div class="left">
+					<a href="#" class="c_btn blue">저장</a>
+				</div>
+				<div class="right">
+					<a href="#" class="c_btn gray">목록</a>
+				</div>
+			</div>
+			<br>
+			<p class="content-title">탭 메뉴</p>
+			<ul class="nav_tabs">
+				<li class="on"><a href="#">전체</a></li>
+				<li><a href="#">2017년</a></li>
+				<li><a href="#">2016년</a></li>
+			</ul>
+			<br>
+			<p class="content-title">테이블(일반) 목록</p>
+			<table class="tbl-list">
+				<colgroup>
+					<col style="width:40px">
+					<col style="width:120px">
+					<col>
+					<col style="width:360px;">
+					<col>
+					<col>
+					<col>
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>NO</th>
+						<th>구분</th>
+						<th>시험년도</th>
+						<th>시험명</th>
+						<th>시험회차</th>
+						<th>시험일자</th>
+						<th>채용분야</th>
+						<th>채용직급</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>서류</td>
+						<td>2017</td>
+						<td class="al"><a href="#" class="exam_detail k-link">민간경력자 임용</a></td>
+						<td>3회차</td>
+						<td>06-12</td>
+						<td>민간경력자</td>
+						<td>9급</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>면접</td>
+						<td>2017</td>
+						<td class="al"><a href="#" class="exam_detail k-link">일반임기제공무원 경력경쟁</a></td>
+						<td>1회차</td>
+						<td>04-10</td>
+						<td>일반임기제공무원</td>
+						<td>9급</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>출제</td>
+						<td>2016</td>
+						<td class="al"><a href="#" class="exam_detail k-link">2015년도 제1회 사회복지 민간경력 임용</a></td>
+						<td>1회차</td>
+						<td>05-25</td>
+						<td>사회복지</td>
+						<td>9급</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>서류</td>
+						<td>2016</td>
+						<td class="al"><a href="#" class="exam_detail k-link">민간경력자 임용</a></td>
+						<td>3회차</td>
+						<td>06-12</td>
+						<td>민간경력자</td>
+						<td>9급</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>면접</td>
+						<td>2016</td>
+						<td class="al"><a href="#" class="exam_detail k-link">일반임기제공무원 경력경쟁</a></td>
+						<td>1회차</td>
+						<td>04-10</td>
+						<td>일반임기제공무원</td>
+						<td>9급</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>출제</td>
+						<td>2016</td>
+						<td class="al"><a href="#" class="exam_detail k-link">2015년도 제1회 사회복지 민간경력 임용</a></td>
+						<td>1회차</td>
+						<td>05-25</td>
+						<td>사회복지</td>
+						<td>9급</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="paging">
+				<div class="inner">
+					<a href="#" class="img start"><img src="../../images/admin/common/pagi_start.gif" alt="처음"></a>
+					<a href="#" class="img prev"><img src="../../images/admin/common/pagi_prev.gif" alt="이전"></a>
+					<a href="#">1</a>
+					<span class="on">2</span>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#" class="img next"><img src="../../images/admin/common/pagi_next.gif" alt="다음"></a>
+					<a href="#" class="img end"><img src="../../images/admin/common/pagi_end.gif" alt="마지막"></a>
+				</div>
+			</div>
+			<br>
+			<p class="content-title">테이블(일반) 상세</p>
+			<table class="tbl-detail">
+				<colgroup>
+					<col style="width:60px">
+					<col style="width:120px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th colspan="2">입력일</th>
+						<td>2017-05-01</td>
+					</tr>
+					<tr>
+						<th colspan="2">소속기관</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<tr>
+						<th colspan="2">성명</th>
+						<td>
+							<input type="text">
+							<a class="btn black" href="#"><span class="mid">중복체크</span></a>
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2">학과(부)</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<!-- <tr>
+						<th>출생년도</th>
+						<td>1980</td>
+						<th>직위</th>
+						<td>전산6급</td>
+					</tr> -->
+					<tr>
+						<th colspan="2">성별</th>
+						<td>
+							남자 <input type="radio">
+							여자 <input type="radio">
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2">분야</th>
+						<td>
+							<select name="" id="">
+								<option value="">전문가</option>
+								<option value="">인사</option>
+								<option value="">기타</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2">주요이력</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<tr>
+						<th colspan="2">전문분야</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<tr>
+						<th colspan="2">추천기관</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<!-- <tr>
+						<th>학력 및 전공</th>
+						<td></td>
+						<th>특이사항</th>
+						<td></td>
+					</tr> -->
+					<tr>
+						<th rowspan="2">주소</th>
+						<th>기관주소</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<tr>
+						<th>자택주소</th>
+						<td><input type="text" style="width:300px;"></td>
+					</tr>
+					<tr>
+						<th rowspan="2">연락처</th>
+						<th>사무실</th>
+						<td>
+							<input type="text" style="width:100px;">
+							- <input type="text" style="width:100px;">
+							- <input type="text" style="width:100px;">
+						</td>
+					</tr>
+					<tr>
+						<th>이메일</th>
+						<td>
+							<input type="text"> @
+							<select name="" id="">
+								<option value="">seoul.go.kr</option>
+								<option value="">gmail.com</option>
+								<option value="">naver.com</option>
+								<option value="">daum.net</option>
+							</select>
+							<a class="btn black" href="#"><span class="mid">직접입력</span></a>
+							<div class="vspace"></div>
+
+							<input type="text" style="width:300px;">
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2">핸드폰</th>
+						<td>
+							<input type="text" style="width:100px;">
+							- <input type="text" style="width:100px;">
+							- <input type="text" style="width:100px;">
+						</td>
+					</tr>
+					<tr>
+						<th colspan="2">첨부파일</th>
+						<td><input id="files" type="file" aria-label="files"></td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<p class="content-title">샘플 박스</p>
+			<div class="sq_box gray">
+				<div class="b_tbl">
+					<div class="ct">
+						그리드
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--//content-->
+	</div>
+	<!--//container-->
+	<!--footer-->
+	<div class="footer">
+		<p class="copyright">Copyright ⓒ <strong>4csoft</strong>ALL Rights Reserved.</p>
+	</div>
+	<!--//footer-->
+</div>
+</body>
+</html>

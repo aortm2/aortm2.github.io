@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<title>KORAIL 인재개발원</title>
+	<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+	<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+	
+	<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+	<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+	<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../js/www/design.js"></script>
+	
+	<!-- kendo -->
+	<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css" />
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+	<!-- //kendo -->
+	<script>
+		jQuery(function ($) {
+			// kendo.culture("ko-KR");
+			// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+			// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+			// });
+
+			$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function (e) {
+				e.preventDefault();
+				$($(this).attr('href')).fadeIn();
+			});
+
+			$("#editor_01").kendoEditor();
+			$("#editor_02").kendoEditor();
+
+			var todayDate = kendo.toString(kendo.parseDate(new Date()), 'yyyy-MM-dd');
+			$(".datepickerSub").kendoDatePicker().val(todayDate);
+
+
+		});
+
+
+		//모바일 메뉴
+		$(function () {
+			$(".m_menu").click(function () {
+				if ($(this).hasClass("app_x") == true) {
+					$(".nav_bg").removeClass("on")
+					$(this).removeClass("app_x")
+					$(".course_nav").removeClass("on")
+				} else {
+					$(".nav_bg").addClass("on")
+					$(this).addClass("app_x")
+					$(".course_nav").addClass("on")
+				}
+			});
+		});
+
+		// 과정 접기
+		$(function () {
+			$(".course_nav .fold").click(function () {
+				$(this).parent().parent().parent().find(".con").slideToggle();
+			});
+		});
+
+		$(function () {
+			$('.f-radio').click(function () {
+				if ($(this).val() == "Y") {
+					$(".ind_box").hide();
+					$(".all_box").show();
+				} else {
+					$(".all_box").hide();
+					$(".ind_box").show();
+				}
+			});
+
+			$(".ind_box a").click(function () {
+				$("#add_all").fadeIn();
+			});
+		});
+
+	</script>
+</head>
+
+<body class="cl_room_02">
+	<div id="skip">
+		<a href="#lnb">주메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+	<div id="courseHeader">
+		<div class="wizard_top">
+			<h1>철도 안전사고 예방</h1>
+			<div class="btn_box">
+				<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+			</div>
+			<ul class="top_box">
+				<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+				<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+				<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+			</ul>
+			<i class="icc hamburger m_menu"></i>
+		</div>
+		<div class="top_menu menu">
+			<ul>
+				<li><a href="12_05_course_wizard_01_main.html">기본정보</a></li>
+				<li><a href="12_05_course_wizard_02_setting.html">추가정보</a></li>
+				<li class="on"><a href="12_05_course_wizard_06_index.html">목차</a></li>
+				<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>
+				<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="course_wrap cr">
+		<div class="course_ar">
+			<!-- 왼쪽영역 -->
+			<div class="course_nav" data-include-path="inc/left.html"></div>
+			<div class="nav_bg"></div>
+			<!--// 왼쪽영역 -->
+
+			<!-- 오른쪽 -->
+			<div class="course_con">
+				
+				<div class="cr_box">
+					<div class="title">
+						<h3 class="icc drag_indicator">주차정보 및 수정</h3>
+						<div class="tit_btn">
+							<a class="btn" href="javascript:void(0)">저장</a>
+						</div>
+					</div>
+					<div class="tbl_row">
+						<div class="all_box">
+							<div class="col_g">
+								<h5>제목</h5>
+								<div class="input">
+									<input type="text" name="activeElementTitle" value="철도 안전사고 예방" style="width:100%"
+										maxlength="200">
+								</div>
+							</div>
+
+							<div class="col_g">
+								<h5>일정</h5>
+								<div class="date_box">
+									<input type="text" name="applyStartDate" id="applyStartDate" class="datepickerSub">
+									~
+									<input type="text" name="applyEndDate" id="applyEndDate" class="datepickerSub">
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- //오른쪽 -->
+		</div>
+	</div>
+	<div class="c_dialog course" id="add_all" style="display: none;">
+		<div class="mask"></div>
+		<div class="outer" style="width:1000px;">
+			<!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+			<div class="top">
+				<p class="title">일괄추가</p>
+				<a href="#" class="p_close">닫기</a>
+			</div>
+			<div class="ct">
+				<!-- 컨텐츠 -->
+				<div class="c_search">
+					<fieldset>
+						<div class="sg">
+							<div class="left">
+								<input type="hidden" id="srchCategorySeq1comnt" name="srchCategorySeq1" value="">
+								<input type="hidden" id="srchCategorySeq2comnt" name="srchCategorySeq2" value="">
+								<input type="hidden" id="srchCategorySeq3comnt" name="srchCategorySeq3" value="">
+								<input type="hidden" id="srchCategorySeq4comnt" name="srchCategorySeq4" value="">
+								<input type="hidden" id="srchCategorySeq5comnt" name="srchCategorySeq5" value="">
+								<input type="hidden" id="categorySeqcomnt" name="categorySeq" value="">
+								<input type="hidden" id="groupOrdercomnt" name="groupOrder" value="">
+								<input type="hidden" id="_srchCategoryNamecomnt" name="_srchCategoryName" value="">
+								<strong id="_srchCategoryName"></strong>
+							</div>
+							<div class="right">
+								<select name="srchRegionCode" class="combo" style="display:none;">
+									<option value="">==권역==</option>
+									<option value="REGION::01">러시아/CIS</option>
+									<option value="REGION::02">북미</option>
+									<option value="REGION::03">브라질</option>
+									<option value="REGION::04">아시아</option>
+									<option value="REGION::05">아프리카</option>
+									<option value="REGION::06">오세아니아/이스라엘/터키</option>
+									<option value="REGION::07">유럽</option>
+									<option value="REGION::08">인도/네팔/방글라데시/스리랑카</option>
+									<option value="REGION::09">중국</option>
+									<option value="REGION::10">중남미</option>
+									<option value="REGION::11">중동</<option>
+									<option value="REGION::12" selected="selected">대한민국</option>
+								</select>
+								<input type="text" name="srchContentsSeqStr" value=""
+									onkeyup="UT.callFunctionByEnter(event, doSearch);" placeholder="ID"
+									style="width: 60px">
+								<input type="hidden" name="srchKey" value="title">
+								<input type="text" placeholder="제목" name="srchWord" value=""
+									onkeyup="UT.callFunctionByEnter(event, doSearch);">
+								<a href="javascript:doSearch()" class="c_btn st gray">검색</a>
+								<a href="javascript:AJAX.doSelectCheck()" class="c_btn red">추가</a>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="fx_box sm">
+					<table class="tbl_col">
+						<caption>유형</caption>
+						<colgroup>
+							<col width="50px;">
+							<col width="70px;">
+							<col width="auto">
+							<col width="120px;">
+							<col width="120px;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="col"><input type="checkbox" name="checkall"
+										onclick="FN.toggleCheckbox('FormSrch','checkkeys');"></th>
+								<th scope="col">ID</th>
+								<th scope="col">제목<a href="javascript:doSort(2)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:doSort(-2)">
+
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">담당자<a href="javascript:doSort(6)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:doSort(-6)">
+
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">등록일<a href="javascript:doSort(1)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:doSort(-1)">
+
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+
+							</tr>
+
+
+
+
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="4">
+									<input type="hidden" name="contentsSeqs" value="4201">
+									<input type="hidden" name="titles" value="화장품 책임판매관리자 교육">
+								</td>
+								<td class="ac">4201</td>
+								<td class="al" id="title4201">화장품 책임판매관리자 교육</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-06-09</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="5">
+									<input type="hidden" name="contentsSeqs" value="4198">
+									<input type="hidden" name="titles" value="02 화장품법 시행령, 시행규칙, 해설(개발서버 테스트용)">
+								</td>
+								<td class="ac">4198</td>
+								<td class="al" id="title4198">02 화장품법 시행령, 시행규칙, 해설(개발서버 테스트용)</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-06-05</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="6">
+									<input type="hidden" name="contentsSeqs" value="4197">
+									<input type="hidden" name="titles" value="01 화장품법 시행령, 시행규칙, 해설(개발서버 테스트용)">
+								</td>
+								<td class="ac">4197</td>
+								<td class="al" id="title4197">01 화장품법 시행령, 시행규칙, 해설(개발서버 테스트용)</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-06-05</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="8">
+									<input type="hidden" name="contentsSeqs" value="4194">
+									<input type="hidden" name="titles" value="화장품 개요">
+								</td>
+								<td class="ac">4194</td>
+								<td class="al" id="title4194">화장품 개요</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-06-04</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="9">
+									<input type="hidden" name="contentsSeqs" value="4193">
+									<input type="hidden" name="titles" value="화장품 요약 강의">
+								</td>
+								<td class="ac">4193</td>
+								<td class="al" id="title4193">화장품 요약 강의</td>
+								<td class="ac">prof</td>
+								<td class="ac">2020-05-27</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="10">
+									<input type="hidden" name="contentsSeqs" value="4192">
+									<input type="hidden" name="titles" value="화장품 심화 강의">
+								</td>
+								<td class="ac">4192</td>
+								<td class="al" id="title4192">화장품 심화 강의</td>
+								<td class="ac">prof</td>
+								<td class="ac">2020-05-27</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="11">
+									<input type="hidden" name="contentsSeqs" value="4191">
+									<input type="hidden" name="titles" value="Dash9">
+								</td>
+								<td class="ac">4191</td>
+								<td class="al" id="title4191">Dash9</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-05-26</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="12">
+									<input type="hidden" name="contentsSeqs" value="4190">
+									<input type="hidden" name="titles" value="화장품 기초 강의">
+								</td>
+								<td class="ac">4190</td>
+								<td class="al" id="title4190">화장품 기초 강의</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-05-23</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="13">
+									<input type="hidden" name="contentsSeqs" value="4189">
+									<input type="hidden" name="titles" value="담당강사prof">
+								</td>
+								<td class="ac">4189</td>
+								<td class="al" id="title4189">담당강사prof</td>
+								<td class="ac">prof</td>
+								<td class="ac">2020-05-12</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="14">
+									<input type="hidden" name="contentsSeqs" value="4188">
+									<input type="hidden" name="titles" value="[법정보수과정] 화장품 책임판매관리자 교육2">
+								</td>
+								<td class="ac">4188</td>
+								<td class="al" id="title4188">[법정보수과정] 화장품 책임판매관리자 교육2</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-05-12</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="15">
+									<input type="hidden" name="contentsSeqs" value="4187">
+									<input type="hidden" name="titles" value="[법정보수과정] 화장품 책임판매관리자 교육1">
+								</td>
+								<td class="ac">4187</td>
+								<td class="al" id="title4187">[법정보수과정] 화장품 책임판매관리자 교육1</td>
+								<td class="ac">운영자</td>
+								<td class="ac">2020-05-12</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="16">
+									<input type="hidden" name="contentsSeqs" value="4186">
+									<input type="hidden" name="titles" value="화장품 책임판매관리자 교육">
+								</td>
+								<td class="ac">4186</td>
+								<td class="al" id="title4186">화장품 책임판매관리자 교육</td>
+								<td class="ac">홍길동</td>
+								<td class="ac">2020-02-04</td>
+							</tr>
+						</tbody>
+					</table>
+					<span class="arrow"></span>
+				</div>
+				<div class="paginate">
+					<div class="inner">
+						<a href="#" class="img start"><img src="../../images/www/common/pagi_start.gif" alt="처음"></a>
+						<a href="#" class="img prev"><img src="../../images/www/common/pagi_prev.gif" alt="이전"></a>
+						<span class="on">1</span>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#" class="img next"><img src="../../images/www/common/pagi_next.gif" alt="다음"></a>
+						<a href="#" class="img end"><img src="../../images/www/common/pagi_end.gif" alt="마지막"></a>
+					</div>
+				</div>
+				<div class="b_box">
+					<a href="#" class="c_btn gray lg">취소</a>
+				</div>
+				<!-- //컨텐츠 -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

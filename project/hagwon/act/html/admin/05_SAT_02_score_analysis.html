@@ -1,0 +1,885 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>active 4C</title>
+<link rel="stylesheet" href="../../css/adm/base.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/adm/layout.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/adm/content.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/adm/common.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/adm/style.css" type="text/css"/>
+<!-- kendoui -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<!-- //kendoui -->
+<link rel="stylesheet" href="../../css/adm/kendoui-custom.css" type="text/css"/>
+<!-- kendoui -->
+<script src="../../../js/3rdparty/kendoui/js/jquery.min.js"></script>
+<script src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<!-- //kendoui -->
+<!-- chart.js -->
+<script type="text/javascript" src="../../js/www/Chart.min.js"></script>
+<!-- //chart.js -->
+<script type="text/javascript" src="../../js/adm/design.js"></script>
+<script>
+jQuery(function($){
+	// $('.x .c_btn').click(function(e){
+	// 	e.preventDefault();
+	// 	window.close();
+	// });
+
+	//그래프 00 Tendency
+	var ct_00 = document.getElementById("ct_00");
+	var language_skills = new Chart(ct_00, {
+		type: 'line',
+		data: {
+			xLabels: ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+			yLabels: ['100', '90', '80', '70', '60', '50', '40', '30', '20', '10'],
+			datasets: [{
+				label: 'Tendency',
+				borderColor: "#00aae5",
+				backgroundColor: "#00aae5",
+				fill: false,
+				data: ['', '', '', '', '', '', '30', '', '', '']
+			}]
+		},
+		options: {
+			scales: {
+				xAxes: [{
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'R.S'
+					}
+				}],
+				yAxes: [{
+					type: 'category',
+					position: 'left',
+					display: true,
+					scaleLabel: {
+						display: true,
+						labelString: 'Q.S'
+					}
+				}]
+			},
+			tooltips: {
+				enabled: false
+			},
+			legend: {
+				display: false
+			}
+		}
+		//options: options
+	});
+
+	//그래프 1 LANGUAGE SKILLS
+	var ct_01 = document.getElementById("ct_01");
+	var language_skills = new Chart(ct_01, {
+		type: 'bar',
+		data: {
+			labels: ["EXP", "IMP", "MEC", "LOG"],
+			datasets: [{
+				label: 'Today',
+				borderColor: "#00aae5",
+				backgroundColor: "#00aae5",
+				data: [80, 50, 30, 30]
+				}, {
+				label: 'AVG',
+				borderColor: "#f47159",
+				backgroundColor: "#f47159",
+				data: [70, 60, 25, 55]
+			}]
+		}
+		//options: options
+	});
+
+	//그래프 2  Based on Recent 10 Exams
+	var ct_02 = document.getElementById("ct_02");
+	var exams = new Chart(ct_02, {
+		type: 'bar',
+		data: {
+			labels: ["Test1", "Test2", "Test3", "Test4", "Test5", "Test6", "Test7", "Test8", "Test9", "Test10"],
+			datasets: [{
+				label: 'Reading',
+				borderColor: "#2aae89",
+				backgroundColor: "#2aae89",
+				data: [180, 250, 210, 220, 250, 240, 220, 280, 390, 400]
+				}, {
+				label: 'Writing',
+				borderColor: "#f39323",
+				backgroundColor: "#f39323",
+				data: [160, 180, 210, 200, 250, 270, 260, 300, 350, 400]
+				}, {
+				label: 'Math',
+				borderColor: "#00aae5",
+				backgroundColor: "#00aae5",
+				data: [400, 500, 440, 620, 610, 580, 640, 740, 750, 800]
+				}, {
+				type: 'line',
+				label: 'Total',
+				borderColor: "#f8d731",
+				backgroundColor: "#f8d731",
+				fill: false,
+				data: [740, 930, 860, 1040, 1110, 1090, 1120, 1320, 1490, 1600],
+			}]
+		}
+		//options: options
+	});
+});
+</script>
+</head>
+<body class="p_frm">
+<!-- 프레임 -->
+<div class="page_frame wd st"><!-- fwd 없는 레이아웃은 클래스 .st -->
+	<div class="frm_top">
+		<div class="head">
+			<div class="con">
+				<p class="title">SAT Score Report</p>
+			</div>
+		</div>
+		<div class="x">
+			<!-- <a href="05_SAT_03_full_report.html" class="c_btn blue">다음</a> -->
+		</div>
+	</div>
+	<div class="frm_ct">
+		<!-- 컨텐츠 -->
+		<div class="sat_report">
+			<table class="tbl_row col">
+				<caption>학생 정보</caption>
+				<colgroup>
+					<col width="12%">
+					<col>
+					<col width="12%">
+					<col>
+					<col width="12%">
+					<col>
+					<col width="20%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">Test Date</th>
+						<td></td>
+						<th scope="row">Test Number</th>
+						<td></td>
+						<th scope="row">ID</th>
+						<td>tester</td>
+						<td>Gil-Dong Hong</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<ul class="nav_tabs2 nojs">
+				<li><a href="05_SAT_01_personal_report.html">Personal Report</a></li>
+				<li class="on"><a href="05_SAT_02_score_analysis.html">Score Analysis</a></li>
+				<li><a href="05_SAT_03_full_report.html">Full Report</a></li>
+				<li><a href="05_SAT_04_passage_analysis.html">Cumulative Data</a></li>
+			</ul>
+			<div class="sc_box">
+				<p class="g_title">Reading Analysis</p>
+				<div class=" group w33">
+					<table class="tbl_rp">
+						<caption>Tendency</caption>
+						<thead>
+							<tr>
+								<th scope="col">Tendency</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="ct_00">
+										<canvas id="ct_00" style="width:100%;height:100%;"></canvas>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="group w33 sp">
+					<table class="tbl_rp">
+						<caption>Passage Strength</caption>
+						<colgroup>
+							<col width="40px">
+							<col >
+							<col width="20%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="3">Passage Strength</th>
+							</tr>
+							<tr class="sb">
+								<th scope="col">No.</th>
+								<th scope="col">Type of Passage</th>
+								<th scope="col">%</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Prose</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>Historical</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>Social Studies</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>Natural Science 1</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>Natural Science 2</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="group w33">
+					<table class="tbl_rp">
+						<caption>Question Analysis</caption>
+						<colgroup>
+							<col width="40%">
+							<col>
+							<col>
+							<col>
+							<col width="40px">
+							<col width="10%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col" colspan="6">Question Analysis</th>
+							</tr>
+							<tr class="sb">
+								<th scope="col">Question Type</th>
+								<th scope="col"># Cor</th>
+								<th scope="col"># of Q.</th>
+								<th scope="col">%</th>
+								<th scope="col" colspan="2">%</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Command of Evidence</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td rowspan="3" class="sb">E<br>X<br>P</td>
+								<td rowspan="3"></td>
+							</tr>
+							<tr>
+								<td>Direct Interpretation</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Vocab in Context</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Author's Purpose</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td rowspan="5" class="sb">I<br>M<br>P</td>
+								<td rowspan="5"></td>
+							</tr>
+							<tr>
+								<td>Big Picture</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Inference</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Rhetoric</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Synthesis</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<br>
+			<div class="sc_box">
+				<p class="g_title">Writing Analysis</p>
+				<table class="tbl_rp">
+					<caption>Question Analysis</caption>
+					<colgroup>
+						<col width="40%">
+						<col>
+						<col>
+						<col>
+						<col width="40px">
+						<col width="10%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="6">Question Analysis</th>
+						</tr>
+						<tr class="sb">
+							<th scope="col">Question Type</th>
+							<th scope="col"># Cor</th>
+							<th scope="col"># of Q.</th>
+							<th scope="col">%</th>
+							<th scope="col" colspan="2">%</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Grammar</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td rowspan="2" class="sb">M<br>E<br>C</td>
+							<td rowspan="2"></td>
+						</tr>
+						<tr>
+							<td>Sentence Coordination</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Synthesis</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td rowspan="3" class="sb">L<br>O<br>G<br>I<br>C</td>
+							<td rowspan="3"></td>
+						</tr>
+						<tr>
+							<td>Coherence and Logic</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Vocab in Context</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br>
+			<div class="sc_box">
+				<p class="g_title">Reading / Writing Analysis</p>
+				<table class="tbl_rp">
+					<caption>LANGUAGE SKILLS</caption>
+					<thead>
+						<tr>
+							<th>LANGUAGE SKILLS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="ct_01">
+									<canvas id="ct_01" style="width:100%;height:100%;"></canvas>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br>
+			<div class="sc_box">
+				<p class="g_title">Math Analysis</p>
+				<table class="tbl_rp">
+					<caption>Math Analysis</caption>
+					<colgroup>
+						<col width="40%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col" colspan="3">MATH 1</th>
+							<th scope="col" colspan="3">MATH 2</th>
+							<th scope="col" rowspan="2">Total<br>%</th>
+						</tr>
+						<tr>
+							<th scope="col">Heart of Algebra</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Linear equation in 1 variable	</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Linear equation in 2 variable	</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Linear equation in 3 variable	</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Systems of Linear Equation</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Systems of linear inequalities</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Interpreting linear models (Context & Graph)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">TOTAL</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tbl_rp">
+					<caption>Problem Solving & Data Analysis</caption>
+					<colgroup>
+						<col width="40%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col" colspan="3" rowspan="2"></th>
+							<th scope="col" colspan="3">MATH 2</th>
+							<th scope="col" rowspan="2">Total<br>%</th>
+						</tr>
+						<tr>
+							<th scope="col">Problem Solving & Data Analysis</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Ratios, Rates, Proportion</td>
+							<td colspan="3" rowspan="9" class="gray"></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Percentages</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Scatterplot: Linear, Quadratic, Exponential</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Interpreting Graph & Charts</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Linear VS Exponential Models</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>2-way tables and conditional probability</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Statistics: Center & Spread</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Inference About Population</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">TOTAL</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tbl_rp">
+					<caption>Advanced Math</caption>
+					<colgroup>
+						<col width="40%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col" colspan="3">MATH 1</th>
+							<th scope="col" colspan="3">MATH 2</th>
+							<th scope="col" rowspan="2">Total<br>%</th>
+						</tr>
+						<tr>
+							<th scope="col">Advanced Math</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Quadratic/Exponential Modeling</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Rational Exponents / Radical</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Algebraic Expression</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Solving Quadratic Equation</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Polynomial Expressions</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Rational/ Radical Equations</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>System of Nonlinear Equations Inequality</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Rational Expressions</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Solving Polynomial Equation</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Nonlinear models (Context & Graph)</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Functions</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Algebraic manipulation</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">TOTAL</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="tbl_rp">
+					<caption>Geometry & Trig</caption>
+					<colgroup>
+						<col width="40%">
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col" colspan="3">MATH 1</th>
+							<th scope="col" colspan="3">MATH 2</th>
+							<th scope="col" rowspan="2">Total<br>%</th>
+						</tr>
+						<tr>
+							<th scope="col">Geometry & Trig</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+							<th scope="col" class="sb"># Cor</th>
+							<th scope="col" class="sb"># of Q.</th>
+							<th scope="col" class="sb">%</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Volume</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Angles</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Triangles</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Circles</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Trigonometry</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Complex Numbers</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th scope="row">TOTAL</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br>
+			<p class="g_title">Based on Recent 10 Exams</p>
+			<div class="ct_box ct_02">
+				<canvas id="ct_02" style="width:100%;height:100%;"></canvas>
+			</div>
+		</div>
+		<!-- //컨텐츠 -->
+	</div>
+</div>
+<!-- //프레임 -->
+</body>
+</html>

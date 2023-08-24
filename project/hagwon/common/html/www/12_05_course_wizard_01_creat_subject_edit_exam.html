@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>KORAIL 인재개발원</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+<script>
+jQuery(function($){
+	// kendo.culture("ko-KR");
+	// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+	// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+	// });
+
+	$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+
+	$("#editor_01").kendoEditor();
+	$("#editor_02").kendoEditor();
+
+	var todayDate = kendo.toString(kendo.parseDate(new Date()), 'yyyy-MM-dd');
+	$(".datepickerSub").kendoDatePicker().val(todayDate);
+
+});
+
+
+	//모바일 메뉴
+	$(function(){
+		$(".m_menu").click(function(){
+			if($(this).hasClass("app_x") == true){
+				$(".nav_bg").removeClass("on")
+				$(this).removeClass("app_x")
+				$(".course_nav").removeClass("on")
+			}else{
+				$(".nav_bg").addClass("on")
+				$(this).addClass("app_x")
+				$(".course_nav").addClass("on")
+			}
+		});
+	});
+
+	// 과정 접기
+	$(function(){
+		$(".course_nav .fold").click(function(){
+			$(this).parent().parent().parent().find(".con").slideToggle();
+		});
+	});
+
+	$(function(){
+		$(".tit_btn").click(function(){
+			$(".add").show()
+		});
+	});
+
+	//학습자료 유형 선택
+	$(function(){
+	  $(".ln_sel input").click(function(){
+		 $(".ln_tb tbody").hide()
+		 if($(this).attr("id") == "learn01"){
+			$(".learn_file").show()
+		 }else if($(this).attr("id") == "learn02"){
+			$(".learn_url").show()
+		 }
+	  });
+	});
+
+	// 콘텐츠 유형 선택
+	$(function(){
+		$(".type_con li").click(function(){
+			$(".type_con li").removeClass("on")
+			$(this).addClass("on")
+		});
+	})
+
+	// 콘텐츠 유형 선택 확인
+	function typeConfirm(){
+		if($(".type_con li.on").length == 0){
+				alert("콘텐츠 유형을 선택하세요");
+			}else{
+				$(".type_sel").fadeOut();
+		}
+	}
+	// 콘텐츠 유형 선택 취소
+	function typeCancel(){
+		location.href='12_05_course_wizard_01_main.html'
+	}
+
+	
+	// 성적공개여부 버튼
+	function onBtn(){
+		if(!$(".c_btn").hasClass("on")){
+			$(".c_btn").addClass("on")
+		}else{
+			$(".c_btn").removeClass("on")
+
+		}
+	}
+		
+	$(function(){
+		$("select[name=limitStandardCd]").change(function(){
+			if($(this).val() == "Y"){
+				$("#limitArea").show()
+			}else{
+				$("#limitArea").hide()
+			}
+		})
+	});
+</script>
+</head>
+<body class="cl_room_02">
+<div id="skip">
+	<a href="#lnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="courseHeader">
+	<div class="wizard_top">
+		<h1>철도 안전사고 예방</h1>
+		<div class="btn_box">
+			<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+		</div>
+		<ul class="top_box">
+			<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+			<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+			<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+		</ul>
+		<i class="icc hamburger m_menu"></i>
+	</div>
+	<div class="top_menu menu">
+		<ul>
+			<li><a href="12_05_course_wizard_01_main.html">기본정보</a></li>
+			<li><a href="12_05_course_wizard_02_setting.html">추가정보</a></li>
+			<li class="on"><a href="12_05_course_wizard_06_index.html">목차</a></li>
+			<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>	
+			<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+		</ul>
+	</div>
+</div>
+	<!-- //모바일 메뉴 -->
+	<div class="course_wrap cr">
+		<div class="course_ar">
+			<!-- 왼쪽영역 -->
+			<div class="course_nav" data-include-path="inc/left.html"></div>
+			<div class="nav_bg"></div>
+			<!--// 왼쪽영역 -->
+
+			 <!-- 오른쪽 -->
+			<div class="course_con">
+				<div class="cr_box">
+				<div class="title">
+					<h3 class="icc drag_indicator">시험 차시정보 및 수정</h3>
+					<div class="tit_btn">
+					  <a class="btn" href="javascript:void(0)">저장</a>
+					</div>
+				</div>
+
+
+				<div class="tbl_row">
+					<!-- <div class="col_g">
+						<h5>제목</h5>
+						<div class="input">
+							<input type="text" name="activeElementTitle" value="" style="width:100%" maxlength="200">
+						</div>
+					</div> -->
+					<div class="col_g">
+						<h5>시험제목</h5>
+						<div class="input" style="display:inline-block; width:calc(100% - 202px);">
+							<input type="text" name="activeElementTitle" value="" style="width:100%" maxlength="200">
+						</div>
+						<a href="javascript:void(0)" onclick="openPopup();" class="btn  lg">불러오기</a>
+						<a href="08_classroom_04_exam_02_view.html" target="_blank" class="btn bk lg">미리보기</a>
+					</div>
+
+					<div class="col_g">
+						<h5>시험기간</h5>
+						<input type="text" class="datepickerSub"> ~
+						<input type="text" class="datepickerSub">
+					</div>
+					<div class="sq_box">
+						<dl class="tbl marker first">
+							<dt>
+								<button type="button" class="c_btn no" onclick="onBtn()"><span class="icc done"></span>성적공개여부</button>
+								<input type="hidden" name="openYn" value="N">
+							</dt>
+							<dd>
+								해당 성적 결과를 학생들에게 공개합니다.</dd>
+						</dl>		
+						<dl class="tbl">
+							<dt>제한기준</dt>
+							<dd>
+								<select name="limitStandardCd" class="combo">
+									<option value="N">제한없음</option>
+									<option value="Y">제한있음</option>
+								</select>
+								<span id="limitArea" style="display:none;">진도율&nbsp;
+								   <select name="limitProgress">
+									<option value="">선택</option>
+									<option value="20">20%</option>
+									<option value="30">30%</option>
+									<option value="40">40%</option>
+									<option value="50">50%</option>
+									<option value="60">60%</option>
+									<option value="70">70%</option>
+									<option value="80" selected="selected">80%</option></select>&nbsp; 이상
+								</span>
+							</dd>
+						</dl>	
+						<dl class="tbl" style="display: none;">
+							<dt>재응시 기준점수</dt>
+							<dd>
+								<select name="retakeScore">
+										<option value="0" selected="selected">0점</option><option value="50">50점</option><option value="60">60점</option><option value="70">70점</option><option value="80">80점</option><option value="90">90점</option></select>
+							</dd>
+						</dl>	
+						<dl class="tbl" style="display: none;">
+							<dt>재응시 가능횟수</dt>
+							<dd>
+								<select name="retakeCount">
+										<option value="0">없음</option><option value="1">1회</option><option value="2">2회</option><option value="3">3회</option><option value="4">4회</option><option value="5">5회</option><option value="9999" selected="selected">9999회</option></select>
+							</dd>
+						</dl>
+						<dl class="tbl" style="display: none;">
+							<dt>응시시간</dt>
+							<dd>
+								<div class="timer">
+									<select name="examTime">
+										<option value="">선택</option>
+										<option value="10">10분</option><option value="20">20분</option><option value="30">30분</option><option value="40">40분</option><option value="50">50분</option><option value="60" selected="selected">60분</option><option value="70">70분</option><option value="80">80분</option><option value="90">90분</option></select>
+									설정한 제한 시간이 지나면 시험이 자동으로 종료됩니다.</div>
+							</dd>
+						</dl>
+					</div>
+					<!-- <div class="col_g">
+						<h5>학습자료</h5>
+						<ul class="ln_sel">
+							<li>
+							  <input type="radio" name="learn" id="learn01" value="" checked="checked" class="f-radio">
+							  <label for="learn01">파일첨부</label>
+							</li>
+							<li>
+							  <input type="radio" name="learn" id="learn02" value="" class="f-radio">
+							  <label for="learn02">URL</label>
+							</li>
+						</ul>
+						<table class="ln_tb">
+							<caption>학습자료 형식</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="*">
+							</colgroup>
+							<tbody class="learn_file" style="display: table-row-group;">
+								<tr>
+									<th>파일첨부</th>
+									<td>
+										<div style="background-color: #eee;">
+											<div class="k-widget k-upload k-header k-upload-empty">
+												<div class="k-dropzone">
+													<div class="k-button k-upload-button"><input type="file" name="FileData" id="uploader" data-role="upload" autocomplete="off"><span>파일선택</span></div><em>업로드할 파일을 여기에 놓으십시오</em>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+							<tbody class="learn_url">
+								<tr>
+									<th>URL</th>
+									<td>
+										<div class="input">
+											<input type="text" name="url" value="" style="width:100%" maxlength="200">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div> -->
+				</div>
+				<div class="b_box">
+					<a class="btn lg" href="javascript:void(0)">저장</a>
+				</div>
+			</div>
+      </div>
+	<!-- //오른쪽 -->
+  </div>
+</div>
+<div class="c_dialog course" id="c_pop_03" style="display: none; height: 870px;">
+	<div class="mask"></div>
+	<div class="outer" style="width:640px;">
+		<!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+		<div class="top">
+			<p class="title" id="p_popup_title">시험지</p>
+			<a href="#" class="p_close">닫기</a>
+		</div>
+		<div class="ct" id="c_popup_03_content">
+
+			<div class="bd_box naw">
+				<div class="input ar">
+					<input type="text" name="srchExamPaperTitle" value=""
+						onkeyup="UT.callFunctionByEnter(event, AJAX.doSearch);"> <a href="javascript:AJAX.doSearch()"
+						class="c_btn blue">검색</a>
+				</div>
+			</div>
+			<table class="tbl_col">
+				<caption>학습자 유형</caption>
+				<colgroup>
+					<col>
+					<col width="15%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">시험지제목</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="al" id="id185">종합평가</td>
+						<td><a href="#" class="c_btn blue sm">선택</a></td>
+					</tr>
+					<tr>
+						<td class="al" id="id182">종합평가</td>
+						<td><a href="#" class="c_btn blue sm">선택</a></td>
+					</tr>
+
+				</tbody>
+			</table>
+
+			<div class="paginate">
+				<div class="inner">
+					<a class="img start"><img src="../../images/www/common/pagi_start.gif"></a>
+					<a class="img prev"><img src="../../images/www/common/pagi_prev.gif"></a>
+					<span class="on">1</span>
+					<a class="img next"> <img src="../../images/www/common/pagi_next.gif"></a>
+					<a class="img end"><img src="../../images/www/common/pagi_end.gif"></a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>RTSEDU LMS</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/GmarketSans.css" />
+<link rel="stylesheet" type="text/css" href="../../font/Roboto.css" />
+<link rel="stylesheet" type="text/css" href="../../font/NotoSerifLao.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="../../js/jquery/jquery-ui.min.css" type="text/css"/>
+<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+<!-- kendo -->
+<!-- <link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script> -->
+<!-- //kendo -->
+<!-- chart.js -->
+<script type="text/javascript" src="../../js/www/Chart.min.js"></script>
+<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+<!-- //chart.js -->
+<script>
+jQuery(function($){
+	// 계산기 샘플 코딩
+	var elt = document.getElementById('cct');
+  	var calculator = Desmos.GraphingCalculator(elt);
+	calculator.setExpression({ id: 'graph1', latex: 'y=x^2' });
+	
+	//타이머 샘플 코딩
+	var min = 30 //분
+	var sec = 46 //초
+	var timer = setInterval(function () {
+		$(".sec").html(sec)
+		$(".min").html(min)
+		console.log(sec)
+		console.log(min)
+		if (min == 0 && sec == 0) {
+			clearInterval(timer);
+			alert("0")
+		} else {
+			sec--;
+			if (sec < 10) {
+				$(".sec").html('0' + sec);
+			}
+		}
+		if(sec == 0){
+			min--;
+			sec = 59;
+		}
+		if(min < 10){
+    		$(".min").html('0' + min);
+   		}
+	
+	}, 1000); 
+});
+	
+</script>
+</head>
+<body>
+<div class="sat_top">
+	<div class="title">
+		<h2>Section 1, Module 1:Reading and Writing</h2>
+		<a href="#" class="b_dir on">Directions</a>
+	</div>
+	<div class="time">
+		<span class="val">
+			<em class="min">00</em>
+			<em class="at">:</em>
+			<em class="sec">00</em>
+		</span>
+		<a href="javascript:void(0)" class="b_hide c_btn line sm">Hide</a>
+	</div>
+	<div class="b_box">
+		<a href="#" class="b_cal icc edit" onclick="onView('calculator')">Calculator</a>
+		<a href="#" class="b_reference icc edit" onclick="onView('reference')">Reference</a>
+		<a href="#" class="b_more">More</a>
+	</div>
+</div>
+<div class="sat_con">
+	<div class="section sec_01">
+		<a href="#" class="b_size right"></a>
+		<div class="sc">
+			<h4 class="m_title">Student-produced response directions</h4>
+			<ul class="li_01">
+				<li>If yopu find <em>more than one correct answer</em>, enter only one answer.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="section sec_02">
+		<a href="#" class="b_size left"></a>
+		<div class="sc">
+			<div class="top">
+				<div class="num">1</div>
+				<a href="#" class="b_mark">Mark for Review</a>
+				<a href="#" class="b_check">check</a>
+			</div>
+			<div class="title">
+				<p class="txt">the y-intercept of the graph of y=-6x -32 in the xy-plane is(0,y).
+					<br>What is the value of y?
+				</p>
+				<div class="input_box">
+					<input type="text" class="an_input" title="answer">
+				</div>
+			</div>
+			<div class="preview">
+				<span class="title">Answer Preview :</span>
+				<input class="an_pr" title="preview Answer" value="">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sat_bot">
+	<div class="name">Kyu Choi</div>
+	<div class="answer">
+		<a href="#" class="b_asw">Question 1 of 8</a>
+		<div class="sheet">
+			<div class="top">
+				<div class="title">
+					<h4>Section 1 : Reading and Writing Questions</h4>
+					<p class="p_close">x</p>
+				</div>
+				<div class="icon_exam">
+					<span class="cur">Current</span>
+					<span class="una">Unanswered</span>
+					<span class="for">For Review</span>
+				</div>
+			</div>
+			<ul class="pr_li">
+				<li class="on mark">1</li>
+				<li class="mark">2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+			</ul>
+			<div class="b_box">
+				<a href="#" class="c_btn blue_l line md">Go to Review Page</a>
+			</div>
+		</div>
+	</div>
+	<div class="b_box">
+		<a href="#" class="c_btn">Next</a>
+	</div>
+</div>
+<div class="dir" style="display: none;">
+	<div class="con">
+		<p>The questions in this section address a number of important reading and writing skills. Each question includes one or more passages, which may include a table or graph. Read each passage and question carefully, and then choose the best answer to the question based on the passage(s).</p>
+		<div class="b_box"><a href="#" class="c_btn dir_close">Close</a></div>
+	</div>
+</div>
+<div class="highlight">
+	<div class="top">
+		<div class="title">
+			<h3>New Annotation:</h3>
+			<p id="seltxt"></p>
+		</div>
+		<p class="p_close"></p>
+	</div>
+	<div class="con">
+		<div class="ibox">
+			<div class="i_high"><span>Highlight Color:</span></div>
+			<div class="i_under"><span>Underline style:</span></div>
+		</div>
+		<textarea></textarea>
+		<div class="b_box">
+			<a href="#" class="c_btn md">Save</a>
+			<a href="#" class="c_btn md line blue_l">Cancel</a>
+		</div>
+	</div>
+	
+</div>
+
+<div id="reference" class="c_dialog drgg" style="display:none;">
+	<div class="mask bk"></div>
+	<div class="outer">
+		<div class="top">
+			<div class="group">
+				<p class="title">Reference Sheet</p>
+				<a href="#" class="b_drag"></a>
+				<a href="#" class="b_winsize collapse">Collapse</a>
+			</div>
+			<a href="#" class="p_close">x</a>
+		</div>
+		<div class="ct">
+			<!-- 콘텐츠 -->
+			<div class="img_box">
+				<img src="../../images/www/temp/math_02.png">
+			</div>
+			<div class="txt">
+				<p>The number of degrees of arc in a circle is 360.</p>
+				<p>The number of degrees of arc in a circle is 2π.</p>
+				<p>The sum of the measures in degrees of the angles of a triangle is 180</p>
+			</div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+
+<div id="calculator" class="c_dialog drgg exp" style="display:none;">
+	<div class="mask bk"></div>
+	<div class="outer">
+		<div class="top">
+			<div class="group">
+				<p class="title">Calculator</p>
+				<a href="#" class="b_drag"></a>
+				<a href="#" class="b_winsize expend">Expend</a>
+			</div>
+			<a href="#" class="p_close">x</a>
+		</div>
+		<div class="ct">
+			<!-- 콘텐츠 -->
+			<div id="cct"></div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

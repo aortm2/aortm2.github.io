@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<meta name="keywords" content="국립국어원 - 점자 종합정보 누리집">
+<meta name="description" content="국립국어원에서 제공하는 온라인/오프라인 교육 프로그램을 통하여 국악을 대중 속으로 보급하는 명실상부한 최고의 온라인 국악교육 사이트 입니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국립국어원 - 점자 종합정보 누리집">
+<meta property="og:description" content="여러분 삶 속에 국악을 전합니다. 교육 프로그램 체험 및 과정 수강을 통하여 다양한 국악을 즐겨보세요.">
+<meta property="og:image" content="http://gugak.4csoft.com/static/common/images/www/common/logo.png">
+<meta property="og:url" content="http://gugak.4csoft.com">
+<title>국립국어원 - 점자 종합정보 누리집</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/notosanskr.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+<script type="text/javascript" src="../../js/www/template.js"></script>
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+<script>
+jQuery(function($){
+	// kendo.culture("ko-KR");
+	// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+	// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+	// });
+	var isMobile = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+	if(!isMobile) { //PC
+		//진도율, 총점
+		$('#pg_my').circleProgress({
+			size: 60,
+			emptyFill: '#e7e7e8', //bg, transparent
+			thickness: 8, //size
+			startAngle: -Math.PI / 2, //start point
+			lineCap: 'round',
+			value: 0.5,
+			fill: {color: '#fed388'}
+		});
+		$('#task_my').circleProgress({
+			size: 60,
+			emptyFill: '#e7e7e8', //bg, transparent
+			thickness: 8, //size
+			startAngle: -Math.PI / 2, //start point
+			lineCap: 'round',
+			value: 1,
+			fill: {color: '#fed388'}
+		});
+		$('#test_my').circleProgress({
+			size: 60,
+			emptyFill: '#e7e7e8', //bg, transparent
+			thickness: 8, //size
+			startAngle: -Math.PI / 2, //start point
+			lineCap: 'round',
+			value: 0.7,
+			fill: {color: '#fed388'}
+		});
+	}
+});
+</script>
+</head>
+<body class="cl_room_02">
+	<div id="skip">
+		<a href="#lnb">주메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+		<div class="course_top">
+			<h1><img src="../../images/www/common/logo.png" alt="이패스코리아"></h1>
+			<i class="icc hamburger m_menu"></i>
+			<!--0902 버튼추가 -->
+			<div class="btn_box">
+				<a href="javascript:void(0)" class="i_tp notice"><span>3</span>공지</a>
+				<a href="javascript:void(0)" class="i_tp qna">Q&A</a>
+				<a href="javascript:void(0)" class="i_tp data"><span>1</span>자료실</a>
+				<a href="javascript:void(0)" onClick="window.close()"><i class="icc close">닫기</i></a>
+			</div>
+			<!-- 0902 // 버튼추가-->
+		</div>
+		<div class="course_wrap">
+			<div class="course_ar">
+				<!-- 왼쪽영역 -->
+				<div class="course_nav">
+					<div class="gauge">
+							<div class="period">
+								<div class="inner">
+									<span class="lab">수강기간</span>
+									<span class="val">2021-07-01 ~ 2021-07-31</span>
+								</div>
+							</div>
+							<div class="group">
+								<p class="title">진도율</p>
+								<div class="chart">
+									<div class="my" id="pg_my"></div>
+									<div class="result">50</div>
+								</div>
+							</div>
+							<div class="group">
+								<p class="title">과제점수</p>
+								<div class="chart">
+									<div class="my" id="task_my"></div>
+									<div class="result">100</div>
+								</div>
+							</div>
+							<div class="group">
+								<p class="title">시험점수</p>
+								<div class="chart">
+									<div class="my" id="test_my"></div>
+									<div class="result">70</div>
+								</div>
+							</div>
+							<div class="group">
+								<p class="title">설문</p>
+								<div class="circle done">
+									<div class="result">완료</div>
+								</div>
+							</div>
+							<!-- <div class="group">
+								<p class="title">설문</p>
+								<div class="circle">
+									<div class="result">미완료</div>
+								</div>
+							</div> -->
+						</div>
+	
+					<div class="search_box">
+						<div class="btn_search">과목검색<i class="icc arrow_drop_down"></i></div>
+						<div class="seach_idx">
+						  <div class="search_input">
+							  <input type="type" class="searchText" title="과목검색"/>
+							  <i class="icc search"></i>
+						  </div>
+							<ul>
+								<li>
+									<h5>1단원 : 철도안전 예방 및 사고처리</h5>
+									<div class="seach_li">
+										<a href="javascript:void(0)">1. 예방 및 사고처리 지침</a>
+									</div>
+	
+									<div class="seach_li">
+										<a href="javascript:void(0)">2. 수익형 블로그 만들기</a>
+									</div>
+								</li>
+	
+								<li>
+									<h5>2단원 : 인사관리의 정의와 내용</h5>
+									<div class="seach_li">
+										<a href="javascript:void(0)">2.철도안전법</a>
+									</div>
+								</li>
+							</ul>
+							<span class="none">
+								검색결과가 없습니다.
+							</span>
+						</div>
+					</div>
+	
+					<ul class="index">
+						<li>
+							<div class="title">
+								<h5><span>01</span>철도안전 예방 및 사고처리</h5>
+							</div>
+							<div class="idx_ul">
+								<!-- 현재 선택 강의 클래스 추가 n_on -->
+								<div class="idx_li">
+									<!--0902 집합교육 클레스 추가 gr_edu -->
+									<div class="idx_title gr_edu">
+									  <span class="num">01</span>
+									  <a href="07_classroom_01_online_01_main_02_set.html" class="sub_title">
+											예방 및 사고처리 지침
+										</a>
+										<span class="cs_type icc d_green group">집합</span>
+									</div>
+									<!--0902 출결 추가 공통클래스:status, 출석:atten, 지각:tardy, 결석:absent -->
+									<!-- <div class="status atten">
+										<span>출석</span>
+									</div> -->
+								</div>
+	
+								<div class="idx_li">
+									<div class="idx_title gr_edu">
+									  <span class="num">02</span>
+									  <a href="07_classroom_01_online_01_main_02_set.html" class="sub_title">
+											예방 및 사고처리 지침
+										</a>
+										<span class="cs_type d_green icc group">집합</span>
+									</div>
+									<!-- <div class="status tardy">
+										<span>지각</span>
+									</div> -->
+								</div>
+	
+								<div class="idx_li">
+									<div class="idx_title gr_edu">
+									  <span class="num">03</span>
+									  <a href="07_classroom_01_online_01_main_02_set.html" class="sub_title">
+											예방 및 사고처리 지침
+										</a>
+										<span class="cs_type d_green icc group">집합</span>
+									</div>
+									<!-- <div class="status absent">
+									  <span>결석</span>
+									</div> -->
+								</div>
+
+								<div class="idx_li">
+									<div class="idx_title gr_edu">
+									  <span class="num">04</span>
+									  <a href="07_classroom_01_online_01_main_02.html" class="sub_title">
+											예방 및 사고처리 지침
+										</a>
+										<span class="cs_type bk icc portrait">실시간</span>
+									</div>
+									<!-- <div class="status absent">
+									  <span>결석</span>
+									</div> -->
+								</div>
+	
+								<div class="idx_li n_on">
+									<div class="idx_title gr_edu">
+									<span class="num">05</span>
+									  <a href="07_classroom_01_online_01_main_02_online.html" class="sub_title">철도안전법</a>
+										<span class="cs_type icc tv">온라인</span>
+										<div class="btn_box">
+										  
+											<div class="pro_box">
+												<div class="progress">
+													<div class="pro_bar" style="width:60%;"></div>
+												</div>
+												<span class="count">60</span>
+											</div>
+										  <a href="javascript:void(0)" class="btn_detail"></a>
+										</div>
+									</div>
+									<div class="li_detail">
+										<dl class="after">
+											<dt>최근학습일시</dt>
+											<dd>2021-07-21 15:45:33</dd>
+										</dl>
+										<dl>
+											<dt>누적학습시간</dt>
+											<dd>01:08:07</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</li>
+	
+						<li>
+							<div class="title">
+								<h5><span>02</span> 인사관리의 정의와 내용</h5>
+							</div>
+							<div class="idx_ul">
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="nav_bg"></div>
+				<!--// 왼쪽영역 -->
+	
+				 <!-- 영상 -->
+				<div class="course_con">
+					<!-- <div class="panel">
+						<div class="p_bar">
+							<div class="total">
+								<a href="#total" class="c_btn bk lg mr">내역상세보기</a>
+								<span class="score">총점[환산점수] : <span class="num">82점</span></span>
+							</div>
+							<div class="btn">
+								<a href="javascript:void(0)" class="c_btn blue lg play"><i class="icc play_circle_outline"></i>이어보기</a>
+							</div>
+						</div>
+	
+					</div> -->
+					<div class="vid_ar">
+						<div class="vid_top">
+							<!-- 닫기버튼 수정 0906 -->
+							<!-- <i class="icc close" onclick="frmClose()"></i> -->
+							<i class="icc fullscreen" onclick="vidFull()"></i>
+							
+							<!-- 0913 과목별 유형 변경 공통클래스: icc, 실시간: portrait 집합: group, 온라인: tv-->
+							<h3><span class="cs_type icc tv">온라인</span>예방 및 사고처리 지침</h3>
+						</div>
+						
+						<div class="vid_box">
+							 
+							<div class="viewer">
+								<!-- <iframe width="560" height="315" src="07_classroom_04_player.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+								<video controls="">
+									<source src="../../data/me01_02.mp4" type="video/ogg">
+							   </video>
+							</div>
+							
+						</div>
+						<!-- 집합교육 유형 추가 0903-->
+						<!-- <div class="frm_ct">
+							<div class="bd_box">
+								<p class="lab">교시명</p>
+								<div class="input">
+									<input type="text" name="activeElementTitle" value="마케팅 실전 [실시간 화상강의]" style="width:100%" maxlength="100" readonly>
+								</div>
+							</div>
+							<div class="bd_box">
+								<p class="lab">교시기간</p>
+								<div class="input">
+									<div id="date-range">
+										<input type="text" readonly name="startDtime" class="datetimepicker" id="date-range1" value="2021-07-01 00:00">
+										~
+										<input type="text" readonly name="endDtime" class="datetimepicker" id="date-range2" value="2021-12-31 23:59">
+									</div>
+								</div>
+							</div>
+							<div class="bd_box" id="memobox">
+								<p class="lab">메모</p>
+								<textarea name="realtimeMemo" readonly>줌 화상강의 안내 입니다.아래의 안내에 따라 입장해 주시기 바랍니다.
+	코드 : 1234
+								</textarea>
+							</div>
+							<div class="btn_box">
+							  <a href="javascript:void(0);" onclick="MAIN.doStudy('Y');" class="c_btn blue">실시간 화상 강의 입장</a>
+							</div>
+						</div> -->
+						<!-- // 집합교육 유형 추가 0903-->
+					</div>
+					<div class="cd_cont">
+						<ul class="nav_tabs3">
+							<li class="on"><a href="#cc_01">교육개요</a></li>
+							<!-- <li class="on"><a href="#cc_02">학습목차</a></li> -->
+							<li><a href="#cc_03">시험</a></li>
+							<li><a href="#cc_04">과제</a></li>
+							<li><a href="#cc_05">설문</a></li>
+						</ul>
+						<div class="cd_intro" id="cc_01" style="display: none;">
+							<div class="group">
+								<p class="c_title2">교육목표</p>
+								<div class="desc">
+									<p>철도운전면허 취득</p>
+								</div>
+							</div>
+							<div class="group">
+								<p class="c_title2">교육내용</p>
+								<div class="desc">
+									<p>
+										철도에 대해 이해하고, 철도의 안전수칙 및 작동원리를 습득하는데 목표가 있습니다.
+									</p>
+								</div>
+							</div>
+							<div class="group">
+								<p class="c_title2">과정정보</p>
+								<table width="100%" class="tbl_col3 averageList" cellspacing="0" cellpadding="0">
+									<caption class="hiddenTitle">과정정보</caption>
+									<colgroup>
+										<col width="20%">
+										<col>
+										<col width="20%">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">담당강사</th>
+											<td class="al">
+												김종희
+												<a href="javascript:void(0);" onclick="sendMsg('1000277');">
+													<img src="../../images/www/icon/icon_message.gif" alt="쪽지">
+												</a>
+											</td>
+											<th scope="row">담당운영자</th>
+											<td class="al">
+												백재욱
+												<a href="javascript:void(0);" onclick="sendMsg('888');">
+													<img src="../../images/www/icon/icon_message.gif" alt="쪽지">
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">E-mail</th>
+											<td class="al"><span class="">e9anada@epasskorea.com</span></td>
+											<th scope="row">전화</th>
+											<td class="al">02-2635-6705</td>
+										</tr>
+										<tr>
+											<th scope="row">팩스</th>
+											<td class="al">02-6345-6701</td>
+											<th scope="row"></th>
+											<td class="al"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="group">
+								<p class="c_title2">이수기준</p>
+								<div class="weditor">
+									<table class="tbl_col3">
+										<colgroup>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가항목</th>
+												<th scope="col">이수기준</th>
+												<th scope="col">반영기준(가중치)</th>
+											</tr>
+										</thead>
+										<tbody>
+	
+											<tr>
+												<td>진도율</td>
+												<td>0점 이상</td>
+												<td>50%</td>
+											</tr>
+											<tr>
+												<td>과제</td>
+												<td>0점 이상</td>
+												<td>25%</td>
+											</tr>
+											<tr>
+												<td>시험</td>
+												<td>0점 이상</td>
+												<td>25%</td>
+											</tr>
+											<tr>
+												<td class="bold">총점</td>
+												<td class="c_red">
+													60점 이상
+												</td>
+												<td class="bold">
+	
+													100%
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div id="cc_03" style="display: none;">
+							<table class="tbl_col">
+								<!-- 20201120 : 시험 테이블 컬럼 클래스 추가 -->
+								<colgroup>
+									<col class="ord">
+									<col>
+									<col class="task">
+									<col class="btns">
+								</colgroup>
+								<!-- //20201120 : 시험 테이블 컬럼 클래스 추가 -->
+								<thead>
+									<tr>
+										<th scope="col">No</th>
+										<th scope="col">시험명</th>
+										<th scope="col">시험점수</th>
+										<th scope="col">응시하기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td class="al">철도 안전수칙</td>
+										<td>-</td>
+										<td><a href="08_classroom_04_exam_02_view.html" target="_blank" class="c_btn red st">응시</a></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td class="al">직무사고예방</td>
+										<td><span class="c_red">70점</span></td>
+										<td><a href="javascript:void(0)" class="c_btn bk st">재시험</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="cc_04" style="display: none;">
+							<!-- <p class="e_box">과제가 없습니다.</p> -->
+							<table class="tbl_col">
+								<!-- 20201120 : 시험 테이블 컬럼 클래스 추가 -->
+								<colgroup>
+									<col>
+									<col style="width:12%">
+									<col style="width:12%">
+									<col style="width:12%">
+									<col style="width:12%">
+									<col style="width:12%">
+									<col style="width:12%">
+								</colgroup>
+								<!-- //20201120 : 시험 테이블 컬럼 클래스 추가 -->
+								<thead>
+									<tr>
+										<th scope="col">과제명 (제출기간)</th>
+										<th scope="col">응시가능 조건</th>
+										<th scope="col">점수</th>
+										<th scope="col">본인인증</th>
+										<th scope="col">제출답안확인</th>
+										<th scope="col">제출하기</th>
+										<th scope="col">채점결과</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="al">철도 안전수칙 (2021-02-20)</td>
+										<td>-</td>
+										<td>-</td>
+										<td><a href="javascript:void(0)" class="c_btn red st">인증</a></td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td class="al">직무사고예방 (2021-02-24)</td>
+										<td></td>
+										<td><span class="c_red">70점</span></td>
+										<td></td>
+										<td></td>
+										<td><a href="javascript:void(0)" class="c_btn bk st">제출</a></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="cc_05" style="display: none;">
+							<table class="tbl_col">
+								<!-- 20201120 : 설문 테이블 컬럼 클래스 추가 -->
+								<colgroup>
+									<col>
+									<col style="width:15%">
+									<col style="width:15%">
+								</colgroup>
+								<!-- //20201120 : 설문 테이블 컬럼 클래스 추가 -->
+								<thead>
+									<tr>
+										<th scope="col">설문 제목</th>
+										<th scope="col">설문가능 조건</th>
+										<th scope="col">참여하기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="al">과정 만족도 조사(1)</td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="al">교육 과정 설문조사</td>
+										<td>-</td>
+										<td><a href="02_mypage_01_stu_02_classroom_04_item_05_survey_01_list.html" target="_blank" class="c_btn bk st">참여하기</a></td>
+									</tr>
+									<tr>
+										<td class="al">교육 과정 설문조사</td>
+										<td>-</td>
+										<td><a href="02_mypage_01_stu_02_classroom_04_item_05_survey_01_list.html" target="_blank" class="c_btn bk st">참여하기</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+		  </div>
+		<!-- //영상 -->
+	  </div>
+	</div>
+	
+	
+</body>
+</html>

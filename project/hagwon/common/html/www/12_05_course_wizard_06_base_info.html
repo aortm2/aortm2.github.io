@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>KORAIL 인재개발원</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common_02.css" />
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+<script>
+jQuery(function($){
+	// kendo.culture("ko-KR");
+	// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+	// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+	// });
+
+	$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+});
+
+	//모바일 메뉴
+	$(function(){
+		$(".m_menu").click(function(){
+			if($(this).hasClass("app_x") == true){
+				$(".nav_bg").removeClass("on")
+				$(this).removeClass("app_x")
+				$(".course_nav").removeClass("on")
+			}else{
+				$(".nav_bg").addClass("on")
+				$(this).addClass("app_x")
+				$(".course_nav").addClass("on")
+			}
+		});
+	});
+
+	// 과정 접기
+	$(function(){
+		$(".course_nav .fold").click(function(){
+			$(this).parent().parent().parent().find(".con").slideToggle();
+		});
+	});
+
+	// 강사추가 팝업
+	$(function(){
+		$(".btn_prof").click(function(){
+			$(".course").fadeIn();
+		});
+	});
+
+</script>
+</head>
+<body class="cl_room_02">
+<div id="skip">
+	<a href="#lnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="courseHeader">
+	<div class="wizard_top">
+		<h1>철도 안전사고 예방</h1>
+		<div class="btn_box">
+			<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+		</div>
+		<ul class="top_box">
+			<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+			<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+			<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+		</ul>
+		<i class="icc hamburger m_menu"></i>
+	</div>
+	<div class="top_menu menu">
+		<ul>
+			<li><a href="12_05_course_wizard_01_main.html">목차</a></li>
+			<li><a href="12_05_course_wizard_06_base_info.html" class="on">설정</a></li>
+			<!-- <li><a href="12_05_course_wizard_02_creat_prof.html">강사선택</a></li>
+			<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>
+			<li><a href="12_05_course_wizard_04_creat_survey.html">설문</a></li> -->
+			
+		</ul>
+	</div>
+</div>
+<div class="course_wrap cr">
+	<div class="course_ar">
+		<!-- 왼쪽영역 -->
+		<div class="course_nav">
+			<ul class="nav_sub">
+				<li><a href="12_05_course_wizard_06_base_info.html"  class="on">기본정보</a></li>
+				<li><a href="12_05_course_wizard_02_creat_prof.html">강사선택</a></li>
+				<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>
+				<li><a href="12_05_course_wizard_04_creat_survey.html">설문</a></li>
+				<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+			</ul>
+		</div>
+		<div class="nav_bg"></div>
+		<!--// 왼쪽영역 -->
+		 <!-- 오른쪽 -->
+		<div class="course_con">
+			<div class="title">
+				<h3 class="icc drag_indicator">기본정보</h3>
+			</div>
+			<div class="tbl_row">
+				<div class="lct_con cr">
+					<div class="info" id="cd_1" style="display: block;">
+						<h3 class="c_title">철도 안전사고 예방</h3>
+						<div class="box">
+							<div class="head">
+								<p class="title">과정 소개</p>
+							</div>
+							칙칙!!폭폭!! 빠르고 편리한 열차!! 철도안전에 빨간불이 켜졌다?! 띠용?!
+						</div>
+						<div class="box">
+							<div class="head">
+								<p class="title">학습목표</p>
+							</div>
+							철도 안전사고에 대해 숙지하고, 철도 사고를 예방
+						</div>
+
+						<div class="box">
+							<div class="head">
+								<p class="title">학습내용</p>
+							</div>
+							철도운영에 따른 위험요인의 식별, 위험도 분석, 평가 및 안전대책의 수립 등에 필요한위험관리 절차를 수립, 실행 및 유지해야하며, 철도차량과 철도시설의 설계단계에서 식별한 위험관리 결과를 운영단계에서 활용하여 사고 및 장애를 예방하고 피해를 최소화합니다.
+						</div>
+
+						<div class="box">
+							<div class="head">
+								<p class="title">강사</p>
+							</div>
+							홍길동
+						</div>
+					</div>
+					<div class="time" id="cd_2" style="display: none;">
+						<!-- 20210607 : 타이틀, 상단바 -->
+						<div class="h_box">
+							<h3 class="c_title">교육일정</h3>
+							<!-- <div class="add">
+								<select name="weekNumYn" class="combo">
+									<option value="Y">순번사용</option>
+									<option value="N" selected="selected">입력사용</option>
+								</select>
+								<a href="#" class="c_btn bk">저장</a>
+							</div> -->
+						</div>
+						<!-- //20210607 : 타이틀, 상단바 -->
+						<div class="lct_view">
+							<div class="bar">
+								<div class="sub">
+									<select grp="OPT_SEQ" title="순서정보">
+										<option value="1" selected="selected">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+									</select>
+									<!-- <input type="text" name="listTitles" style="width: 60px;" value="화상"> -->
+									<span class="name">화상강의</span>
+									<span class="date">(21-05-18 09:00 ~ 21-05-18 17:00)</span>
+								</div>
+								<div class="edit">
+									<a href="#" title="설정"><i class="icc sq set red">설정</i></a>
+									<a href="#" title="교시 추가"><i class="icc sq plus red">교시 추가</i></a>
+									<a href="#" title="삭제"><i class="icc sq close red">삭제</i></a>
+									<button type="button" class="fold on"><i class="icc sq red">더보기</i></button>
+								</div>
+							</div>
+							<div class="detail" style="display:block;">
+								<div class="com">
+									<div class="top">
+										<div class="sub">
+											<select title="순서" grp="OPT_SEQINI">
+												<option value="1" selected="selected">1</option>
+											</select>
+											<!-- <input type="text" name="listTitles" style="width: 60px;" value="화상"> -->
+											<!-- 20210607 : 차시명 -->
+											<span class="name">인스타그램 실전 화상강의 2일차 (https://naver.com)</span>
+											<!-- //20210607 : 차시명 -->
+										</div>
+										<div class="group">
+											<!-- 20210607 : 강의보기, 설정 버튼 -->
+											<a href="#" title="강의보기"><i class="icc sq play">강의보기</i></a>
+											<a title="설정" href="04_course_manage_02_study_table_01_question_01_manage.html" target="_blank"><i class="icc sq set">설정</i></a>
+											<!-- //20210607 : 강의보기, 설정 버튼 -->
+										</div>
+									</div>
+								</div>
+								<div class="com">
+									<div class="top">
+										<div class="sub">
+											<select title="순서" grp="OPT_SEQINI">
+												<option value="2" selected="selected">2</option>
+											</select>
+											<!-- <input type="text" name="listTitles" style="width: 60px;" value="화상"> -->
+											<span class="name">실습</span>
+										</div>
+										<div class="group">
+											<a href="#" title="강의보기"><i class="icc sq play">강의보기</i></a>
+											<a title="설정" href="04_course_manage_02_study_table_01_question_01_manage.html" target="_blank"><i class="icc sq set">설정</i></a>
+										</div>
+									</div>
+								</div>
+								<div class="com">
+									<div class="top">
+										<div class="sub">
+											<select title="순서" grp="OPT_SEQINI">
+												<option value="3" selected="selected">3</option>
+											</select>
+											<!-- <input type="text" name="listTitles" style="width: 60px;" value="화상"> -->
+											<span class="name">실습</span>
+										</div>
+										<div class="group">
+											<a href="#" title="강의보기"><i class="icc sq play">강의보기</i></a>
+											<a title="설정" href="04_course_manage_02_study_table_01_question_01_manage.html" target="_blank"><i class="icc sq set">설정</i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lct_view">
+							<div class="bar">
+								<div class="sub">
+									<select grp="OPT_SEQ" title="순서정보">
+										<option value="1">1</option>
+										<option value="2" selected="selected">2</option>
+										<option value="3">3</option>
+									</select>
+									<!-- <input type="text" name="listTitles" style="width: 60px;" value="외환"> -->
+									<span class="name">경제 지표</span>
+									<span class="date">(21-05-18 09:00 ~ 21-05-18 17:00)</span>
+								</div>
+								<div class="edit">
+									<a href="#" title="설정"><i class="icc sq set red">설정</i></a>
+									<a href="#" title="추가"><i class="icc sq plus red">교시 추가</i></a>
+									<a href="#" title="삭제"><i class="icc sq close red">삭제</i></a>
+									<button type="button" class="fold on"><i class="icc sq red">더보기</i></button>
+								</div>
+							</div>
+							<div class="detail" style="display:block;">
+								<div class="com">
+									<div class="top">
+										<div class="sub">
+											<select title="순서" grp="OPT_SEQINI">
+												<option value="1" selected="selected">1</option>
+											</select>
+											<!-- <input type="text" name="listTitles" style="width: 60px;" value="외환"> -->
+											<span class="name">외환전문역 1종</span>
+										</div>
+										<div class="group">
+											<a title="설정" href="04_course_manage_02_study_table_01_question_01_manage.html" target="_blank"><i class="icc sq set">설정</i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b_box">
+							<a href="#" class="c_btn blue lg">+ 주차 추가</a>
+						</div>
+					</div>
+					<div class="val" id="cd_3" style="display: none;">
+						<div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="m_icon web"></i>진도율</span>
+								</div>
+								<div class="group fc">
+									<div class="item"><span class="lab">수료기준 </span> : <input class="rate" maxlength="3" type="text" value="90.0"></div>
+									<div class="item"><span class="lab">평가비율</span> : <input class="rate" type="text" value="80.0"><span class="unit">%</span></div>
+									<a href="#" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="m_icon event_note"></i>과제</span>
+									<span class="count">0</span>
+									<span class="unit">회</span>
+								</div>
+								<div class="group fc">
+									<div class="item"><span class="lab">수료기준 </span> : <input class="rate" maxlength="3" type="text" value="90.0"></div>
+									<div class="item"><span class="lab">평가비율</span> : <input class="rate" type="text" value="80.0"><span class="unit">%</span></div>
+									<button type="button" class="fold" title="더보기"><i class="icc sq">더보기</i></button>
+								</div>
+							</div>
+							<div class="fold_con">
+								<div class="fx_box sm">
+									<table class="tbl_col">
+										<caption>평가 상세 항목</caption>
+										<colgroup>
+											<col width="10%">
+											<col width="25%">
+											<col>
+											<col width="25%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가번호</th>
+												<th scope="col">평가명</th>
+												<th scope="col">평가기간</th>
+												<th scope="col">평가항목내 가중치</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>6529</td>
+												<td>6529</td>
+												<td>2018.10.10 00:00~ 2018.12.31 23:59</td>
+												<td><input type="text" class="rate" title="가중치" value="100"> %</td>
+												<td><a href="04_course_manage_03_finish_course_01_task_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="b_box">
+									<a href="04_course_manage_03_finish_course_01_task_01_manage.html" target="_blank" class="c_btn blue">+ 추가</a>
+								</div>
+							</div>
+						</div> -->
+						<div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="m_icon event_note"></i>토론</span>
+									<span class="count">0</span>
+									<span class="unit">회</span>
+								</div>
+								<div class="group fc">
+									<div class="item"><span class="lab">평가비율</span> : <input class="rate" type="text" value="80.0"><span class="unit">%</span></div>
+									<button type="button" class="fold" title="더보기"><i class="icc sq">더보기</i></button>
+								</div>
+							</div>
+							<div class="fold_con">
+								<div class="fx_box sm">
+									<table class="tbl_col">
+										<caption>평가 상세 항목</caption>
+										<colgroup>
+											<col width="10%">
+											<col width="25%">
+											<col>
+											<col width="25%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가번호</th>
+												<th scope="col">평가명</th>
+												<th scope="col">평가기간</th>
+												<th scope="col">평가항목내 가중치</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>6529</td>
+												<td>토론</td>
+												<td>2018.10.10 00:00 ~ 2018.12.31 23:59</td>
+												<td><input type="text" class="rate" title="가중치" value="100"> %</td>
+												<td><a href="04_course_manage_03_finish_course_02_debate_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a></td>
+											</tr>
+										</tbody>
+									</table>
+								<span class="arrow"></span></div>
+								<div class="b_box">
+									<a href="04_course_manage_03_finish_course_02_debate_01_manage.html" target="_blank" class="c_btn blue">+ 추가</a>
+								</div>
+							</div>
+						</div>
+						<div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="m_icon border_color"></i>시험</span>
+									<span class="count">0</span>
+									<span class="unit">회</span>
+								</div>
+								<div class="group fc">
+									<div class="item"><span class="lab">평가비율</span> : <input class="rate" type="text" value="80.0"><span class="unit">%</span></div>
+									<button type="button" class="fold"><i class="icc sq">더보기</i></button>
+								</div>
+							</div>
+							<div class="fold_con">
+								<div class="fx_box sm">
+									<table class="tbl_col">
+										<caption>평가 상세 항목</caption>
+										<colgroup>
+											<col width="10%">
+											<col width="25%">
+											<col>
+											<col width="25%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가번호</th>
+												<th scope="col">평가명</th>
+												<th scope="col">평가기간</th>
+												<th scope="col">평가항목내 가중치</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>809</td>
+												<td>중간평가</td>
+												<td>2019-05-01 00:00 ~ 2019-05-31 23:59	</td>
+												<td>
+													<input name="rates" class="rate" title="비율" maxlength="3" type="text" value="100.0">
+													%
+												</td>
+												<td>
+													<a href="#" target="_blank" title="결과보기"><i class="icc sq list">결과보기</i></a>
+													<a href="#" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+													<a href="#" target="_blank" title="삭제"><i class="icc sq del">삭제</i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								<span class="arrow"></span></div>
+								<br>
+								<div class="fx_box sm">
+									<table class="tbl_col">
+										<caption>평가 상세 항목</caption>
+										<colgroup>
+											<col width="10%">
+											<col width="25%">
+											<col>
+											<col width="25%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가번호</th>
+												<th scope="col">평가명</th>
+												<th scope="col">평가기간</th>
+												<th scope="col">평가항목내 가중치</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td colspan="5">등록된 시험이 없습니다.</td>
+											</tr>
+										</tbody>
+									</table>
+								<span class="arrow"></span></div>
+								<div class="b_box">
+									<a href="04_course_manage_03_finish_course_03_test_01_manage.html" target="_blank" class="c_btn blue">+ 추가</a>
+								</div>
+							</div>
+						</div>
+						<div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="icc code"></i>코드평가</span>
+									<span class="count">0</span>
+									<span class="unit">회</span>
+								</div>
+								<div class="group fc">
+									<div class="item"><span class="lab">평가비율</span> : <input class="rate" type="text" value="80.0"><span class="unit">%</span></div>
+									<button type="button" class="fold"><i class="icc sq">더보기</i></button>
+								</div>
+							</div>
+							<div class="fold_con">
+								<div class="fx_box sm">
+									<table class="tbl_col">
+										<caption>평가 상세 항목</caption>
+										<colgroup>
+											<col width="10%">
+											<col width="25%">
+											<col>
+											<col width="25%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가번호</th>
+												<th scope="col">평가명</th>
+												<th scope="col">평가기간</th>
+												<th scope="col">평가항목내 가중치</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>809</td>
+												<td>Hello world~ 코딩시작!!</td>
+												<td>2021-05-01 00:00 ~ 2021-05-31 23:59</td>
+												<td>
+													<input name="rates" class="rate" title="비율" maxlength="3" type="text" value="100.0">
+													%
+												</td>
+												<td>
+													<a href="09_prof_02_course_manage_03_finish_course_08_code_01_manage.html" target="_blank" title="결과보기"><i class="icc sq list">결과보기</i></a>
+													<a href="09_prof_02_course_manage_03_finish_course_08_code_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+													<a href="#" target="_blank" title="삭제"><i class="icc sq del">삭제</i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								<span class="arrow"></span></div>
+								<div class="b_box">
+									<a href="09_prof_02_course_manage_03_finish_course_08_code_01_manage.html" target="_blank" class="c_btn blue">+ 추가</a>
+								</div>
+							</div>
+						</div>
+						<div class="sum">
+							<span class="lab">총점 수료기준</span>
+							<div class="result">
+								<input class="rate" type="text" value="100">
+								<span class="unit">점</span>
+							</div>
+						</div>
+						<div class="sum">
+							<span class="lab">평가비율 합계</span>
+							<div class="result">
+								<input class="rate" type="text" value="100">
+								<span class="unit">%</span>
+							</div>
+						</div>
+						<div class="b_box">
+							<a href="#" class="c_btn green lg">저장</a>
+						</div>
+					</div>
+					<!-- <div class="val" id="cd_4">
+						<div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="m_icon border_color"></i>시험</span>
+									<span class="count">1</span>
+									<span class="unit">회</span>
+								</div>
+							</div>
+							<div class="fold_con open">
+								<div class="fx_box mid">
+									<table class="tbl_col">
+										<caption>평가 결과 상세</caption>
+											<colgroup>
+											<col width="10%">
+											<col width="25%">
+											<col>
+											<col width="25%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">평가번호</th>
+												<th scope="col">평가명</th>
+												<th scope="col">평가기간</th>
+												<th scope="col">평가항목내 가중치</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>191</td>
+												<td class="al">[종합평가] - 데이터 분석</td>
+												<td>17.02.15 00:00 ~ 17.02.22 23:59</td>
+												<td>미설정</td>
+												<td>
+													<a href="04_course_manage_03_finish_course_03_test_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>146015</td>
+												<td class="al">파이썬 프로그래밍</td>
+												<td>17.02.15 00:00 ~ 17.02.22 23:59</td>
+												<td>100.0%</td>
+												<td>
+													<a href="04_course_manage_03_finish_course_03_test_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<div class="val" id="cd_5" style="display: none;">
+						<div class="i_box">
+							<div class="top">
+								<div class="sort">
+									<span class="lab"><i class="m_icon border_color"></i>설문</span>
+									<span class="count">1</span>
+									<span class="unit">회</span>
+								</div>
+							</div>
+							<div class="fold_con open">
+								<div class="fx_box mid">
+									<table class="tbl_col">
+										<caption>평가 결과 상세</caption>
+											<colgroup>
+											<col width="10%">
+											<col>
+											<col width="30%">
+											<col width="10%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">설문번호</th>
+												<th scope="col">설문명</th>
+												<th scope="col">설문기간</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>191</td>
+												<td>과정만족도 설문</td>
+												<td>17.02.15 00:00 ~ 17.02.22 23:59</td>
+												<td>
+													<a href="09_prof_02_course_manage_05_survey_manage_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								<span class="arrow"></span></div>
+								<div class="b_box">
+									<a href="09_prof_02_course_manage_05_survey_manage_01_manage.html" target="_blank" class="c_btn green lg">+ 추가</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="cd_6" style="display: none;">
+						<div class="c_search">
+							<fieldset>
+								<legend>항목별 검색</legend>
+								<div class="word">
+									<input class="text" type="text" title="검색어" placeholder="제목을 입력하세요">
+									<a href="#" class="enter">검색</a>
+								</div>
+							</fieldset>
+						</div>
+						<div class="fx_box mid">
+							<table class="tbl_col3">
+								<caption>시험지 상세</caption>
+								<colgroup>
+									<col>
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">시험제목</th>
+										<th scope="col">상태</th>
+										<th scope="col">활용수</th>
+										<th scope="col">출제방식</th>
+										<th scope="col">등록일</th>
+										<th scope="col">관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="al">시작하기</td>
+										<td>사용</td>
+										<td>2</td>
+										<td>랜덤</td>
+										<td>2021-05-14</td>
+										<td>
+											<!-- 20191121 : 미리보기 추가 -->
+											<!-- //20191121 : 미리보기 추가 -->
+											<a href="04_course_manage_07_item_pool_01_test_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+											<a href="#" title="삭제"><i class="icc sq close">삭제</i></a>
+										</td>
+									</tr>
+									<tr>
+										<td class="al">이론풀이</td>
+										<td>사용</td>
+										<td>1</td>
+										<td>지정</td>
+										<td>2021-05-14</td>
+										<td>
+											<a href="04_course_manage_07_item_pool_01_test_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+											<a href="#" title="삭제"><i class="icc sq close">삭제</i></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<span class="arrow"></span></div>
+						<div class="b_box">
+							<a href="#" class="c_btn green lg">+ 추가</a>
+						</div>
+					</div>
+					<div id="cd_7" style="display: none;">
+						<div class="c_search">
+							<fieldset>
+								<legend>항목별 검색</legend>
+								<div class="word">
+									<input class="text" type="text" placeholder="검색어를 입력하세요" title="검색어">
+									<a href="#" class="enter gray">검색</a>
+								</div>
+								<div class="sel">
+									<select>
+										<option>상태</option>
+										<option>사용</option>
+										<option>미사용</option>
+									</select>
+									<select>
+										<option>난이도</option>
+										<option>어려움</option>
+										<option>보통</option>
+										<option>쉬움</option>
+									</select>
+									<select>
+										<option>유형별</option>
+										<option>객관식 단일형</option>
+										<option>객관식 복수형</option>
+										<option>진위형</option>
+										<option>주관식 단답형</option>
+										<option>주관식 서술형</option>
+									</select>
+									<select>
+										<option>선택</option>
+									</select>
+									<select>
+										<option>선택</option>
+									</select>
+									<select>
+										<option>선택</option>
+									</select>
+									<select>
+										<option>선택</option>
+									</select>
+								</div>
+							</fieldset>
+						</div>
+						<!-- 20190531 : 문항 버튼 -->
+						<div class="dt_bar">
+							<ul class="align">
+								<li class="on asc"><a href="#">문항유형</a></li>
+								<li><a href="#">문제제목</a></li>
+								<li><a href="#">활용수 </a></li>
+								<li><a href="#">난이도</a></li>
+								<li><a href="#">등록일</a></li>
+							</ul>
+							<div class="add">
+								<a href="04_course_manage_07_item_pool_02_question_01_manage.html" target="_blank" class="c_btn blue">추가</a>
+								<a href="#" class="c_btn blue">지정시험지 생성</a>
+								<a href="#" class="c_btn blue">문항 가져오기</a>
+								<a href="#" class="c_btn blue">Excel 일괄등록</a>
+								<a href="#" class="c_btn blue">일괄삭제</a>
+							</div>
+						</div>
+						<!-- //20190531 : 문항 버튼 -->
+						<div class="fx_box mid">
+							<table class="tbl_col3">
+								<caption>문항 상세</caption>
+								<colgroup>
+									<col style="width:5%;">
+									<col style="width:15%;">
+									<col>
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:10%;">
+									<col style="width:12%;">
+									<col style="width:14%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><input type="checkbox" title="전체 선택"></th>
+										<th scope="col">문항유형</th>
+										<th scope="col">문제제목</th>
+										<th scope="col">상태</th>
+										<th scope="col">난이도</th>
+										<th scope="col">점수</th>
+										<th scope="col">등록일</th>
+										<th scope="col">관리</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" title="항목 선택"></td>
+										<td>객관식 단일형</td>
+										<td class="al">웹 데이터 이해하기</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>2019-02-14</td>
+										<td>
+											<a href="#" target="_blank" title="미리보기"><i class="icc sq visibility">미리보기</i></a><!-- 20191121 : 미리보기 버튼 추가 -->
+											<a href="04_course_manage_07_item_pool_02_question_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+											<a href="#" title="삭제"><i class="icc sq close">삭제</i></a>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" title="항목 선택"></td>
+										<td>객관식 복수형</td>
+										<td class="al">시계열 데이터 실습</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td>2019-02-14</td>
+										<td>
+											<a href="04_course_manage_07_item_pool_02_question_01_manage.html" target="_blank" title="설정"><i class="icc sq set">설정</i></a>
+											<a href="#" title="삭제"><i class="icc sq close">삭제</i></a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						<span class="arrow"></span></div>
+						<div class="b_box">
+							<a href="#" class="c_btn green lg">+ 추가</a>
+						</div>
+					</div>
+					<div class="member" id="cd_8" style="display: none;">
+						<div class="c_search">
+							<fieldset>
+								<legend>항목별 검색</legend>
+								<div class="word">
+									<input class="text" type="text" placeholder="이름을 입력하세요" title="검색어">
+									<a href="#" class="enter gray">검색</a>
+								</div>
+							</fieldset>
+						</div>
+						<div class="dt_bar">
+							<!-- 목록 정렬 -->
+							<ul class="align">
+								<li class="on desc"><a href="#">이름</a></li>
+								<!-- <li class="on asc"><a href="#">이름</a></li> -->
+								<li><a href="#">진도율</a></li>
+								<li><a href="#">시험</a></li>
+								<li><a href="#">최종점수</a></li>
+								<li><a href="#">수료여부</a></li>
+							</ul>
+							<!-- //목록 정렬 -->
+							<div class="add">
+								<a href="#" class="c_btn turq">수료처리<i class="icmg check"></i></a>
+								<a href="#send_mail" class="c_btn l_turq">메일 전송<i class="icmg sms"></i></a>
+								<a href="#send_sms" class="c_btn l_turq">SMS 전송<i class="icmg sms"></i></a>
+								<a href="#" class="c_btn green">Excel 출력<i class="icmg excel"></i></a>
+							</div>
+						</div>
+						<!-- 20190729 : 탭 영역에 기간 표시 -->
+						<div class="cb_box">
+							<ul class="nav_tabs2">
+								<li class="on"><a href="#">전체<span class="sr_only">선택됨</span></a></li>
+								<li><a href="#">진행</a></li>
+								<li><a href="#">종료</a></li>
+							</ul>
+							<div class="period">
+								<p class="lab">
+									<i class="icc cal_today"></i>
+									과정생성일 : 2020.09.17
+								</p>
+								<div class="sel">
+									<select class="category" id="srchYear" name="srchYear">
+										<option value="">년도</option>
+										<option value="2019">2019</option>
+										<option value="2020">2020</option>
+										<option value="2021">2021</option>
+										<option value="2022">2022</option>
+										<option value="2023">2023</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+									</select>
+									<select class="category" id="srchMonth" name="srchMonth">
+										<option value="">월</option>
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<!-- //20190729 : 탭 영역에 기간 표시 -->
+						<div class="fx_box mid">
+							<table class="tbl_col3">
+								<caption>학습자 상세</caption>
+								<!-- 20190625 : 소속 추가, 컬럼 조정 -->
+								<colgroup>
+									<col width="5%">
+									<col width="5%">
+									<col width="8%">
+									<col width="8%">
+									<col>
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+								</colgroup>
+								<!-- //20190625 : 소속 추가, 컬럼 조정 -->
+								<thead>
+									<tr>
+										<th scope="col"><input type="checkbox" id="i_a_01"></th>
+										<th scope="col">번호</th>
+										<th scope="col">이름</th>
+										<th scope="col">사번</th>
+										<th scope="col">소속</th>
+										<th scope="col">신청일</th>
+										<th scope="col">진도율</th>
+										<th scope="col">시험</th>
+										<th scope="col">최종점수</th>
+										<th scope="col">수료여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input class="check" name="checkkeys" value="0" type="checkbox" title="항목 선택">
+										</td>
+										<td>2</td>
+										<td><a href="#m_detail" class="tb_link">홍길동</a></td><!-- 20190625 : 회원 링크 -->
+										<td>05191629</td>
+										<td>-</td>
+										<td>18.11.14</td>
+										<!-- <td>18.11.14 ~ 12.14</td> -->
+										<td>0%</td>
+										<td>0.0</td>
+										<td>0.0</td>
+										<td>미수료</td>
+									</tr>
+									<tr>
+										<td>
+											<input class="check" name="checkkeys" value="0" type="checkbox" title="항목 선택">
+										</td>
+										<td>1</td>
+										<td><a href="#m_detail" class="tb_link">홍길동</a></td>
+										<td>05191629</td>
+										<td>-</td>
+										<td>18.11.14</td>
+										<td>0%</td>
+										<td>0.0</td>
+										<td>0.0</td>
+										<td>수료</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+							<table class="tbl_col3">
+								<caption>대상과정 수료현황 상세</caption>
+								<colgroup>
+									<col width="5%">
+									<col width="5%">
+									<col width="8%">
+									<col width="8%">
+									<col>
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+									<col width="10%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><input type="checkbox" id="i_a_01"></th>
+										<th scope="col">번호</th>
+										<th scope="col">이름</th>
+										<th scope="col">사번</th>
+										<th scope="col">소속</th>
+										<th scope="col">신청일</th>
+										<th scope="col">진도율</th>
+										<th scope="col">시험</th>
+										<th scope="col">최종점수</th>
+										<th scope="col">수료여부</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="10">해당 정보가 없습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						<span class="arrow"></span></div>
+					</div>
+				</div>
+			</div>
+  		</div>
+	<!-- //오른쪽 -->
+  </div>
+</div>
+
+
+</body>
+</html>

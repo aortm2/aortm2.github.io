@@ -1,0 +1,262 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<?php
+include "inc/meta.html";
+?>
+<script>
+jQuery(function($){
+	$("#file1").kendoUpload();
+	$("#datepicker_01").kendoDatePicker();
+	$('a[href="#pw_safety"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+});
+</script>
+</head>
+<body>
+<a id="skip" href="#content">본문 바로가기</a>
+<!-- header -->
+<div id="header">
+	<?php
+	include "inc/header.html";
+	?>
+</div>
+<!-- //header -->
+<!-- 모바일 메뉴 -->
+<div class="side_bar" id="sidr">
+	<?php
+	include "inc/sidr.html";
+	?>
+</div>
+<!-- //모바일 메뉴 -->
+<div id="container" class="wide">
+	<div class="page_ct">
+		<div class="path_ind">
+			<div class="path">
+				<i class="icmg home">home</i>
+				<span>마이페이지</span>
+				<span>회원정보변경</span>
+			</div>
+		</div>
+		<div id="content">
+			<!-- 콘텐츠 -->
+			<h3 class="p_title">회원정보변경</h3>
+			<div class="join_mb">
+				<div class="ip_form">
+					<dl>
+						<dt><span class="ast" title="필수">*</span>아이디</dt>
+						<dd>
+							hyundai123
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>대리점 명</dt>
+						<dd>
+							<input type="text" title="대리점 명">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>이름</dt>
+						<dd>
+							길동
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>성</dt>
+						<dd>
+							홍
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>비밀번호</dt>
+						<dd>
+							<input type="password" maxlength="20" title="비밀번호">
+							<p class="note">
+								영문/숫자/특수문자 혼합하여 9자 이상 30자 까지 입력하셔야 합니다.
+								<br>사용불가문자 (+, ", ', #, ^, /, &, %, ., ?)
+							</p>
+							<div class="pw_safety">
+								<a href="#pw_safety" class="mark" title="비밀번호 안전성 검사에 대한 설명 보기"><span class="icc caution">도움말</span></a>
+								<div class="step">
+									<div class="bar">
+										<!-- js 에서 밸리데이션 체크후 css 적용하는 부분 -->
+										<div id="div_pw" class="gage" style="width:15%;background:rgb(238, 104, 104);">
+											<span id="pw_safety_txt" class="blind">위험</span>
+										</div>
+									</div>
+								</div>
+								<p class="alert">비밀번호 안전성: <span id="span_pw">비밀번호가 안전하지 않습니다.</span></p>
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>비밀번호 확인</dt>
+						<dd>
+							<input type="password" maxlength="20" title="비밀번호 확인">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>전화번호</dt>
+						<dd class="phone">
+							<select title="전화번호 앞자리">
+								<option>02</option>
+								<option>031</option>
+							</select>
+							<input type="text" maxlength="4" title="전화번호 가운데 자리">
+							<input type="text" maxlength="4" title="전화번호 뒷자리">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>핸드폰번호</dt>
+						<dd class="phone">
+							<select title="핸드폰번호 앞자리">
+								<option>010</option>
+								<option>011</option>
+							</select>
+							<input type="text" maxlength="4" title="핸드폰번호 가운데 자리">
+							<input type="text" maxlength="4" title="핸드폰번호 뒷자리">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>이메일</dt>
+						<dd>
+							<div class="ip_mail">
+								<input type="text" title="이메일 주소 앞자리">
+								<span class="wave">@</span>
+								<input type="text" title="이메일 주소 뒷자리">
+								<select title="입력 선택">
+									<option>직접입력</option>
+									<option>naver.com</option>
+									<option>gmail.com</option>
+								</select>
+							</div>
+							<p class="note">정확한 이메일 주소를 입력해주세요.</p>
+						</dd>
+					</dl>
+					<dl>
+						<dt>팩스번호</dt>
+						<dd class="phone">
+							<select title="팩스번호 앞자리">
+								<option>02</option>
+								<option>031</option>
+							</select>
+							<input type="text" maxlength="4" title="팩스번호 가운데 자리">
+							<input type="text" maxlength="4" title="팩스번호 뒷자리">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>직종</dt>
+						<dd>
+							<input type="checkbox" id="a_01" class="chk">
+							<label for="a_01">파트</label>
+							<input type="checkbox" id="a_02" class="chk">
+							<label for="a_02">서비스</label>
+							<input type="checkbox" id="a_03" class="chk">
+							<label for="a_03">판매</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>국가</dt>
+						<dd>
+							<select title="국가">
+								<option>All</option>
+							</select>
+						</dd>
+					</dl>
+					<dl>
+						<dt>지역</dt>
+						<dd>
+							<input type="text" title="지역">
+						</dd>
+					</dl>
+					<dl>
+						<dt>우편번호</dt>
+						<dd>
+							<input type="text" title="우편번호">
+						</dd>
+					</dl>
+					<dl>
+						<dt>도시</dt>
+						<dd>
+							<input type="text" title="도시">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>주소</dt>
+						<dd>
+							<input type="text" class="wide" title="주소">
+						</dd>
+					</dl>
+					<dl>
+						<dt><span class="ast" title="필수">*</span>생년월일</dt>
+						<dd>
+							<input id="datepicker_01" title="날짜 선택" class="datepicker">
+						</dd>
+					</dl>
+				</div>
+				<div class="b_box">
+					<a href="01_portal_01_main.html" class="c_btn blue lg">확인</a>
+					<a href="#" class="c_btn gray lg">취소</a>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+<div id="quickmenu">
+	<?php
+	include "inc/quick.html";
+	?>
+</div>
+<!-- footer -->
+<div id="footer">
+	<?php
+	include "inc/footer.html";
+	?>
+</div>
+<!-- //footer -->
+<div class="c_dialog" id="pw_safety" style="display:none;">
+	<div class="mask"></div>
+	<div class="outer" style="width:640px;"><!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+		<div class="top">
+			<p class="title">안전한 비밀번호 안내</p>
+			<a href="#" class="p_close">닫기</a>
+		</div>
+		<div class="ct">
+			<!-- 컨텐츠 -->
+			<div class="tx_box">
+				<ul>
+					<li class="hypen">
+						개인정보보호법 및 정보통신망법에서는 이용자가 안전한 비밀번호를 이용할 수 있도록 비밀번호 작성규칙을 수립하고, 이행할 것을 규정하고 있습니다.
+					</li>
+					<li class="hypen">
+						이용자가 사용하는 비밀번호에 대해서는 이용자의 편의성 등도 고려하여 이용자가 적절한 수준으로 비밀번호를 설정할 수 있도록 비밀번호 설정기준을 마련해야 합니다.
+					</li>
+				</ul>
+			</div>
+			<p class="p_title2">[한국인터넷진흥원 패스워드(비밀번호)선택 및 이용가이드]</p>
+			<div class="tx_box">
+				<ul>
+					<li>
+						패스워드 안전성 검증<br>
+						<a class="c_blue" href="http://seed.kisa.or.kr/iwt/ko/sup/EgovSafePwdLb.do" target="_blank">http://seed.kisa.or.kr/iwt/ko/sup/EgovSafePwdLb.do</a>
+					</li>
+					<li>
+						안전한 패스워드란?<br>
+						제3자가 쉽게 추측할 수 없으며, 시스템에 저장되어 있는 사용자 정보나 인터넷을 통해 전송되는 정보를 해킹하여 사용자의 패스워드를 알아낼 수 없거나 알아낸다 하더라도 많은 시간이 요구되는 패스워드를 말합니다.
+					</li>
+					<li>
+						안전한 패스워드를 생성하려면?<br>
+						3가지 종류 이상의 문자구성으로 8자리 이상의 길이 또는 2가지 종류 이상의 문자구성으로 10자리 이상의 길이를 갖도록 생성하셔야 합니다.
+					</li>
+				</ul>
+			</div>
+			<!-- //컨텐츠 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

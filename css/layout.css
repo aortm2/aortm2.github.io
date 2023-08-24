@@ -11,12 +11,35 @@ html, body {max-width: 100%; height:100%; background:#fff; overflow-x:hidden; }
 #header h1{font-size:28px;}
 #header h1 a{font-family: 'GongGothicMedium';}
 #header h1 a strong{color:#000;}
-
 #header div.top-menu.menu-scroll{background:rgba(0,0,0,0.8);}
 #header div.top-menu.menu-scroll h1 a{color:#fff;}
 #header div.top-menu.menu-scroll h1 a strong{color:#999;}
 #header div.top-menu.menu-scroll #nav li a{color:#fff;}
 
+/* table */
+table {width:100%;table-layout:fixed;border-collapse:collapse;border-top:1px solid #282728;border-right:1px solid #282728;}
+table th, table td {text-align:center;height:36px;line-height:1.4;padding:5px;border-bottom:1px solid #dbdbdb;border-left:1px solid #999;font-size:15px;color:#494949;background-color:#fff;}
+table thead{border-top:2px solid #333;}
+table thead th {border-bottom:1px solid #282828;font-size:15px;font-weight:500;color:#212121;}
+table .dep1 {border-bottom:1px solid #999;font-size:16px;font-weight:500;background-color:#f5f5f5;}
+table .dep2 {font-weight:500;}
+table .tb_link {font-weight:bold;color:#2b65dc;font-family: 'NanumSquareL';}
+table td.yellow {background-color:#fbf972;}
+table .gray td {background-color:#f5f5f5;}
+table .last td {border-bottom:1px solid #999;}
+table .bd_bot {border-bottom:1px solid #999;}
+.c_line {text-decoration:line-through;}
+
+/* tab */
+.nav_tabs {margin-bottom:20px;border-bottom:1px solid #cacaca;}
+.nav_tabs.top {margin-top:20px;}
+.nav_tabs:after {content:" ";clear:both;display:block;}
+.nav_tabs > li {text-align:center;position:relative;top:1px;float:left;margin-left:-1px;border:1px solid #fff;border-bottom:0;background-color:#fff;}
+.nav_tabs > li:first-child {margin-left:0;}
+.nav_tabs > li.on {z-index:10;border-color:#cacaca;border-left:1px solid #cacaca;border-right:1px solid #cacaca;}
+.nav_tabs > li > a {display:block;height:51px;line-height:51px;padding:0 35px;font-size:18px;font-weight:600;color:#212121; font-family: 'Spoqa Han SansL', sans-serif;}
+.nav_tabs > li.on > a {height:53px;color:#50b4b6;}
+.tabcon{display: none;}
 
 /* 메뉴 */
 #nav {width: 1680px; margin:0 auto; padding:10px 0; transition: all 1s ease; z-index: 10; overflow: hidden;}
@@ -82,11 +105,27 @@ section{position: relative;height: calc(100vh - 65px);padding-top:130px;}
 #project .project-article > div:hover{color: #000;-webkit-transform: translateY(-1.2rem);-ms-transform: translateY(-1.2rem);transform: translateY(-1.2rem)opacity .75;transition: transform .15s linear;}
 #project .project-article > div:hover .project-img{opacity: 1;}
 #project .project-info{margin-top:10px;}
-#project .project-img{opacity: .75;transition: opacity .15s linear;}
+#project .project-img{opacity: .75;line-height:0;transition: opacity .15s linear;border:1px solid #dfdfdf;overflow: hidden;border-radius: 10px;}
 #project .project-title{color:var(--titColor);font-size:20px;}
-#project .project-company{color: var(--subFontColor);font-size:15px;}
+#project .project-company{color: var(--subFontColor);font-size:15px;font-family: 'NanumSquareL';font-weight: bold;}
 #project .project-tags{margin-top:15px;color:var(--titColor);font-weight: bold;font-size: 13px;font-family: 'KBO-Dia-Gothic_bold';}
 
+/* dialog */
+.dialog{display: none; position: fixed;top: 0;left: 0;z-index: 1050;width: 100%;height: 100%;background: rgba(255,255,255,0.95); overflow: hidden;}
+.dialog > .inner{height:100%;padding:200px 120px 100px 120px;overflow-y: auto;}
+.dialog .dialog-title{font-size:4rem;font-family: 'KBO-Dia-Gothic_bold';color:#000;}
+.dialog .dialog-subtitle{font-size:1.1rem;font-family: 'NanumSquareR';}
+.dialog .dialog-close{position: absolute; top:40px; right:80px; width:40px; height:40px; background:url(../images/icon/close.svg) no-repeat;text-indent: -9999px;}
+.dialog .con{display: flex;margin-top:40px;}
+.dialog .index{margin-top:40px;}
+.dialog .con .img{max-width: 1000px;line-height: 0;margin-left:100px;border:1px solid var(--borderColor);border-radius: 20px;overflow: hidden;box-shadow: 1px 1px 20px rgba(0,0,0,0.1);}
+.dialog .con .txt p {color:#333;font-size:1.2rem;font-family: 'NanumSquareL';font-weight: bold;}
+.dialog .project-tags.lg{color:#000;font-size:15px;font-weight: bold;    font-family: 'NanumSquareL';}
+
+/* badge */
+.c_badge {display:inline-block;line-height:25px;padding:0 10px;border-radius:20px;font-size:13px;font-weight:500;color:#fff;vertical-align: middle;background: #333;}
+.c_badge.teal{background: #58c9b5; border:1px solid #58c9b5;}
+.c_badge.blue{background:#3559c3;}
 
 @keyframes cursor{
   0%{border-right: 1px solid #fff}

@@ -1,0 +1,110 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<?php
+include "inc/meta.html";
+?>
+<script>
+jQuery(function($){
+	$('a[href="#member_type"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+});
+</script>
+</head>
+<body>
+<a id="skip" href="#content">본문 바로가기</a>
+<!-- header -->
+<div id="header">
+	<?php
+	include "inc/header.html";
+	?>
+</div>
+<!-- //header -->
+<!-- 모바일 메뉴 -->
+<div class="side_bar" id="sidr">
+	<?php
+	include "inc/sidr.html";
+	?>
+</div>
+<!-- //모바일 메뉴 -->
+<div id="container">
+	<div class="lnb">
+		<?php
+		include "inc/lnb_member.html";
+		?>
+	</div>
+	<div class="page_ct">
+		<div class="path_ind">
+			<div class="path">
+				<i class="icmg home">home</i>
+				<span>마이페이지</span>
+				<span>로그인</span>
+			</div>
+		</div>
+		<div id="content">
+			<!-- 콘텐츠 -->
+			<div class="p_login">
+				<div class="head">
+					<h1><span>L</span>ogin</h1>
+					<p class="guide">현대건설기계 교육센터에 오신 것을 환영합니다.</p>
+				</div>
+				<div class="form">
+					<fieldset>
+						<legend>로그인</legend>
+						<div class="box">
+							<div class="id">
+								<input type="text" title="아이디" placeholder="아이디">
+							</div>
+							<div class="pw">
+								<input type="password" title="비밀번호" placeholder="비밀번호">
+							</div>
+						</div>
+						<a href="03_menu_02_mypage_01_main_01_stu.html" class="c_btn d_blue">로그인</a>
+					</fieldset>
+				</div>
+				<div class="help">
+					<a href="#member_type">회원가입</a><a href="01_portal_04_find_idpw.html">아이디/비밀번호 찾기</a>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+<div id="quickmenu">
+	<?php
+	include "inc/quick.html";
+	?>
+</div>
+<!-- footer -->
+<div id="footer">
+	<?php
+	include "inc/footer.html";
+	?>
+</div>
+<!-- //footer -->
+<div class="c_dialog" id="member_type" style="display:none;">
+	<div class="mask"></div>
+	<div class="outer" style="width:480px;height:500px;"><!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+		<div class="top">
+			<p class="title">회원유형 선택</p>
+			<a href="#" class="p_close">닫기</a>
+		</div>
+		<div class="ct">
+			<!-- 컨텐츠 -->
+			<div class="member_type">
+				<div class="logo"><img src="../../images/www/common/logo.png" alt="HYUNDAI CONSTRUCTION EQUIPMENT"></div>
+				<p class="guide">현대건설기계 회원가입 서비스입니다.<br><strong>회원유형을 선택</strong>해 주세요.</p>
+				<ul class="type">
+					<li class="learner"><a href="01_portal_03_join_01_type.html">학습자</a></li>
+					<li class="teacher"><a href="01_portal_03_join_01_type.html">교육강사</a></li>
+				</ul>
+			</div>
+			<!-- //컨텐츠 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

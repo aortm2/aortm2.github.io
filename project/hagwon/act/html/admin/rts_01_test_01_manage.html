@@ -1,0 +1,523 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>active 4C</title>
+<link rel="stylesheet" href="../../css/admin/base.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/layout.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/content.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/common.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/style.css" type="text/css"/>
+<!-- kendoui -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<!-- //kendoui -->
+<link rel="stylesheet" href="../../css/admin/kendoui-custom.css" type="text/css"/>
+<style type="text/css">
+html {overflow:visible;}
+</style>
+<!-- kendoui -->
+<script src="../../../js/3rdparty/kendoui/js/jquery.min.js"></script>
+<script src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<!-- //kendoui -->
+<script type="text/javascript" src="../../js/admin/design.js"></script>
+<script>
+jQuery(function($){
+	$("#datepicker_01").kendoDatePicker();
+	$("#file_01").kendoUpload();
+
+	$('a[href="#detail"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).show();
+	});
+	$('a[href="#detail_grid"]').on('click', function(e){
+		e.preventDefault();
+		$('.detail_group').hide();
+		$($(this).attr('href')).show();
+	});
+	$('a[href="#detail_excel"]').on('click', function(e){
+		e.preventDefault();
+		$('.detail_group').hide();
+		$($(this).attr('href')).show();
+	});
+	$('a[href="#reg_test"]').on('click', function(e){
+		e.preventDefault();
+		popup1.data("kendoWindow").center().open();
+	});
+	var popup1 = $("#reg_test").kendoWindow({
+		width: "640px",
+		title: "신규등록",
+		visible: false,
+		modal: true,
+		animation: false
+	});
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+	<!--mainhead-->
+	<div class="mainhead">
+		<h1 class="logo"><a href="#"><img src="../../images/admin/common/logo.png" alt="active4c"></a></h1>
+		<div class="headtop-menu">
+			<!-- 20190520 : 메뉴 수정 -->
+			<div class="global">
+				<div class="fc">
+					<!-- <a href="#" class="blue">영문관리자</a> -->
+					<a href="#" class="gray">로그아웃</a>
+				</div>
+				<ul class="menu">
+					<li class="ip">
+						운영자[ADM]
+						<span class="num">(121.138.74.231, 172.20.1.38, 172.20.6.120)</span>
+					</li>
+					<li class="access">
+						<span class="visit">최근접속일자 : </span>
+						<span class="date">2019-03-29 09:32:09</span>
+					</li>
+				</ul>
+				<dl class="headtop-box box02"><!-- 그룹 메뉴는 수정없이 그대로 추가 -->
+					<dt><div>시스템관리그룹</div></dt>
+					<dd style="display: none;">
+						<ul>
+							<li><a href="javascript:void(0)" onclick="CROS.doChangeRolegroup(this)" info="1@ROLE::ADM@ADM">시스템관리그룹</a></li>
+							<li><a href="javascript:void(0)" onclick="CROS.doChangeRolegroup(this)" info="2@ROLE::USR@USR">학습자그룹</a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			<!-- //20190520 : 메뉴 수정 -->
+		</div>
+	</div>
+	<!--//mainhead-->
+	<!--gnb-->
+	<div class="gnb-wrap">
+		<ul id="top-menu" class="nav">
+			<li>
+				<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/common/greeting.do','fnhDwXriTVs@','','');">
+					<span class="gnbicon gnbicon001"></span>홈
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon002"></span>게시판</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/system/bbs/notice/main.do','+U53Eazr2Ig@','','');">공지사항</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >자료실</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/system/bbs/resource/main.do','qYp360MizbzsoBc4CHQLhg@@','','');">일반</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/system/bbs/faq/main.do','OvtBQu1J5sY@','','');">FAQ</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/system/bbs/qna/main.do','u84yG2vzsO8@','','');">Q&amp;A</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon003"></span>사용자</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/member/user/main.do','NOussV8ue80@','','');">회원</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/member/adm/main.do','GIjeyvUkbII@','','');">관리자</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/company/main.do','Ct9hRI4NQ+c@','','');">소속</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/adminHistory/main.do','pT6ahd+o3Ck@','','');">관리자 변경 이력</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/login/history/main.do','YVeZ0qaCzjM@','','');">관리자 로그인 이력</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >개인정보</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/memberDeleteHistory/main.do','sUKXufI5AVzsoBc4CHQLhg@@','','');">파기대장</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/memberDormant/main.do','sUKXufI5AVwLU!670hbTnQ@@','','');">휴면계정</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon004"></span>사이트</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/code/main.do','hWd9YtnpaO8@','','');">공통코드</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/menu/main.do','0S9Jh1eXz!Q@','','');">메뉴관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/rolegroup/main.do','nUZ9vk+JWRY@','','');">권한관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/popup/main.do','EYJeNFpY99g@','','');">팝업관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/banner/main.do','AAffOjC5wRg@','','');">배너관리</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon005"></span>과정</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" >과정관리</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/master/nondegree/main.do','21wN6okIDusLU!670hbTnQ@@','','');">마스터과정</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/active/non/main.do','21wN6okIDuu6c5ihNSTuWA@@','','');">운영과정</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >교육계획</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/courseYearPlan/main.do','y9AIfMCXYMXsoBc4CHQLhg@@','','');">연간교육계획</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >수료</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/courseResult/main.do','i0PKlFV6TU4LU!670hbTnQ@@','','');">교육수료대상</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/schedule/system/main.do','8SysJaK8uK0@','','');">월별 기술교육 계획</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon006"></span>콘텐츠</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/lcms/organization/main.do','tN!zkGJHu0A@','','');">교시(SCO) 관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/lcms/contents/main.do','BoX8Poqg07E@','','');">주차(LO) 관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/category/contents/main.do','HjlcKjibs!s@','','');">콘텐츠분류</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon007"></span>업무지원 및 AS</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" >고장코드</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/troblueCode/main_list.do','zeL0VAAx15XsoBc4CHQLhg@@','','');">고장코드 목록</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/troblueCode/agree_list.do','zeL0VAAx15ULU!670hbTnQ@@','','');">고장코드 원인승인</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/troblueCode/main_list.do','Sfalc8dz2ls@','','');">트러블 슈팅 </a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/assceneCase/main.do','3pynEjI8T1o@','','');">A/S 현장사례소개</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/fieldData/main.do','17Zjv54kcwg@','','');">자료실</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/discuss/list/main.do','7XxOU7dvaVw@','','');">이슈트래킹</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon008"></span>평가</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" >시험관리</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/exampaper/main.do','Sn2G4U2sN4bsoBc4CHQLhg@@','','');">시험지</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/exam/main.do','Sn2G4U2sN4YLU!670hbTnQ@@','','');">문항</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >설문관리</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/surveypaper/main.do','yHSHXTw!n7jsoBc4CHQLhg@@','','');">설문지</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/survey/main.do','yHSHXTw!n7gLU!670hbTnQ@@','','');">문항</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >과제관리</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/homework/template/main.do','Q+xas693ntnsoBc4CHQLhg@@','','');">문항</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon011"></span>통계</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/common/ready.do','qZYTay2jcf8@','','');">수강자 통계</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="javascript:void(0)" ><span class="gnbicon gnbicon800"></span>시스템</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/rolegroup/main.do','rnJwQMh+PYE@','','');">그룹관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/menu/main.do','XxhmYDPLq+c@','','');">메뉴관리</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/setting/main.do','px8acZtxmXV3eFtNQtXSaQ@@','','');">설정관리</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/system/bbs/coding/main.do','px8acZtxmXUSC1BobhOwYA@@','','');">코딩참조게시판</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/generator/main.do','px8acZtxmXUEAOuamVfTiQ@@','','');">generator</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/code/main.do','YjLs1W3BIc0@','','');">코드관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/setting/main.do','0ubEjYRU4As@','','');">설정관리</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" >모니터링</a>
+						<ul>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/login/history/statistics/main.do','N1Wl79RlVtfsoBc4CHQLhg@@','','');">접속통계</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/course/apply/access/history/statistics/main.do','N1Wl79RlVtcLU!670hbTnQ@@','','');">교과목접속통계</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/common/system/status/main.do','N1Wl79RlVte6c5ihNSTuWA@@','','');">시스템상태</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/common/log/main.do','N1Wl79RlVtd3eFtNQtXSaQ@@','','');">로그분석</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:void(0)" onclick="FN.doGoMenu('/admmanage/total/setting/main.do','rzO5qxz0uEY@','','');">사이트 설정</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--//gnb-->
+	<!--container-->
+	<div id="container">
+		<div class="location-wrap">
+			<h2 class="location-title">RTS 시험 관리</h2>
+			<div class="location">
+				<a href="#" class="home">HOME</a>
+				<a href="#" class="here">RTS 시험 관리</a>
+			</div>
+		</div>
+		<!--content-->
+		<div class="content">
+			<div class="k_toolbar">
+				<a href="#reg_test" class="k-button k-button-icontext"><span class="k-icon k-i-plus"></span>신규등록</a>
+				<a href="#" class="k-button k-button-icontext"><span class="k-icon k-i-excel"></span>엑셀</a>
+				<a href="#" class="k-button k-button-icontext" disabled="disabled"><span class="k-icon k-i-close"></span>삭제</a>
+			</div>
+			<div class="k_grid">
+				<table>
+					<colgroup>
+						<col style="width:50px">
+						<col style="width:150px">
+						<col>
+						<col style="width:150px">
+						<col style="width:150px">
+						<col style="width:150px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><input type="checkbox" title="전체 선택"></th>
+							<th scope="col">시험날짜</th>
+							<th scope="col">시험명</th>
+							<th scope="col">정답 등록여부</th>
+							<th scope="col">환산표 등록여부</th>
+							<th scope="col">시험자 명단</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" title="항목 선택"></td>
+							<td>2019.05.22</td>
+							<td class="al"><a href="#detail">RTS_TEST</a></td>
+							<td>O</td>
+							<td>O</td>
+							<td>100 명</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="항목 선택"></td>
+							<td>2019.05.22</td>
+							<td class="al"><a href="#detail">RTS_TEST</a></td>
+							<td>O</td>
+							<td>O</td>
+							<td>100 명</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="항목 선택"></td>
+							<td>2019.05.22</td>
+							<td class="al"><a href="#detail">RTS_TEST</a></td>
+							<td>O</td>
+							<td>O</td>
+							<td>100 명</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" title="항목 선택"></td>
+							<td>2019.05.22</td>
+							<td class="al"><a href="#detail">RTS_TEST</a></td>
+							<td>O</td>
+							<td>O</td>
+							<td>100 명</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="k_toolbar bot">
+				<ul class="pager">
+					<li><a href="#" title="첫 페이지" class="first"><span class="k-icon k-i-seek-w">첫 페이지</span></a></li>
+					<li><a href="#" title="이전 페이지"><span class="k-icon k-i-arrow-w">이전 페이지</span></a></li>
+					<li><a href="#" class="selected">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#" title="다음 페이지"><span class="k-icon k-i-arrow-e">다음 페이지</span></a></li>
+					<li><a href="#" title="끝 페이지" class="last"><span class="k-icon k-i-seek-e">끝 페이지</span></a></li>
+				</ul>
+			</div>
+			<div id="detail" class="tog_group" style="display:none;">
+				<p class="ct_title top">RTS_TEST</p>
+				<div class="k_toolbar single">
+					<div class="gp">
+						<a href="#" class="k-button k-button-icontext"><span class="k-icon k-i-shape"></span>저장</a>
+						<a href="#" class="k-button k-button-icontext"><span class="k-icon k-i-close"></span>삭제</a>
+						<a href="#detail_grid" class="k-button k-button-icontext"><span class="k-icon k-i-hbars"></span>상세</a>
+						<a href="#" class="k-button k-button-icontext"><span class="k-icon k-i-pencil"></span>수정</a>
+					</div>
+					<a href="#detail_excel" class="k-button k-button-icontext"><span class="k-icon k-i-excel"></span>정답</a>
+					<a href="#detail_excel" class="k-button k-button-icontext"><span class="k-icon k-i-excel"></span>환산표</a>
+					<a href="#detail_excel" class="k-button k-button-icontext"><span class="k-icon k-i-excel"></span>명단</a>
+				</div>
+				<div id="detail_grid" class="detail_group">
+					<table class="tbl-detail">
+						<colgroup>
+							<col style="width: 150px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">시험날짜</th>
+								<td>2019.05.22</td>
+							</tr>
+							<tr>
+								<th scope="row">시험명</th>
+								<td>RTS_TEST</td>
+							</tr>
+							<tr>
+								<th scope="row">정답 등록여부</th>
+								<td>O</td>
+							</tr>
+							<tr>
+								<th scope="row">환산표 등록여부</th>
+								<td>O</td>
+							</tr>
+							<tr>
+								<th scope="row">시험자 명단</th>
+								<td>100 명</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="detail_excel" class="detail_group" style="display:none;">
+					<table class="tbl-detail">
+						<colgroup>
+							<col style="width: 150px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">정답</th>
+								<td>
+									<input id="file_01" type="file">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--//content-->
+	</div>
+	<!--//container-->
+	<!--footer-->
+	<div class="footer">
+		<p class="copyright">Copyright ⓒ <strong>4csoft</strong>ALL Rights Reserved.</p>
+	</div>
+	<!--//footer-->
+</div>
+<div id="reg_test" style="display:none;">
+	<table class="tbl-detail">
+		<colgroup>
+			<col style="width: 150px">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">시험날짜</th>
+				<td>
+					<input id="datepicker_01" title="시험날짜">
+				</td>
+			</tr>
+			<tr>
+				<th scope="row">시험명</th>
+				<td><input type="text" class="wide"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>KORAIL 인재개발원</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+<script>
+jQuery(function($){
+	// kendo.culture("ko-KR");
+	// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+	// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+	// });
+
+	$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+
+	$("#editor_01").kendoEditor();
+	$("#editor_02").kendoEditor();
+
+	var todayDate = kendo.toString(kendo.parseDate(new Date()), 'yyyy-MM-dd');
+	$(".datepickerSub").kendoDatePicker().val(todayDate);
+
+
+});
+
+
+	//모바일 메뉴
+	$(function(){
+		$(".m_menu").click(function(){
+			if($(this).hasClass("app_x") == true){
+				$(".nav_bg").removeClass("on")
+				$(this).removeClass("app_x")
+				$(".course_nav").removeClass("on")
+			}else{
+				$(".nav_bg").addClass("on")
+				$(this).addClass("app_x")
+				$(".course_nav").addClass("on")
+			}
+		});
+	});
+
+	// 과정 접기
+	$(function(){
+		$(".course_nav .fold").click(function(){
+			$(this).parent().parent().parent().find(".con").slideToggle();
+		});
+	});
+
+	$(function(){
+		$(".tit_btn").click(function(){
+			$(".add").show()
+		});
+	});
+
+	//학습자료 유형 선택
+	$(function(){
+	  $(".ln_sel input").click(function(){
+		 $(".ln_tb tbody").hide()
+		 if($(this).attr("id") == "learn01"){
+			$(".learn_file").show()
+		 }else if($(this).attr("id") == "learn02"){
+			$(".learn_url").show()
+		 }
+	  });
+	});
+
+	// 콘텐츠 유형 선택
+	$(function(){
+		$(".type_con li").click(function(){
+			$(".type_con li").removeClass("on")
+			$(this).addClass("on")
+		});
+	})
+
+	// 콘텐츠 유형 선택 취소
+	function typeCancel(){
+		location.href='12_05_course_wizard_01_main.html'
+	}
+</script>
+</head>
+<body class="cl_room_02">
+<div id="skip">
+	<a href="#lnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="courseHeader">
+	<div class="wizard_top">
+		<h1>철도 안전사고 예방</h1>
+		<div class="btn_box">
+			<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+		</div>
+		<ul class="top_box">
+			<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+			<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+			<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+		</ul>
+		<i class="icc hamburger m_menu"></i>
+	</div>
+	<div class="top_menu menu">
+		<ul>
+			<li><a href="12_05_course_wizard_01_main.html">기본정보</a></li>
+			<li><a href="12_05_course_wizard_02_setting.html">추가설정</a></li>
+			<li class="on"><a href="12_05_course_wizard_06_index.html">목차</a></li>
+			<li><a href="12_05_course_wizard_03_complete.html">이수기준</a></li>
+			
+			<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+		</ul>
+	</div>
+</div>
+	<!-- //모바일 메뉴 -->
+	<div class="course_wrap cr">
+		<div class="course_ar">
+			<!-- 왼쪽영역 -->
+			<div class="course_nav" data-include-path="inc/left.html"></div>
+			<div class="nav_bg"></div>
+			<!--// 왼쪽영역 -->
+
+			 <!-- 오른쪽 -->
+			<div class="course_con">
+				
+				<div class="cr_box">
+				<div class="title">
+					<h3 class="icc drag_indicator">차시추가</h3>
+					<div class="tit_btn">
+					  <a class="btn" href="javascript:void(0)">저장</a>
+					</div>
+				</div>
+
+				<div class="tbl_row">
+					<!-- <div class="col_g">
+						<h5>제목</h5>
+						<div class="input">
+							<input type="text" name="activeElementTitle" value="" style="width:100%" maxlength="200">
+						</div>
+					</div> -->
+
+					<div class="col_g">
+						<h5>콘텐츠명</h5>
+						<div class="input">
+							<input type="text" name="activeElementTitle" value="" style="width:100%;" maxlength="200">
+						</div>
+					</div>
+
+					<div class="col_g">
+						<h5>콘텐츠 불러오기</h5>
+						<div class="input" style="display:inline-block; width:calc(100% - 101px);">
+							<input type="text" name="activeElementTitle" value="" style="width:100%" maxlength="200">
+						</div>
+						<a href="javascript:void(0)" onclick="openPopup();" class="btn  lg">불러오기</a>
+					</div>
+
+					<div class="col_g">
+						<h5>콘텐츠 설명</h5>
+						<textarea id="editor_01" rows="" cols=""></textarea>
+					</div>
+
+					<div class="col_g">
+						<h5>학습자료</h5>
+						<ul class="ln_sel">
+							<li>
+							  <input type="radio" name="learn" id="learn01" value="" checked="checked" class="f-radio">
+							  <label for="learn01">파일첨부</label>
+							</li>
+							<li>
+							  <input type="radio" name="learn" id="learn02" value="" class="f-radio">
+							  <label for="learn02">URL</label>
+							</li>
+						</ul>
+						<table class="ln_tb">
+							<caption>학습자료 형식</caption>
+							<colgroup>
+								<col width="15%">
+								<col width="*">
+							</colgroup>
+							<tbody class="learn_file" style="display: table-row-group;">
+								<tr>
+									<th>파일첨부</th>
+									<td>
+										<div style="background-color: #eee;">
+											<div class="k-widget k-upload k-header k-upload-empty">
+												<div class="k-dropzone">
+													<div class="k-button k-upload-button"><input type="file" name="FileData" id="uploader" data-role="upload" autocomplete="off"><span>파일선택</span></div><em>업로드할 파일을 여기에 놓으십시오</em>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+							<tbody class="learn_url">
+								<tr>
+									<th>URL</th>
+									<td>
+										<div class="input">
+											<input type="text" name="url" value="" style="width:100%" maxlength="200">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+      </div>
+	<!-- //오른쪽 -->
+
+	<!-- 차시 유형선택 팝업 -->
+	<div class="type_sel">
+		<div class="type_box">
+		  <div class="type_top">차시 유형</div>
+		  <ul class="type_con">
+			  <li><button type="button"><i class="icc group"></i><span>집합</span></button></li>
+			  <li class="none"><button type="button"><i class="icc tv"></i><span>온라인</span></button></li>
+			  <li><button type="button"><i class="icc portrait"></i><span>실시간 화상</span></button></li>
+			  <li><button type="button"><i class="icc description"></i><span>시험</span></button></li>
+			  <li><button type="button"><i class="icc edit"></i><span>과제</span></button></li>
+			  <li><button type="button"><i class="icc assignment_turned_in"></i><span>설문</span></button></li>
+		  </ul>
+		  <div class="btn_box">
+			  <a href="#" class="btn" onclick="typeConfirm()">확인</a>
+			  <a href="#" class="btn white" onclick="typeCancel()">취소</a>
+		  </div>
+		</div>
+	  </div>
+  </div>
+</div>
+
+<div class="c_dialog course">
+	<div class="mask"></div>
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:640px;">
+				<!-- max-width 값 필수 -->
+				<div class="top">
+					<p class="title">콘텐츠 불러오기</p>
+					<a href="#" class="p_close">닫기</a>
+				</div>
+				<div class="ct">
+					<div class="c_search">
+						<fieldset>
+							<legend>검색</legend>
+							<div class="word">
+								<input class="text" type="text" name="srchTitle" value="" placeholder="제목" title="제목">
+								<a href="" class="enter gray">검색</a>
+							</div>
+						</fieldset>
+						<div class="list">
+							<span class="lab">목록 개수</span>
+							<select name="perPage" id="i_01">
+								<option value="10" selected="selected">10</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+								<option value="200">200</option>
+							</select>
+						</div>
+					</div>
+					<table class="tbl_col">
+						<caption>학습자유형</caption>
+						<colgroup>
+							<col>
+							<col width="80px;">
+							<col width="90px;">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="col">제목<a href="javascript:void(0)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:void(0)">
+
+										<strong style="color: #eb7c7c;">▼</strong>
+									</a>
+								</th>
+								<th scope="col" style="display:none;">담당자<a href="javascript:void(0)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:void(0)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col"></th>
+								<th scope="col"></th>
+							</tr>
+							<tr>
+								<td class="al" id="id17619">철도 안전사고 예방</td>
+								<td>
+									<a href="#" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0);" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17613">철도 안전사고 예방</td>
+								<td>
+									<a href="#" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0);" onclick="" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17616">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17668">철도 안전사고 예방</td>
+								<td>
+									<a href="" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17632">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17671">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17672">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17623">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17636">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+							<tr>
+
+								<td class="al" id="id17634">철도 안전사고 예방</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn blue sm">선택</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="c_btn red sm">강의보기</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="paginate">
+						<div class="inner">
+							<a class="img start"><img src="../../images/www/common/pagi_start.gif"></a>
+							<a class="img prev"><img src="../../images/www/common/pagi_prev.gif"></a>
+							<span class="on">1</span>
+							<a onclick="SUB.doAdd(2);" style="cursor:pointer">2</a>
+							<a onclick="SUB.doAdd(3);" style="cursor:pointer">3</a>
+							<a onclick="SUB.doAdd(4);" style="cursor:pointer">4</a>
+							<a onclick="SUB.doAdd(5);" style="cursor:pointer">5</a>
+							<a onclick="SUB.doAdd(6);" style="cursor:pointer">6</a>
+							<a class="img next"> <img src="../../images/www/common/pagi_next.gif"></a>
+							<a class="img end"><img src="../../images/www/common/pagi_end.gif"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

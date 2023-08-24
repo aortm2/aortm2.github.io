@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>The Hagwon</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/campton.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/import.css" />
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/aos.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+<script>
+jQuery(function($){
+	$('a[href="#sub"]').on('click', function(e){
+		e.preventDefault();
+		var target = $($(this).attr('href'));
+		if(target.is(':hidden')){
+			target.fadeIn();
+		} else {
+			target.fadeOut();
+		};
+	});
+});
+</script>
+</head>
+<body>
+<div class="ex_frm">
+	<div class="head">
+		<div class="rows">
+			<h1 class="logo"><img src="../../images/www/common/logo.png" title="THE HAGWON"></h1>
+			<!-- <div class="timer">
+				<div class="inner">
+					<span class="count">04:59</span>
+				</div>
+			</div> -->
+			<div class="global">
+				<div class="menu">
+					<a href="javascript:window.close()" class="d_btn icc close"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="q_ct">
+		<div class="q_view">
+			<div class="sub_result">
+				<p class="end">Thank You</p>
+				<p class="desc">30개 문제 중 <span class="count">24</span>개 문제를 체크 했습니다.</p>
+			</div>
+			<div class="ct_box_li">
+				<ul>
+					<li>모든 문항을 다 체크했는지 한번 더 확인하세요.</li>
+					<li>답안 수정 원하시면 시험 번호를 눌러 이동하세요.</li>
+					<li>최종 제출 후에는 답안 수정이 불가합니다.</li>
+				</ul>
+			</div>
+			<div class="b_box st">
+				<a href="#sub" class="btn b_o">Get test result</a>
+			</div>
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="rows">
+			<div class="paging">
+				<a href="#" class="d_btn md gray">BACK</a>
+				<span class="count">
+					<span class="current">30</span>
+					/ 30
+				</span>
+				<a href="#" class="d_btn md gray">NEXT</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog nt" id="sub" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:320px;"><!-- max-width 값 필수 -->
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<p class="ex_alert">
+						시험을 종료하고 최종제출 하시겠습니까?
+						<br>제출 뒤에는 답안 수정이 불가합니다.
+					</p>
+					<div class="b_box two">
+						<a href="#sub" class="d_btn d_gray md">취소</a>
+						<a href="#sub" class="d_btn bk md">확인</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

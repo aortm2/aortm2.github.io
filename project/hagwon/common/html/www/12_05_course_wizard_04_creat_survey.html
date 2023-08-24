@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>KORAIL 인재개발원</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+<script>
+jQuery(function($){
+	// kendo.culture("ko-KR");
+	// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+	// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+	// });
+
+	$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function(e){
+		e.preventDefault();
+		$($(this).attr('href')).fadeIn();
+	});
+});
+
+
+	// 과정 접기
+	$(function(){
+		$(".course_nav .fold").click(function(){
+			$(this).parent().parent().parent().find(".con").slideToggle();
+		});
+	});
+
+</script>
+</head>
+<body class="cl_room_02">
+<div id="skip">
+	<a href="#lnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div id="courseHeader">
+	<div class="wizard_top">
+		<h1>철도 안전사고 예방</h1>
+		<div class="btn_box">
+			<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+		</div>
+		<ul class="top_box">
+			<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+			<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+			<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+		</ul>
+		<i class="icc hamburger m_menu"></i>
+	</div>
+	<div class="top_menu menu">
+		<ul>
+			<li><a href="12_05_course_wizard_01_main.html" >기본정보</a></li>
+			<li><a href="12_05_course_wizard_02_setting.html">추가정보</a></li>
+			<li><a href="12_05_course_wizard_06_index.html">목차</a></li>
+			<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>
+			<li class="on"><a href="12_05_course_wizard_04_creat_survey.html">설문</a></li>
+			<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+		</ul>
+	</div>
+</div>
+	<div class="course_wrap cr">
+		<div class="course_ar">
+			<!-- 왼쪽영역 -->
+			<div class="course_nav" data-include-path="inc/left.html"></div>
+			<div class="nav_bg"></div>
+			<!--// 왼쪽영역 -->
+
+			 <!-- 오른쪽 -->
+			<div class="course_con">
+				
+				<div class="cr_box">
+				<div class="title">
+					<h3 class="icc drag_indicator">설문</h3>
+					<div class="tit_btn">
+						<a class="btn white" href="javascript:void(0)">추가</a>
+					  <a class="btn" href="javascript:void(0)">저장</a>
+					</div>
+				</div>
+				<div id="wd_05" style="display: block;">
+							<div class="i_box">
+								<div class="top">
+									<div class="sort">
+										<span class="lab"><i class="m_icon icc assignment_turned_in"></i>설문</span>
+										<span class="count">1</span>
+										<span class="unit">회</span>
+									</div>
+								</div>
+								<div class="fold_con open">
+									<div class="fx_box mid">
+										<table class="tbl_col">
+											<caption>평가 결과 상세</caption>
+												<colgroup>
+												<col width="10%">
+												<col>
+												<col width="30%">
+												<col width="10%">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="col">설문번호</th>
+													<th scope="col">설문명</th>
+													<th scope="col">설문기간</th>
+													<th scope="col">관리</th>
+												</tr>
+												<tr>
+													<td>191</td>
+													<td>과정만족도 설문</td>
+													<td>17.02.15 00:00 ~ 17.02.22 23:59</td>
+													<td>
+														<a href="04_course_manage_05_survey_manage_01_manage.html" target="_blank" title="설정"><i class="icc sq set sm">설정</i></a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									<span class="arrow"></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+      </div>
+	<!-- //오른쪽 -->
+  </div>
+</div>
+
+
+</body>
+</html>

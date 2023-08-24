@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>The Hagwon</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/campton.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/import.css" />
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/aos.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+
+<script>
+jQuery(function($){
+	halfCircle();
+});
+$(window).scroll(function(){
+	 halfCircle();
+});
+
+var cirLoad = false;
+function  halfCircle(){
+	if($(".circle_half").position().top < $(window).scrollTop() && cirLoad == false){
+		if($(window).width() < 1000){
+			var circle = 350;
+		}else{
+			var circle = 526;
+		}
+		//chart common
+		var halfVal = 0.75
+		$(".chart").circleProgress({
+			size: circle,
+			emptyFill: '#fbe8a6', //bg, transparent
+			thickness: 25, //size
+			startAngle: -Math.PI / -1, //start point
+			emptyFill: '#fff', //bg, transparent
+			fill: {color: '#b4dfe5'},
+			value: halfVal / 2,
+			lineCap: 'round',
+		}).on('circle-animation-progress', function(event, progress, stepValue) {
+	    $(this).find('strong').text(parseInt(stepValue * 200) + '%');
+	  });
+		cirLoad = true
+	}
+}
+</script>
+</head>
+<body class="main"><!-- 메인클래스 -->
+<!-- header -->
+<div id="header" data-include-path="inc/header.html"></div>
+<!-- //header -->
+
+<!-- content -->
+<div id="content">
+	<!-- visual -->
+	<div id="subVisual" class="sub_mid txt_cen sub_03">
+		<div class="rows">
+			<div class="visual_txt">
+				<h2>SAT I</h2>
+				<p>
+					The Hagwon’s SAT prep course is a compilation of most valuable lessons and secrets<br />
+					that have been gathered from over two decades of test prep experience. Whether<br />
+					you seek help in reasoning skills, reading strategies, grammar tips, or even math<br />
+					concepts, we have expert guidance and solutions to help you reach your goals.
+				</p>
+			</div>
+			<img src="../../images/www/content/sub_05.png" />
+		</div>
+	</div>
+	<!-- //visual -->
+
+	<div id="dashDetail" class="section">
+		<div class="rows">
+			<ul class="tab tab_03">
+				<li class="tab_on"><a href="#">Reading</a></li>
+				<li><a href="#">Writing</a></li>
+				<li><a href="#">Mathematics</a></li>
+			</ul>
+			<div class="sc_title align_l">
+				<h3>Progress</h3>
+			</div>
+			<div class="dash_group">
+				<div class="circle_half">
+					<div class="chart">
+						<div class="pro_txt">
+							<span>PROGRESS RATE</span>
+							<strong></strong>
+							<p>Rolem ipsum dolo sit rolem ipsum dolar sit</p>
+							<p>Rolem ipsum dolo sit rolem ipsum dolar sit</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sc_title align_l">
+				<h3>Lesson</h3>
+			</div>
+			<div class="sc_box">
+				<table>
+					<caption>Lesson</caption>
+					<colgroup>
+						<col width="8%"></col>
+						<col width="*"></col>
+						<col width="12%"></col>
+						<col width="12%"></col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>Lesson</th>
+							<th>Video</th>
+							<th>Exercise</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>LESSON 3 : Atomic Structure, Electron configuration and Periodicity</td>
+							<td><a href="#" class="btn b_o">WATCH</a></td>
+							<td><a href="#" class="btn b_b">START</a></td>
+						</tr>
+
+						<tr>
+							<td>2</td>
+							<td>LESSON 2 : Periodic Table of Elements</td>
+							<td><a href="#" class="btn b_o">WATCH</a></td>
+							<td><a href="#" class="btn b_b">START</a></td>
+						</tr>
+
+						<tr>
+							<td>1</td>
+							<td>LESSON 1 : Pre-Colonical Period (1492 - 1600s)</td>
+							<td><a href="#" class="btn b_o">WATCH</a></td>
+							<td><a href="#" class="btn b_b">START</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- //content -->
+
+<!-- footer -->
+<div id="footer" data-include-path="inc/footer.html"></div>
+<!-- //footer -->
+</body>
+</html>

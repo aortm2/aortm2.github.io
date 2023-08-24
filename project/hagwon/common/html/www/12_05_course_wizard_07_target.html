@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<title>KORAIL 인재개발원</title>
+	<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+	<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+	
+	<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+	<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+	<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../js/www/design.js"></script>
+	
+	<!-- kendo -->
+	<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css" />
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+	<!-- //kendo -->
+	<script>
+		jQuery(function ($) {
+			// kendo.culture("ko-KR");
+			// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+			// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+			// });
+
+			$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function (e) {
+				e.preventDefault();
+				$($(this).attr('href')).fadeIn();
+			});
+
+			$(".tg_type input[type=radio]").click(function(){
+				if($(this).val() == 'Y' ){
+					$(".tg_01").show();
+					$(".tg_02").hide();
+				}else{
+					$(".tg_02").show();
+					$(".tg_01").hide();
+				}
+			});
+
+		});
+
+		// 과정 접기
+		$(function () {
+			$(".course_nav .fold").click(function () {
+				$(this).parent().parent().parent().find(".con").slideToggle();
+			});
+		});
+
+		function openPop(p_this){
+			var link = $(p_this).attr("href")
+			$(link).fadeIn();
+		}
+
+		function selBxShow(sel_this){
+			if($(sel_this).val() !== 'Y'){
+				$(sel_this).parent().parent().parent().find(".sel_sw").css('display','inline-block');
+			}else{
+				$(sel_this).parent().parent().parent().find(".sel_sw").css('display','none');
+				
+			}
+		}
+
+	</script>
+</head>
+
+<body class="cl_room_02">
+	<div id="skip">
+		<a href="#lnb">주메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="courseHeader">
+		<div class="wizard_top">
+			<h1>철도 안전사고 예방</h1>
+			<div class="btn_box">
+				<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+			</div>
+			<ul class="top_box">
+				<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+				<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+				<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+			</ul>
+			<i class="icc hamburger m_menu"></i>
+		</div>
+		<div class="top_menu menu">
+			<ul>
+				<li><a href="12_05_course_wizard_01_main.html" >기본정보</a></li>
+				<li><a href="12_05_course_wizard_02_setting.html">추가정보</a></li>
+				<li><a href="12_05_course_wizard_06_index.html">목차</a></li>
+				<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>
+				<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+				<li class="on"><a href="12_05_course_wizard_07_target.html">수강대상</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="course_wrap cr">
+		<div class="course_ar">
+			
+			<!-- 오른쪽 -->
+			<div class="course_con no_left">
+				
+				<div class="cr_box">
+					<div class="title">
+						<h3 class="icc drag_indicator">수강 대상</h3>
+						<div class="tg_type">
+							<ul class="radio_li">
+								<li>
+									<input type="radio" name="tgType" id="tgType01" title="일반" value="Y" onclick="selBxShow(this)" checked>
+									<label for="tgType01">일반</label>
+								</li>
+								<li>
+									<input type="radio" name="tgType" id="tgType02" title="일반" value="N" onclick="selBxShow(this)">
+									<label for="tgType02">운전면허자격증교육(임시)</label>
+								</li>
+							</ul>
+						</div>
+						<div class="tit_btn">
+							<a class="btn" href="javascript:void(0)">저장</a>
+						</div>
+					</div>
+				
+					<div class="tbl_bx tg_01">
+						<h4 class="c_title">조건 설정</h4>
+						<table class="tbl_row">
+							<caption>기본정보</caption>
+							<colgroup>
+								<col width="10%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="col">직무</th>
+									<td>
+										<ul class="radio_li">
+											<li>
+												<input type="radio" name="duty" id="duty01" title="직무" value="Y" onclick="selBxShow(this)" checked>
+												<label for="duty01">전체</label>
+											</li>
+											<li>
+												<input type="radio" name="duty" id="duty02" title="직무" alue="N" onclick="selBxShow(this)">
+												<label for="duty02">선택하기</label>
+											</li>
+										</ul>
+										<div class="sel_sw">
+											<a href="#duty" class="c_btn bk" onclick="openPop(this)">선택</a>
+											<ul class="tch_li">
+												<li><a href="javascript:void(0)">인사/행정</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="col">직급</th>
+									<td>
+										<ul class="radio_li">
+											<li>
+												<input type="radio" name="rank" id="rank01" title="직급" value="Y" onclick="selBxShow(this)" checked>
+												<label for="rank01">전체</label>
+											</li>
+											<li>
+												<input type="radio" name="rank" id="rank02" title="직급" alue="N" onclick="selBxShow(this)">
+												<label for="rank02">선택하기</label>
+											</li>
+										</ul>
+										<div class="sel_sw">
+											<a href="javascript:void(0)" class="c_btn bk" onclick="openPop(this)">선택</a>
+											<ul class="tch_li">
+												<li><a href="javascript:void(0)">대리</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="col">직렬</th>
+									<td>
+										<ul class="radio_li">
+											<li>
+												<input type="radio" name="type" id="type01" title="직렬" value="Y" onclick="selBxShow(this)" checked>
+												<label for="type01">전체</label>
+		</li>									
+											<li>
+												<input type="radio" name="type" id="type02" title="직렬" alue="N" onclick="selBxShow(this)">
+												<label for="type02">선택하기</label>
+											</li>
+										</ul>
+										<div class="sel_sw">
+											<a href="javascript:void(0)" class="c_btn bk" onclick="openPop(this)">선택</a>
+											<ul class="tch_li">
+												<li><a href="javascript:void(0)">행정</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="col">소속</th>
+									<td>
+										<ul class="radio_li">
+											<li>
+												<input type="radio" name="belong" id="belong01" title="소속" value="Y" onclick="selBxShow(this)" checked>
+												<label for="belong01">전체</label>
+											</li>
+											<li>
+												<input type="radio" name="belong" id="belong02" title="소속" alue="N" onclick="selBxShow(this)">
+												<label for="belong02">선택하기</label>
+											</li>
+										</ul>
+										<div class="sel_sw">
+											<a href="javascript:void(0)" class="c_btn bk" onclick="openPop(this)">선택</a>
+											<ul class="tch_li">
+												<li><a href="javascript:void(0)">인사/행정과</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<th scope="col">부서</th>
+									<td>
+										<ul class="radio_li">
+											<li>
+												<input type="radio" name="department" id="department01" title="소속" value="Y" onclick="selBxShow(this)" checked>
+												<label for="department01">전체</label>
+											</li>
+											<li>
+												<input type="radio" name="department" id="department02" title="소속" alue="N" onclick="selBxShow(this)">
+												<label for="department02">선택하기</label>
+											</li>
+										</ul>
+										<div class="sel_sw">
+											<a href="javascript:void(0)" class="c_btn bk" onclick="openPop(this)">선택</a>
+											<ul class="tch_li">
+												<li><a href="javascript:void(0)">인사</a></li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="c_title">수강대상자<a href="#user_sel" class="c_btn bk"style="margin-left:10px;" onclick="openPop(this)">선택</a></h4>
+						<table class="tbl_row tg_01">
+							<tr>
+								<td>
+									
+									<ul class="tch_li">
+										<li><a href="javascript:void(0)">홍길동</a></li>
+										<li><a href="javascript:void(0)">피터팬</a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+
+						
+					</div>
+					<div class="tbl_bx tg_02" style="display: none;">
+						<h4 class="c_title">수강신청 대상자<a href="#user_sel" class="c_btn bk"style="margin-left:10px;" onclick="openPop(this)">선택</a></h4>
+						<table class="tbl_row">
+							<tr>
+								<td>
+									
+									<ul class="tch_li">
+										<li><a href="javascript:void(0)">홍길동</a></li>
+										<li><a href="javascript:void(0)">피터팬</a></li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+
+					</div>
+				</div>
+			</div>
+			<!-- //오른쪽 -->
+		</div>
+	</div>
+
+	<div class="c_dialog course" id="duty" style="display: ;">
+		<div class="mask"></div>
+		<div class="outer" style="width:900px;">
+			<!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+			<div class="top">
+				<p class="title">직무선택</p>
+				<a href="#" class="p_close">닫기</a>
+			</div>
+			<div class="ct" id="c_prof_list_popup">
+				<!-- 컨텐츠 -->
+				<div class="c_search">
+					<fieldset>
+						<legend>항목별 검색</legend>
+						<div class="word">
+							<input class="text" type="text"value="" placeholder="이름" title="이름">
+							<a href="javascript:void(0)" class="enter gray">검색</a>
+						</div>
+					</fieldset>
+				</div>
+				<div class="fx_box sm">
+					<table class="tbl_col">
+						<caption>강사 목록</caption>
+						<colgroup>
+							<col width="5%">
+							<col width="30%">
+							<col width="15%">
+							<col width="25%">
+							<col width="25%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><input type="checkbox" name="checkall" title="전체선택"></th>
+								<th scope="col">이름<a href="javascript:coursePopup.doSort(7)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-7)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">아이디<a href="javascript:coursePopup.doSort(6)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-6)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">소속<a href="javascript:coursePopup.doSort(9)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-9)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">회원유형<a href="javascript:coursePopup.doSort(4)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-4)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="0" title="선택">
+									<input type="hidden" name="memberSeqs" value="218">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="김명섭">
+								</td>
+								<td>심청이</td>
+								<td>aksenp10000</td>
+								<td class="al">한국철도공사</td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="2" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="214">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="cosmetic">
+								</td>
+								<td>cosmetic</td>
+								<td>cosmetic2</td>
+								<td class="al"></td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="3" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="212">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="강교수">
+								</td>
+								<td>강교수</td>
+								<td>kkhprof</td>
+								<td class="al"></td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="4" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="199">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="test">
+								</td>
+								<td>임꺽정</td>
+								<td>aaa318@go.kr</td>
+								<td class="al"></td>
+								<td class="al">교육강사</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="5" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="198">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="노성용">
+								</td>
+								<td>피터팬</td>
+								<td>tearcher</td>
+								<td class="al"></td>
+								<td class="al">교육강사</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="6" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="2">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="홍길동">
+								</td>
+								<td>홍길동</td>
+								<td>aksenp1024</td>
+								<td class="al">한국철도공사</td>
+								<td class="al">일반 회원</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="b_box">
+
+					<a href="javascript:void(0)" onclick="profPopup.doProfClose();" class="c_btn gray lg">취소</a>
+					<a href="javascript:void(0)" onclick="profPopup.doProfListSelect();" class="c_btn red lg">선택</a>
+				</div>
+				<!-- //컨텐츠 -->
+			</div>
+		</div>
+	</div>
+
+	<div class="c_dialog course" id="user_sel" style="display: ;">
+		<div class="mask"></div>
+		<div class="outer" style="width:900px;">
+			<!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+			<div class="top">
+				<p class="title">회원선택</p>
+				<a href="#" class="p_close">닫기</a>
+			</div>
+			<div class="ct" id="c_prof_list_popup">
+				<!-- 컨텐츠 -->
+				<div class="c_search">
+					<fieldset>
+						<legend>항목별 검색</legend>
+						<div class="word">
+							<input class="text" type="text"value="" placeholder="이름" title="이름">
+							<a href="javascript:void(0)" class="enter gray">검색</a>
+						</div>
+					</fieldset>
+				</div>
+				<div class="fx_box sm">
+					<table class="tbl_col">
+						<caption>강사 목록</caption>
+						<colgroup>
+							<col width="5%">
+							<col width="30%">
+							<col width="15%">
+							<col width="25%">
+							<col width="25%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><input type="checkbox" name="checkall" title="전체선택"></th>
+								<th scope="col">이름<a href="javascript:coursePopup.doSort(7)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-7)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">아이디<a href="javascript:coursePopup.doSort(6)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-6)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">소속<a href="javascript:coursePopup.doSort(9)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-9)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">회원유형<a href="javascript:coursePopup.doSort(4)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-4)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="0" title="선택">
+									<input type="hidden" name="memberSeqs" value="218">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="김명섭">
+								</td>
+								<td>심청이</td>
+								<td>aksenp10000</td>
+								<td class="al">한국철도공사</td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="2" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="214">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="cosmetic">
+								</td>
+								<td>cosmetic</td>
+								<td>cosmetic2</td>
+								<td class="al"></td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="3" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="212">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="강교수">
+								</td>
+								<td>강교수</td>
+								<td>kkhprof</td>
+								<td class="al"></td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="4" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="199">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="test">
+								</td>
+								<td>임꺽정</td>
+								<td>aaa318@go.kr</td>
+								<td class="al"></td>
+								<td class="al">교육강사</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="5" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="198">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="노성용">
+								</td>
+								<td>피터팬</td>
+								<td>tearcher</td>
+								<td class="al"></td>
+								<td class="al">교육강사</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="6" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="2">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="홍길동">
+								</td>
+								<td>홍길동</td>
+								<td>aksenp1024</td>
+								<td class="al">한국철도공사</td>
+								<td class="al">일반 회원</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="b_box">
+
+					<a href="javascript:void(0)" onclick="profPopup.doProfClose();" class="c_btn gray lg">취소</a>
+					<a href="javascript:void(0)" onclick="profPopup.doProfListSelect();" class="c_btn red lg">선택</a>
+				</div>
+				<!-- //컨텐츠 -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

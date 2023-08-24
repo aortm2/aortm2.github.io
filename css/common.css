@@ -31,7 +31,7 @@ a {color:#666; font-weight:bold; text-decoration:none; font-family: 'NanumSquare
 a:active {color:#0070bd}
 button{cursor:pointer;}
 input:radio, input:checkbox, label {cursor:pointer;}
-
+table caption {visibility:hidden;width:0;height:0;line-height:0;text-indent:-1000em;font-size:0;}
 h1, h2, h3, h4, h5, h6, p, span{line-height: 160%; }
 p, span{font-family: 'NanumSquareR'; font-weight: normal;}
 
@@ -43,7 +43,7 @@ p, span{font-family: 'NanumSquareR'; font-weight: normal;}
   --titColor:#111;
   --fontColor:#333;
   --subFontColor:#666;
-  --borderColor:#ddd;
+  --borderColor:#dfdfdf;
 }
 
 /* 웹폰트 */

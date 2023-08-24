@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ko" class="ie8"><![endif]-->
+<html lang="ko">
+<!--<![endif]--><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>active 4C</title>
+<link rel="stylesheet" href="../../css/admin/base.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/layout.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/content.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/common.css" type="text/css"/>
+<link rel="stylesheet" href="../../css/admin/style.css" type="text/css"/>
+<!-- kendoui -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<!-- //kendoui -->
+<link rel="stylesheet" href="../../css/admin/kendoui-custom.css" type="text/css"/>
+<style type="text/css">
+html {overflow:visible;}
+</style>
+<!-- kendoui -->
+<script src="../../../js/3rdparty/kendoui/js/jquery.min.js"></script>
+<script src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<!-- //kendoui -->
+<script type="text/javascript" src="../../js/admin/design.js"></script>
+</head>
+<body>
+    
+        <a class="offline-button" href="../index.html">Back</a>
+    
+    
+        <div id="example">
+            <div id="window">
+			<!-- 컨텐츠 -->
+				<div>삭제 하시겠습니까?</div>
+					<div style="text-align:center; margin-top:10px;">
+					<button class="k-button button1" type="button">확인</button>
+					<button class="k-button button2" type="button">취소</button>
+				</div>
+				<!-- //컨텐츠 -->
+			</div>
+
+            <span id="undo" style="display:none" class="k-button">Click here to open the window.</span>
+
+            <script>
+                $(document).ready(function() {
+                    var window = $("#window"),
+                        undo = $("#undo")
+                                .bind("click", function() {
+                                    window.data("kendoWindow").open();
+                                    undo.hide();
+                                });
+
+                    var onClose = function() {
+                        undo.show();
+                    }
+
+                    if (!window.data("kendoWindow")) {
+                        window.kendoWindow({
+                            width: "600px",
+                            title: "레이어 팝업 샘플레이어 팝업 샘플레이어 팝업 샘플레이어 팝업 샘플레이어 팝업 샘플레이어 팝업 샘플", //
+                            actions: [
+                                //"Pin",
+                                //"Minimize",
+                                //"Maximize",
+                                "Close"
+                            ],
+                            close: onClose
+                        });
+                    }
+                });
+            </script>
+
+            <style>
+
+                #example
+                {
+                    min-height:500px;
+                }
+
+                #undo {
+                    text-align: center;
+                    position: absolute;
+                    white-space: nowrap;
+                    padding: 1em;
+                    cursor: pointer;
+                }
+                .armchair {
+                	float: left;
+                	margin: 30px 30px 120px 30px;
+                	text-align: center;
+                }
+                .armchair img {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            </style>
+        </div>
+
+
+    
+    
+</body>
+</html>

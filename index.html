@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="css/import.css">
 
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="js/works.js"></script>
+  <script type="text/javascript" src="js/design.js"></script>
+
   <script>
     $(document).ready(function(){
       var typingBool = false;
@@ -154,43 +155,43 @@
       </section>
       <section id="section_03">
         <div id="project">
-          <h2 class="section-title">PROJECT</h2>
+          <h2 class="section-title">PROJCECT</h2>
           <article class="project-article">
             <div>
-              <a href="#">
+              <a href="#" onclick="onInfoView('hagwon')">
                 <div class="project-img">
-                  <img src="images/temp/project_01.jpg" />
+                  <img src="images/temp/hagwon.png" />
                 </div>
                 <div class="project-info">
-                  <h4 class="project-title">프로젝트1</h4>
-                  <span class="project-company">업체명</span>
-                  <p class="project-tags">Frontend</p>
+                  <h4 class="project-title">The Hagwon</h4>
+                  <span class="project-company">hagwon</span>
+                  <p class="project-tags">Cross-browsing / jQuery / Javascript</p>
                 </div>
               </a>
             </div>
 
             <div>
-              <a href="#">
+              <a href="#" onclick="onInfoView('koda')">
                 <div class="project-img">
-                  <img src="images/temp/project_01.jpg" />
+                  <img src="images/temp/koda.png" />
                 </div>
                 <div class="project-info">
-                  <h4 class="project-title">프로젝트1</h4>
-                  <span class="project-company">업체명</span>
-                  <p class="project-tags">Frontend</p>
+                  <h4 class="project-title">KODA교육협력센터</h4>
+                  <span class="project-company">한국부동산개발협회</span>
+                  <p class="project-tags">Cross-browsing / jQuery / Javascript</p>
                 </div>
               </a>
             </div>
 
             <div>
-              <a href="#">
+              <a href="#" onclick="onInfoView('keli')">
                 <div class="project-img">
-                  <img src="images/temp/project_01.jpg" />
+                  <img src="images/temp/keli.png" />
                 </div>
                 <div class="project-info">
-                  <h4 class="project-title">프로젝트1</h4>
-                  <span class="project-company">업체명</span>
-                  <p class="project-tags">Frontend</p>
+                  <h4 class="project-title">한국고용노동교육원</h4>
+                  <span class="project-company">한국고용노동교육원</span>
+                  <p class="project-tags">Cross-browsing / jQuery / Javascript</p>
                 </div>
               </a>
             </div>
@@ -204,9 +205,97 @@
           </a>
         </div>
       </section>
+      <section>
+        asdfsadfasdf
+      </section>
     </div>
   </main>
   <!-- // contents -->
 </body>
 
+
+<!-- hagwon -->
+<div id="hagwon" class="dialog project fade">
+  <div class="inner">
+    <a href="#" class="dialog-close">닫기</a>
+    <div class="title">
+      <h3 class="dialog-title">The Hagwon</h3>
+      <div class="dialog-subtitle">
+        <div class="c_badge blue">Cross-browsing</div>
+        <div class="c_badge teal">jQuery</div>
+        <div class="c_badge">Javascript</div>
+      </div>
+    </div>
+    <div class="con">
+      <div class="txt">
+          <p>학원 홈페이지로 스크롤 애니메이션을 통해, 콘텐츠에 집중할 수 있게 했습니다.<br> 다양한 동적 요소를 통해 사용자의 흥미를 유발해서 좀 더 사이트에 오래 머물도록 제작하였습니다.</p>        
+          <p>시험 같은 경우에는 텍스트 드래그를 통해 하이라이트 템플릿을 적용 하였으며, 하이라이트 적용된 부분에 마우스 오버를 하면 인스턴트 형태로 ToolTip박스가 노출되도록 하였습니다.
+          </p>
+        </div>
+        <div class="img">
+          <img src="/images/temp/hagwon.png">
+        </div>
+    </div>
+    <div class="index">
+      <div class="hagwon" data-include-path="project/hagwon/common/html/www/index.html"></div>
+    </div>
+  </div>
+</div>
+<!-- //hagwon -->
+
+<!-- KODA -->
+<div id="koda" class="dialog project fade">
+  <div class="inner">
+    <a href="#" class="dialog-close">닫기</a>
+    <div class="title">
+      <h3 class="dialog-title">KODA교육협력센터</h3>
+      <div class="dialog-subtitle">
+        <div class="c_badge blue">Cross-browsing</div>
+        <div class="c_badge teal">jQuery</div>
+        <div class="c_badge">Javascript</div>
+        <div class="c_badge">Photoshop</div>
+      </div>
+    </div>
+    <div class="con">
+      <div class="txt">
+          <p></p>
+        </div>
+        <div class="img">
+          <img src="/images/temp/koda.png">
+        </div>
+    </div>
+    <div class="index">
+      <div class="koda" data-include-path="project/kar/common/html/www/index.html"></div>
+    </div>
+  </div>
+</div>
+<!-- //KODA -->
+
+<!-- keli -->
+<div id="keli" class="dialog project fade">
+  <div class="inner">
+    <a href="#" class="dialog-close">닫기</a>
+    <div class="title">
+      <h3 class="dialog-title">KODA교육협력센터</h3>
+      <div class="dialog-subtitle">
+        <div class="c_badge blue">Cross-browsing</div>
+        <div class="c_badge teal">jQuery</div>
+        <div class="c_badge">Javascript</div>
+        <div class="c_badge">Photoshop</div>
+      </div>
+    </div>
+    <div class="con">
+      <div class="txt">
+          <p></p>
+        </div>
+        <div class="img">
+          <img src="/images/temp/keli.png">
+        </div>
+    </div>
+    <div class="index">
+      <div class="koda" data-include-path="project/keli/common/html/www/index.html"></div>
+    </div>
+  </div>
+</div>
+<!-- //keli -->
 </html>

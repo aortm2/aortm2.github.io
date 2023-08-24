@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<title>KORAIL 인재개발원</title>
+	<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+	<link rel="stylesheet" type="text/css" href="../../font/nanumsquare.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/www/jquery.mCustomScrollbar.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/www/common.css" />
+	
+	<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../js/www/circle-progress.js"></script>
+	<script type="text/javascript" src="../../js/www/slick.min.js"></script>
+	<script type="text/javascript" src="../../js/www/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="../../js/www/design.js"></script>
+	
+	<!-- kendo -->
+	<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css" />
+	<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css" />
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+	<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+	<!-- //kendo -->
+	<script>
+		jQuery(function ($) {
+			// kendo.culture("ko-KR");
+			// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+			// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+			// });
+
+			$('a[href="#send_sms"], a[href="#send_mail"], a[href="#cs_import"]').on('click', function (e) {
+				e.preventDefault();
+				$($(this).attr('href')).fadeIn();
+			});
+
+			$("#editor_01").kendoEditor();
+			$("#editor_02").kendoEditor();
+
+			var todayDate = kendo.toString(kendo.parseDate(new Date()), 'yyyy-MM-dd');
+			$(".datepickerSub").kendoDatePicker().val(todayDate);
+
+
+			//모바일 메뉴
+			$(function () {
+				$(".m_menu").click(function () {
+					if ($(this).hasClass("app_x") == true) {
+						$(".nav_bg").removeClass("on")
+						$(this).removeClass("app_x")
+						$(".course_nav").removeClass("on")
+					} else {
+						$(".nav_bg").addClass("on")
+						$(this).addClass("app_x")
+						$(".course_nav").addClass("on")
+					}
+				});
+			});
+
+
+			// 항목추가
+			$(function () {
+				var scli = '<div class="addScli"><div class="date_box"><h5 class="thTit">시작시간</h5>'
+				scli += '<input type="text" name="applyStartDate"  class="datepickerSub">'
+				scli += '<select><option>시간</option></select><select><option>분</option></select></div>'
+				scli += '<div class="date_box bef"><h5 class="thTit">종료시간</h5>'
+				scli += '<input type="text" name="applyStartDate" id="applyStartDate" class="datepickerSub">'
+				scli += '<select><option>시간</option></select><select><option>분</option></select></div>'
+				scli += '<div class="input_box"><h5>교시정보</h5><input type="text" title="교시정보" alt="교시정보"  /></div>'
+				scli += '<div class="btn_del"><span>삭제</span></div></div>'
+
+				$(".btn_addli").click(function () {
+					$(".sc_ar").append(scli)
+					$(".datepickerSub").each(function (i, e) {
+						if (!$(this).is(".k-input, .k-widget")) {
+							$(this).kendoDatePicker().val(todayDate)
+						}
+					});
+				});
+				$(document).on('click', '.btn_del', function () {
+					if ($(".addScli").length > 1) {
+						$(this).parent().remove();
+					}
+				});
+
+
+
+				$(".btn_prof").click(function () {
+					$(".prof").fadeIn();
+				});
+			});
+		});
+	</script>
+</head>
+
+<body class="cl_room_02">
+	<div id="skip">
+		<a href="#lnb">주메뉴 바로가기</a>
+		<a href="#content">본문 바로가기</a>
+	</div>
+	<div id="courseHeader">
+		<div class="wizard_top">
+			<h1>철도 안전사고 예방</h1>
+			<div class="btn_box">
+				<a href="javascript:void(0)" onclick="window.close()"><i class="icc close">닫기</i></a>
+			</div>
+			<ul class="top_box">
+				<li class="on"><a href="12_05_course_wizard_01_main.html" class="creat">과정개설</a></li>
+				<li><a href="12_06_course_result_01.html" class="result">학습결과</a></li>
+				<li><a href="12_07_course_board_01.html" class="board">게시판</a></li>
+			</ul>
+			<i class="icc hamburger m_menu"></i>
+		</div>
+		<div class="top_menu menu">
+			<ul>
+				<li><a href="12_05_course_wizard_01_main.html">기본정보</a></li>
+				<li><a href="12_05_course_wizard_02_setting.html">추가정보</a></li>
+				<li class="on"><a href="12_05_course_wizard_06_index.html">목차</a></li>
+				<li><a href="12_05_course_wizard_03_complete.html">수료기준</a></li>
+				
+				<li><a href="12_05_course_wizard_05_problem.html">문제은행</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="course_wrap cr">
+		<div class="course_ar">
+			<!-- 왼쪽영역 -->
+			<div class="course_nav" data-include-path="inc/left.html"></div>
+			<div class="nav_bg"></div>
+			<!--// 왼쪽영역 -->
+
+			<!-- 오른쪽 -->
+			<div class="course_con">
+				
+				<div class="cr_box">
+					<div class="title">
+						<h3 class="icc drag_indicator">실시간 화상 차시정보 및 수정</h3>
+						<div class="tit_btn">
+							<a class="btn white btn_pop" href="javascript:void(0)" onclick="timePop()">시간표 추가</a>
+							<a class="btn" href="javascript:void(0)">저장</a>
+						</div>
+					</div>
+					<div class="tbl_row">
+						<div class="col_g">
+							<h5>교시명</h5>
+							<div class="input">
+								<input type="text" name="activeElementTitle" value="예방 및 사고처리 지침" style="width:100%"
+									maxlength="200">
+							</div>
+						</div>
+
+						<div class="col_g">
+							<h5>교시 기간</h5>
+							<input type="text" class="datepickerSub"> ~
+							<input type="text" class="datepickerSub">
+						</div>
+
+
+						<div class="col_g">
+							<h5>메모</h5>
+							<div class="con_txt">
+								<textarea id="editor_01" rows="" cols=""></textarea>
+							</div>
+						</div>
+
+						<div class="col_g">
+							<h5>학습자료</h5>
+							<!-- url일때 -->
+							<!-- <div class="learn link_box">
+							<a href="https://youtu.be/H-Jl1J1hhU4" target="_blank" class="url">https://youtu.be/H-Jl1J1hhU4</a>
+						</div> -->
+
+							<!-- 학습자료 일때 -->
+							<div class="learn down_box">
+								<a href="https://youtu.be/H-Jl1J1hhU4" download target="_blank"><i
+										class="icc file_download"></i>첨부파일.png</a>
+							</div>
+						</div>
+
+						<div class="col_g">
+							<h5>시간표</h5>
+							<div class="con_txt">
+								<table class="schedule">
+									<colgroup>
+										<col width="15%">
+										</col>
+										<col width="">
+										</col>
+										<col width="">
+										</col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>NO</th>
+											<th>시간</th>
+											<th>교시정보</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2021. 01. 13 13:00</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="b_box">
+						<a class="btn lg" href="javascript:void(0)">저장</a>
+					</div>
+				</div>
+				
+			</div>
+			<!-- //오른쪽 -->
+		</div>
+	</div>
+
+	<div class="c_dialog course" id="cs_import" style="display: none;">
+		<div class="mask"></div>
+		<div class="outer" style="width:850px;">
+			<!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+			<div class="top">
+				<p class="title">시간표 추가</p>
+				<a href="#" class="p_close">닫기</a>
+			</div>
+			<div class="ct">
+				<!-- 컨텐츠 -->
+				<div class="fx_box sm">
+					<div class="sc_ar">
+						<div class="addScli">
+							<div class="date_gr">
+								<div class="date_box">
+									<h5 class="thTit">시작시간</h5>
+									<input type="text" name="applyStartDate" id="applyStartDate" class="datepickerSub">
+									<select>
+										<option>시간</option>
+									</select>
+									<select>
+										<option>분</option>
+										<option>10</option>
+									</select>
+								</div>
+
+								<div class="date_box bef">
+									<h5 class="thTit">종료시간</h5>
+									<input type="text" name="applyEndDate" id="applyEndDate" class="datepickerSub">
+									<select>
+										<option>시간</option>
+									</select>
+									<select>
+										<option>분</option>
+										<option>10</option>
+									</select>
+								</div>
+							</div>
+							<div class="input_box">
+								<h5>교시정보</h5>
+								<input type="text" title="교시정보" alt="교시정보" />
+							</div>
+							<div class="input_box prof">
+								<h5>강사명</h5>
+								<input type="text" title="교시정보" alt="교시정보" />
+								<a href="javascript:void(0)" class="c_btn red btn_prof">불러오기</a>
+							</div>
+							<div class="btn_del"><span>삭제</span></div>
+						</div>
+					</div>
+					<div class="b_box">
+						<a href="#" class="c_btn bk lg btn_addli">추가</a>
+					</div>
+				</div>
+				<!-- //컨텐츠 -->
+			</div>
+		</div>
+	</div>
+
+	<div class="c_dialog prof" id="add_all" style="display: none;">
+		<div class="mask"></div>
+		<div class="outer" style="width:850px;">
+			<!-- 고정(스크롤)처리시 여기에 width, height 삽입 -->
+			<div class="top">
+				<p class="title">강사선택</p>
+				<a href="#" class="p_close">닫기</a>
+			</div>
+			<div class="ct" id="c_prof_list_popup">
+				<!-- 컨텐츠 -->
+				<div class="c_search">
+					<fieldset>
+						<legend>항목별 검색</legend>
+						<div class="word">
+							<input class="text" type="text" onkeydown="FN.onEnterSubmit('profPopup.doSearch()')"
+								name="srchMemberFullName" value="" placeholder="이름" title="이름">
+							<a href="javascript:void(0)" onclick="profPopup.doSearch();" class="enter gray">검색</a>
+						</div>
+					</fieldset>
+				</div>
+				<div class="fx_box sm">
+					<table class="tbl_col">
+						<caption>강사 목록</caption>
+						<colgroup>
+							<col width="5%">
+							<col width="30%">
+							<col width="15%">
+							<col width="25%">
+							<col width="25%">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><input type="checkbox" name="checkall"
+										onclick="FN.toggleCheckbox('form-prof-list','checkkeys');" title="전체선택"></th>
+								<th scope="col">이름<a href="javascript:coursePopup.doSort(7)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-7)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">아이디<a href="javascript:coursePopup.doSort(6)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-6)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">소속<a href="javascript:coursePopup.doSort(9)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-9)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+								<th scope="col">회원유형<a href="javascript:coursePopup.doSort(4)">
+										<strong style="color: #6666ff">▲</strong>
+									</a>
+									<a href="javascript:coursePopup.doSort(-4)">
+										<strong style="color: #6666ff">▼</strong>
+									</a>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="0" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="218">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="김명섭">
+								</td>
+								<td>김교수</td>
+								<td>aksenp10000</td>
+								<td class="al">한국철도공사</td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="2" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="214">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="cosmetic">
+								</td>
+								<td>cosmetic</td>
+								<td>cosmetic2</td>
+								<td class="al"></td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="3" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="212">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="강교수">
+								</td>
+								<td>강교수</td>
+								<td>kkhprof</td>
+								<td class="al"></td>
+								<td class="al">일반 회원</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="4" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="199">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="test">
+								</td>
+								<td>임꺽정</td>
+								<td>aaa318@go.kr</td>
+								<td class="al"></td>
+								<td class="al">교육강사</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="5" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="198">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="노성용">
+								</td>
+								<td>피터팬</td>
+								<td>tearcher</td>
+								<td class="al"></td>
+								<td class="al">교육강사</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="checkkeys" value="6" title="선택"
+										!onclick="profPopup.anyCheck(this);">
+									<input type="hidden" name="memberSeqs" value="2">
+									<input type="hidden" name="companySeqs" value="">
+									<input type="hidden" name="memberFullNames" value="홍길동">
+								</td>
+								<td>홍길동</td>
+								<td>aksenp1024</td>
+								<td class="al">한국철도공사</td>
+								<td class="al">일반 회원</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="b_box">
+
+					<a href="javascript:void(0)" onclick="profPopup.doProfClose();" class="c_btn gray lg">취소</a>
+					<a href="javascript:void(0)" onclick="profPopup.doProfListSelect();" class="c_btn red lg">선택</a>
+				</div>
+				<!-- //컨텐츠 -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

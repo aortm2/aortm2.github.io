@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<title>The Hagwon</title>
+<link rel="stylesheet" type="text/css" href="../../font/material-icons.css" />
+<link rel="stylesheet" type="text/css" href="../../font/campton.css" />
+<link rel="stylesheet" type="text/css" href="../../css/www/import.css" />
+<script type="text/javascript" src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../js/www/aos.js"></script>
+<script type="text/javascript" src="../../js/www/design.js"></script>
+<!-- kendo -->
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.common.min.css" type="text/css"/>
+<link rel="stylesheet" href="../../../js/3rdparty/kendoui/styles/kendo.bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/kendo.all.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/cultures/kendo.culture.ko-KR.min.js"></script>
+<script type="text/javascript" src="../../../js/3rdparty/kendoui/js/messages/kendo.messages.ko-KR.min.js"></script>
+<!-- //kendo -->
+	
+<script>
+jQuery(function($){
+	kendo.culture("ko-KR");
+	// $('.edu_on_li .img, .edu_on_li .wt').on('click', function(e){
+	// 	$(location).attr('href', '02_course_app_01_online_02_detail.html');
+	// });
+	$('a[href="#info"], a[href="#total"], a[href="#reason"], a[href="#teacher"], a[href="#doc_reg"], a[href="#doc_detail"]').on('click', function(e){
+		e.preventDefault();
+		var target = $($(this).attr('href'));
+		if(target.is(':hidden')){
+			target.fadeIn();
+		} else {
+			target.fadeOut();
+		};
+	});
+	$("#file_01").kendoUpload();
+	$("#datepicker_01").kendoDatePicker();
+
+	//수강과정 테스트 js
+	$('.cs_tbl .tog').on('click', function(e){
+		e.preventDefault();
+		var val = $(this).attr('href').split('#')[1];
+		var column = $(this).parents('.cs_tbl').find("[data-type='"+ val +"']");
+		if(column.is(':hidden')){
+			$(this).addClass('on');
+			column.show();
+		} else {
+			$(this).removeClass('on');
+			column.hide();
+		};
+	});
+
+});
+</script>
+</head>
+<body class="dash">
+<div id="skip">
+	<a href="#gnb">메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="work">
+	<div id="header" data-include-path="inc/header.html"></div>
+
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr_card.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<!-- 콘텐츠 -->
+		<div class="d_data">
+			<div class="rows">
+				<div class="my_status">
+					<div class="head">
+						<p class="my"><span class="name">홍길동</span> 님 방문을 환영합니다.</p>
+						<div class="link">
+							<a href="#" class="btn">회원정보관리</a>
+						</div>
+					</div>
+					<div class="lecture">
+						<div class="group quarter">
+							<p class="title">나의 주문내역</p>
+							<ul class="item one">
+								<li class="wd">
+									<a href="07_mypage_03_order_01_list.html" class="val" target="_blank">총 <span class="count">21건</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="group quarter">
+							<p class="title">나의포인트</p>
+							<ul class="item one">
+								<li class="wd">
+									<a href="#" class="val" target="_blank"><span class="count">75</span>점</a>
+								</li>
+							</ul>
+						</div>
+						<div class="group quarter">
+							<p class="title">나의보유쿠폰</p>
+							<ul class="item one">
+								<li class="wd">
+									<a href="#" class="val" target="_blank"><span class="count">14</span>장</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<!-- <div class="h_box2 tog">
+						<a href="#" class="title"><span>나의 수강과정</span></a>
+					</div> -->
+					<div class="h_box2">
+						<p class="title">나의 수강과정</p>
+					</div>
+					<div class="cont">
+						<ul class="nav_tabs">
+							<li class="on">
+								<a href="#s1_01">진행과정<span class="count">(3)</span></a>
+							</li>
+							<li>
+								<a href="#s1_02">종료과정<span class="count">(3)</span></a>
+							</li>
+							<li>
+								<a href="#s1_03">즐겨찾기<span class="count">(3)</span></a>
+							</li>
+						</ul>
+						<div id="s1_01">
+							<div class="fx_box mid">
+								<table class="tbl_col3 cs_tbl">
+									<caption>진행과정 목록</caption>
+									<colgroup>
+										<col style="width:80px">
+										<col>
+										<col style="width:10%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">유형</th>
+											<th scope="col">과정명</th>
+											<th scope="col">수강기간</th>
+											<th scope="col">진도율</th>
+											<th scope="col">평가응시</th>
+											<th scope="col">과제제출</th>
+											<th scope="col">총점</th>
+											<th scope="col">현재상태</th>
+											<th scope="col">강의실</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>단과</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 세무설계</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>55</td>
+											<td>1/2</td>
+											<td>0/1</td>
+											<td>70점</td>
+											<td>학습중</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+										</tr>
+										<tr>
+											<td>종합</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 종합반</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>70</td>
+											<td>1/2</td>
+											<td>0/1</td>
+											<td>70점</td>
+											<td>학습중</td>
+											<td>
+												<a href="#cs_1" class="tog"><i class="icc expand_more"></i></a>
+											</td>
+										</tr>
+										<tr class="low" data-type="cs_1" style="display:none;"><!-- 20210702 : 하위 열리는 row 클래스 -->
+											<td colspan="9">
+												<table class="cs_yellow">
+													<colgroup>
+														<col style="width:80px">
+														<col>
+														<col style="width:10%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:10%;">
+													</colgroup>
+													<tbody>
+														<tr class="low1">
+															<td>
+																<span class="type">단과</span>
+															</td>
+															<td class="al">
+																내부폼 : <a href="#" class="tb_link">자산관리사 FP 자산관리 기본지식</a>
+															</td>
+															<td>2020.12.12<br>~2021.04.10</td>
+															<td>70</td>
+															<td>1/2</td>
+															<td>0/1</td>
+															<td>70점</td>
+															<td>학습중</td>
+															<td><a href="#" class="c_btn bk">입장</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr class="low" data-type="cs_1" style="display:none;">
+											<td colspan="9">
+												<table class="cs_blue">
+													<colgroup>
+														<col style="width:80px">
+														<col>
+														<col style="width:10%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:10%;">
+													</colgroup>
+													<tbody>
+														<tr class="low1" data-type="cs_1" style="display:none;">
+															<td>
+																<span class="type">단과</span>
+															</td>
+															<td class="al">
+																내부폼 : <a href="#" class="tb_link">자산관리사 FP 부동산설계</a>
+															</td>
+															<td>2020.12.12<br>~2021.04.10</td>
+															<td>0</td>
+															<td>0/2</td>
+															<td>0/0</td>
+															<td>0점</td>
+															<td>학습중</td>
+															<td><a href="#" class="c_btn bk">입장</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>묶음</td>
+											<td class="al">
+												<a href="#" class="tb_link">2020. 2021 CFA Level 2</a>
+											</td>
+											<td></td>
+											<td>70</td>
+											<td>1/2</td>
+											<td>0/1</td>
+											<td>70점</td>
+											<td>학습중</td>
+											<td>
+												<a href="#cs_2" class="tog"><i class="icc expand_more"></i></a>
+											</td>
+										</tr>
+										<tr class="low" data-type="cs_2" style="display:none;">
+											<td colspan="9">
+												<table class="cs_yellow">
+													<colgroup>
+														<col style="width:80px">
+														<col>
+														<col style="width:10%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:10%;">
+													</colgroup>
+													<tbody>
+														<tr class="low1">
+															<td>
+																<span class="type">종합</span>
+															</td>
+															<td class="al">
+																<a href="#" class="tb_link">2020 CFA Level 2 종합반</a>
+															</td>
+															<td>2020.12.12<br>~2021.04.10</td>
+															<td>40</td>
+															<td>-</td>
+															<td>-</td>
+															<td>40점</td>
+															<td>학습중</td>
+															<td><a href="#cs_3" class="tog"><i class="icc expand_more"></i></a></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr class="low" data-type="cs_3" style="display:none;">
+											<td colspan="9">
+												<table class="cs_yellow">
+													<colgroup>
+														<col style="width:80px">
+														<col>
+														<col style="width:10%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:10%;">
+													</colgroup>
+													<tbody>
+														<tr class="low2">
+															<td>
+																<span class="type">단과</span>
+															</td>
+															<td class="al">
+																<a href="#" class="tb_link">2021 CFA Level 2 - 1</a>
+															</td>
+															<td>2020.12.12<br>~2021.04.10</td>
+															<td>30</td>
+															<td>0/0</td>
+															<td>0/0</td>
+															<td>30점</td>
+															<td>학습중</td>
+															<td><a href="#" class="c_btn bk">입장</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr class="low" data-type="cs_3" style="display:none;">
+											<td colspan="9">
+												<table class="cs_blue">
+													<colgroup>
+														<col style="width:80px">
+														<col>
+														<col style="width:10%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:7%;">
+														<col style="width:10%;">
+													</colgroup>
+													<tbody>
+														<tr class="low2">
+															<td>
+																<span class="type">단과</span>
+															</td>
+															<td class="al">
+																<a href="#" class="tb_link">2021 CFA Level 2 - 1</a>
+															</td>
+															<td>2020.12.12<br>~2021.04.10</td>
+															<td>30</td>
+															<td>0/0</td>
+															<td>0/0</td>
+															<td>30점</td>
+															<td>학습중</td>
+															<td><a href="#" class="c_btn bk">입장</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div id="s1_02">
+							<div class="fx_box mid">
+								<table class="tbl_col3 cs_tbl">
+									<caption>진행과정 목록</caption>
+									<colgroup>
+										<col style="width:80px">
+										<col>
+										<col style="width:10%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:7%;">
+										<col style="width:10%;">
+										<col style="width:10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">유형</th>
+											<th scope="col">과정명</th>
+											<th scope="col">재학습기간</th>
+											<th scope="col">진도율</th>
+											<th scope="col">평가점수</th>
+											<th scope="col">과제점수</th>
+											<th scope="col">총점</th>
+											<th scope="col">학습결과</th>
+											<th scope="col">재학습</th>
+											<th scope="col">수료증</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>단과</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 세무설계</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>80</td>
+											<td>50점</td>
+											<td>채점중</td>
+											<td>80점</td>
+											<td>처리중</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>단과</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 세무설계</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>80</td>
+											<td>50점</td>
+											<td>70점</td>
+											<td>80점</td>
+											<td>수료</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+											<td><a href="#" class="c_btn st_blue">수료증</a></td>
+										</tr>
+										<tr>
+											<td>종합</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 종합반</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>70</td>
+											<td>-</td>
+											<td>-</td>
+											<td>70점</td>
+											<td>수료</td>
+											<td>
+												<a href="#cs_1" class="tog"><i class="icc expand_more"></i></a>
+											</td>
+											<td></td>
+										</tr>
+										<tr class="low1" data-type="cs_1" style="display:none;">
+											<td>
+												<span class="type">단과</span>
+											</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 자산관리 기본지식</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>70</td>
+											<td>20점</td>
+											<td>50점</td>
+											<td>80점</td>
+											<td>수료</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+											<td><a href="#" class="c_btn st_blue">수료증</a></td>
+										</tr>
+										<tr class="low1" data-type="cs_1" style="display:none;">
+											<td>
+												<span class="type">단과</span>
+											</td>
+											<td class="al">
+												<a href="#" class="tb_link">자산관리사 FP 부동산설계</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>0</td>
+											<td>해당없음</td>
+											<td>해당없음</td>
+											<td>0점</td>
+											<td>미수료</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>묶음</td>
+											<td class="al">
+												<a href="#" class="tb_link">2020. 2021 CFA Level 2</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>70</td>
+											<td>-</td>
+											<td>-</td>
+											<td>70점</td>
+											<td>처리중</td>
+											<td>
+												<a href="#cs_2" class="tog"><i class="icc expand_more"></i></a>
+											</td>
+											<td></td>
+										</tr>
+										<tr class="low1" data-type="cs_2" style="display:none;">
+											<td>
+												<span class="type">종합</span>
+											</td>
+											<td class="al">
+												<a href="#" class="tb_link">2020 CFA Level 2 종합반</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>40</td>
+											<td>-</td>
+											<td>-</td>
+											<td>40점</td>
+											<td>처리중</td>
+											<td><a href="#cs_3" class="tog"><i class="icc expand_more"></i></a></td>
+											<td></td>
+										</tr>
+										<tr class="low2" data-type="cs_3" style="display:none;">
+											<td>
+												<span class="type">단과</span>
+											</td>
+											<td class="al">
+												<a href="#" class="tb_link">2021 CFA Level 2 - 1</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>30</td>
+											<td>해당없음</td>
+											<td>해당없음</td>
+											<td>30점</td>
+											<td>처리중</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+											<td></td>
+										</tr>
+										<tr class="low2" data-type="cs_3" style="display:none;">
+											<td>
+												<span class="type">단과</span>
+											</td>
+											<td class="al">
+												<a href="#" class="tb_link">2021 CFA Level 2 - 1</a>
+											</td>
+											<td>2020.12.12<br>~2021.04.10</td>
+											<td>15</td>
+											<td>해당없음</td>
+											<td>해당없음</td>
+											<td>15점</td>
+											<td>처리중</td>
+											<td><a href="#" class="c_btn bk">입장</a></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div id="s1_03">
+							<div class="fx_box mid">
+								<table class="tbl_col3">
+									<caption>즐겨찾기 목록</caption>
+									<colgroup>
+										<col style="width:10%;">
+										<col>
+										<col style="width:10%;">
+										<col style="width:10%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">NO</th>
+											<th scope="col">과정명</th>
+											<th scope="col">일자</th>
+											<th scope="col">삭제</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td class="al">
+												<a href="#" class="tb_link">epass 사회복지사1급(교재포함)</a>
+											</td>
+											<td>2020.12.12</td>
+											<td><a href="#" class="c_btn bk">삭제</a></td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td class="al">
+												<a href="#" class="tb_link">epass 사회복지사1급(교재포함)</a>
+											</td>
+											<td>2020.12.12</td>
+											<td><a href="#" class="c_btn bk">삭제</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="h_box2 tog">
+						<a href="#" class="title cart"><span>주문/교재배송내역</span></a>
+					</div>
+					<div class="cont">
+						<div class="fx_box mid">
+							<table class="tbl_col3 order">
+								<caption>주문/교재배송내역 목록</caption>
+								<colgroup>
+									<col class="code">
+									<col>
+									<col class="sum">
+									<col class="date">
+									<col class="date">
+									<col class="result">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">주문코드</th>
+										<th scope="col">주문내역</th>
+										<th scope="col">결제금액</th>
+										<th scope="col">주문일자</th>
+										<th scope="col">입금일자</th>
+										<th scope="col">처리상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>232323</td>
+										<td class="al">
+											<a href="#" class="tb_link">[TEST]2020 FRM Part2 종합반(11월)</a>
+										</td>
+										<td>23,000 원</td>
+										<td>2021-12-11</td>
+										<td>2021-12-11</td>
+										<td>결제완료</td>
+									</tr>
+									<tr>
+										<td>232323</td>
+										<td class="al">
+											<a href="#" class="tb_link">[TEST]2020 FRM Part2 종합반(11월)</a>
+										</td>
+										<td>23,000 원</td>
+										<td>2021-12-11</td>
+										<td>2021-12-11</td>
+										<td>결제완료</td>
+									</tr>
+									<tr>
+										<td colspan="6">주문 내역이 존재하지 않습니다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="h_box2 tog">
+						<a href="#" class="title drafts"><span>나의상담내역</span></a>
+					</div>
+					<div class="cont">
+						<div class="fx_box mid">
+							<table class="tbl_col3 counsel">
+								<caption>나의상담내역 목록</caption>
+								<colgroup>
+									<col class="num">
+									<col class="sort">
+									<col>
+									<col class="count">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">분류</th>
+										<th scope="col">제목</th>
+										<th scope="col">조회수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2</td>
+										<td></td>
+										<td class="al">
+											<a href="#" class="tb_link">상담 제목입니다.</a>
+										</td>
+										<td>355</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td></td>
+										<td class="al">
+											<a href="#" class="tb_link">상담 제목입니다.</a>
+										</td>
+										<td>355</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="h_box2 tog">
+						<a href="#" class="title redeem"><span>혜택(쿠폰/포인트) 관리</span></a>
+					</div>
+					<div class="cont">
+						혜택(쿠폰/ 포인트) 관리 내용이 들어갑니다.
+					</div>
+				</div>
+				<div class="section">
+					<div class="h_box2 tog">
+						<a href="#" class="title pen_border"><span>무료모의고사관리</span></a>
+					</div>
+					<div class="cont">
+						<div class="fx_box mid">
+							<table class="tbl_col3 mock">
+								<caption>무료모의고사관리 목록</caption>
+								<colgroup>
+									<col class="num">
+									<col>
+									<col class="time">
+									<col class="score">
+									<col class="que">
+									<col class="result">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">제목</th>
+										<th scope="col">시험시간</th>
+										<th scope="col">점수</th>
+										<th scope="col">문제풀기</th>
+										<th scope="col">결과보기</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2</td>
+										<td class="al">무료모의고사1</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td class="al">무료모의고사1</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //콘텐츠 -->
+	</div>
+	<!-- 20210311 : 푸터 -->
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	<!-- //20210311 : 푸터 -->
+</div>
+<!-- 20210311 : 종합과정 상세 -->
+<div class="ct_dialog" id="info" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:500px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<p class="title">종합과정 상세</p>
+					<a href="#" class="p_close">닫기</a>
+				</div>
+				<div class="ct">
+					<table class="tbl_col3">
+						<caption>종합과정</caption>
+						<colgroup>
+							<col>
+							<col style="width:25%;">
+							<col style="width:25%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">비중</th>
+								<th scope="col">점수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">단과1</th>
+								<td>20%</td>
+								<td>60점</td>
+							</tr>
+							<tr>
+								<th scope="row">단과2</th>
+								<td>60%</td>
+								<td>70점</td>
+							</tr>
+							<tr>
+								<th scope="row">단과3</th>
+								<td>70%</td>
+								<td>50점</td>
+							</tr>
+							<tr>
+								<th scope="row">단과4</th>
+								<td>30%</td>
+								<td>20점</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //20210311 : 종합과정 상세 -->
+</body>
+</html>
