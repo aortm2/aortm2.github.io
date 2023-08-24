@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국부동산개발협회</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	
+});
+function openAmend(item){
+	$(".ct_dialog").fadeIn()
+}
+
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+		
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="path">
+			<div><span class="path_home">홈</span></div>
+			<div><span>마이페이지</span></div>
+			<div class="on"><span>교육진행현황</span></div>
+		</div>
+		<div class="rows">
+			<h4 class="sub_tit">교육진행현황</h4>
+			<div class="mypage">
+				<div class="edu_status">
+					<ul class="nav_tabs_n">
+						<li class="on"><a href="07_mypage_01_edu_app_01_list.html">교육신청</a></li>
+						<li><a href="07_mypage_02_edu_01_list.html">교육 중</a></li>
+						<li><a href="07_mypage_03_edu_complete.html">교육완료</a></li>
+						<li><a href="07_mypage_04_edu_cancel.html">교육취소</a></li>
+						<li><a href="07_mypage_05_edu_pay_complet.html">결제확인</a></li>
+					</ul>
+					<div id="c_01">
+						<span class="sb_tit">결제하기</span>
+						<table class="tbl_row">
+							<colgroup>
+								<col width="20%">
+								<col width="*">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>결제방법<em class="f_r">*</em></th>
+									<td>
+										<ul class="radio_box">
+											<li>
+												<input type="radio" id="p_01" name="per" title="개인">
+												<label for="p_01">개인</label>
+											</li>
+
+											<li>
+												<input type="radio" id="p_02" name="per" title="법인">
+												<label for="p_02">법인</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>결제수단<em class="f_r">*</em></th>
+									<td>
+										<ul class="radio_box">
+											<li>
+												<input type="radio" id="pt_01" name="payTool" title="무통장">
+												<label for="pt_01">무통장</label>
+											</li>
+
+											<li>
+												<input type="radio" id="pt_02" name="payTool" title="신용카드">
+												<label for="pt_02">신용카드</label>
+											</li>
+
+											<li>
+												<input type="radio" id="pt_02" name="payTool" title="계좌이체">
+												<label for="pt_02">계좌이체</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<th>입금정보<em class="f_r">*</em></th>
+									<td>신한은행 / 계좌번호: 100-122222-232323/예금주 : 한국부동산개발협회</td>
+								</tr>
+								<tr>
+									<th>이메일<em class="f_r">*</em></th>
+									<td>
+										<div class="ip_mail">
+											<div class="ip_gp">
+												<div class="input">
+													<input type="text" class="wd_md" title="이메일 아이디">
+												</div>
+												<span class="at">@</span>
+												<div class="input">
+													<input type="text" class="wd_md" title="이메일 도메인주소">
+												</div>
+											</div>
+											<select name="" id="">
+												<option value="0">이메일 직접입력</option>
+												<option value="naver.com">naver.com</option>
+												<option value="daum.net">daum.net</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="b_box">
+							<a href="#" class="c_btn blue_ln rd">교육신청목록</a>
+							<a href="#" class="c_btn rd" onclick="onInfoView('dialog')">확인</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	
+	<!-- //footer -->
+</div>
+
+<div class="ct_dialog" id="dialog" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">무통장결제안내</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<p>무통장 입금 처리 후 관리자가 입금내역을 확인하고 완료표기를 하면 최종 결제가 완료됩니다.</p>
+					<div class="b_box">
+						<a href="#" class="c_btn rd">확인</a>
+						<a href="#" class="c_btn rd blue_ln">취소</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

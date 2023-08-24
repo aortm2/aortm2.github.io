@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국부동산개발협회</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+
+// 코딩샘플
+jQuery(function($){
+	// $(document).on("click",".b_teach", function(){
+	// 	$(this).parents().find(".tb_sb").show();
+	// });
+});
+
+function onInfoView(idNum){
+	$("#" + idNum).toggle();
+}
+
+function openAmend(item){
+	$(".ct_dialog").fadeIn()
+}
+
+
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm gray">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="rows">
+			<div class="content_left">
+				<div class="tit">
+					<span>교육신청</span>
+				</div>
+				<ul>
+					<li>
+						<a href="#">과정찾기</a>
+					</li>
+					<li>
+						<a href="#">교육일정</a>
+					</li>
+					<li>
+						<a href="#">교육분야</a>
+					</li>
+					<li>
+						<a href="#">교육대상</a>
+					</li>
+					<li>
+						<a href="#">교육유형</a>
+					</li>
+					<li>
+						<a href="#">이러닝교육</a>
+					</li>
+					<li>
+						<a href="#">강사지원교육</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content_wrap">
+			<!-- 콘텐츠 -->
+			<div class="sub_top">
+				<h3 class="ct_title">청소년지원교육</h3>
+				<div class="path">
+					<div><span>홈</span></div>
+					<div><span>교육신청</span></div>
+					<div><span>현장지원교육</span></div>
+					<div><span>청소년지원교육</span></div>
+				</div>
+			</div>
+			<div class="container">
+				<span class="sb_tit mt_40">강사현황정보</span>
+				<div class="fx_box mid">
+					<table class="tbl_col">
+						<colgroup>
+							<col width="7%">
+							<col width="10%">
+							<col width="15%">
+							<col width="*">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>이름</th>
+								<th>회사이름</th>
+								<th>과목</th>
+							</tr>
+						</thead>
+						<tbtody>
+							<tr>
+								<td>4</td>
+								<td><a href="#" class="tb_link" onclick="javascript:onInfoView('grade1');">홍길동</a></td>
+								<td>노부법인 한국</td>
+								<td class="al">장실습에 필요한 노동법과 산업안전</td>
+							</tr>
+							<tr class="tb_sb" id="grade1" style="display: table-row;">
+								<td colspan="4">
+									<table class="tbl_row sm">
+										<colgroup>
+											<col width="20%">
+											<col width="*">
+											<col width="20%">
+											<col width="*">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>이름</th>
+												<td>홍길동</td>
+												<th>회사이름</th>
+												<td>노무법인 한국</td>
+											</tr>
+											<tr>
+												<th>휴대전화</th>
+												<td>010-22322-2344</td>
+												<th>이메일</th>
+												<td>010-22322-2344</td>
+											</tr>
+											<tr>
+												<th>경력</th>
+												<td colspan="3" class="al">2012.12 ~ 現 노무법인 조율 대표노무사 2013.05 ~ 現 (사)갈등해결센터 전문위원</td>
+											</tr>
+											<tr>
+												<th>전공분야</th>
+												<td colspan="3" class="al">노동, 노사, 성희롱 예방, 노동관, 직업관</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td><a href="#" class="b_teach tb_link" onclick="javascript:onInfoView('grade2');">홍길동</a></td>
+								<td>노부법인 한국</td>
+								<td class="al">장실습에 필요한 노동법과 산업안전</td>
+							</tr>
+							<tr class="tb_sb" id="grade2" style="display: table-row;">
+								<td colspan="4">
+									<table class="tbl_row sm">
+										<colgroup>
+											<col width="20%">
+											<col width="*">
+											<col width="20%">
+											<col width="*">
+										</colgroup>
+										<tbody>
+											<tr>
+												<th>이름</th>
+												<td>홍길동</td>
+												<th>회사이름</th>
+												<td>노무법인 한국</td>
+											</tr>
+											<tr>
+												<th>휴대전화</th>
+												<td>010-22322-2344</td>
+												<th>이메일</th>
+												<td>010-22322-2344</td>
+											</tr>
+											<tr>
+												<th>경력</th>
+												<td colspan="3" class="al">2012.12 ~ 現 노무법인 조율 대표노무사 2013.05 ~ 現 (사)갈등해결센터 전문위원</td>
+											</tr>
+											<tr>
+												<th>전공분야</th>
+												<td colspan="3" class="al">노동, 노사, 성희롱 예방, 노동관, 직업관</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn">이전</a>
+					</div>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	
+	<div class="ct_dialog" style="display:none;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">댓글 수정</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<div class="txt_box">
+								<textarea title="댓글 입력창" placeholder="댓글을 입력하세요">댓글 수정</textarea>
+								<div class="b_box">
+									<a href="#" class="c_btn blue">수정</a>
+									<a href="#" class="c_btn">닫기</a>
+								</div>
+							</div>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

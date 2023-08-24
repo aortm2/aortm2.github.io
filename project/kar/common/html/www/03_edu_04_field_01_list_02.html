@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>한국부동산개발협회</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	
+});
+function openAmend(item){
+	$(".ct_dialog").fadeIn()
+}
+
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm gray">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div id="content">
+		<div class="rows">
+			<div class="content_left">
+				<div class="tit">
+					<span>교육신청</span>
+				</div>
+				<ul>
+					<li>
+						<a href="#">과정찾기</a>
+					</li>
+					<li>
+						<a href="#">교육일정</a>
+					</li>
+					<li>
+						<a href="#">교육분야</a>
+					</li>
+					<li>
+						<a href="#">교육대상</a>
+					</li>
+					<li>
+						<a href="#">교육유형</a>
+					</li>
+					<li>
+						<a href="#">이러닝교육</a>
+					</li>
+					<li>
+						<a href="#">강사지원교육</a>
+					</li>
+				</ul>
+			</div>
+			<div class="content_wrap">
+			<!-- 콘텐츠 -->
+			<div class="sub_top">
+				<h3 class="ct_title">교육분야</h3>
+				<div class="path">
+					<div><span>홈</span></div>
+					<div><span>교육신청</span></div>
+					<div><span>교육분야</span></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="edu_field">
+					<!-- <div class="top">
+						<ul class="nav_tabs md hash">
+							<li class="on"><a href="#hs_01">고용노동부직무교육</a></li>
+							<li><a href="#hs_02">고용교육</a></li>
+							<li><a href="#hs_03">노사관계교육</a></li>
+							<li><a href="#hs_04">권리보호교육</a></li>
+							<li><a href="#hs_05">전문강사양성교육</a></li>
+						</ul>
+						<div id="hs_01">
+							<div class="hashtag">
+								<ul>
+									<li class="on"><a href="#">고용직무분야</a></li>
+									<li><a href="#">감독직무분야</a></li>
+									<li><a href="#">산안직무분야</a></li>
+									<li><a href="#">노동위원회직무분야</a></li>
+									<li><a href="#">공통직무역량</a></li>
+									<li><a href="#">핵심역량</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div id="hs_02">
+							<div class="hashtag">
+								<ul>
+									<li><a href="#">민간위탁사업 담당자 직무분야</a></li>
+									<li><a href="#">국민취업지원제도 담당자 직무분야</a></li>
+									<li><a href="#">여성새로일하기센터 담당자 직무분야</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div id="hs_03">
+							<div class="hashtag">
+								<ul>
+									<li><a href="#">중앙및지자체고용교육노사관계교육</a></li>
+									<li><a href="#">소방및경찰공무원노동교육</a></li>
+									<li><a href="#">공공기관노사관계교육</a></li>
+									<li><a href="#">중앙및지자체공무직노사관계교육</a></li>
+									<li><a href="#">교육기관공무원노사관계교육</a></li>
+									<li><a href="#">교원노사관계교육</a></li>
+									<li><a href="#">교육공무직노사관계교육</a></li>
+									<li><a href="#">노사관계전문가육성교육</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div id="hs_04">
+							<div class="hashtag">
+								<ul>
+									<li><a href="#">중소기업노사권리보호교육</a></li>
+									<li><a href="#">업종테마별교육</a></li>
+									<li><a href="#">특수고용직권리보호교육</a></li>
+									<li><a href="#">청소년고용노동교육</a></li>
+									<li><a href="#">소규모사업장노동교육</a></li>
+									<li><a href="#">직장 내 괴롭힘 예방 및 근절교육</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div id="hs_05">
+							<div class="hashtag">
+								<ul>
+									<li><a href="#">노사관계전문강사양성과정</a></li>
+									<li><a href="#">노동인권강사양성교육</a></li>
+									<li><a href="#">직장 내 괴롭힘 예방 및 근절교육</a></li>
+								</ul>
+							</div>
+						</div>
+					</div> -->
+					<ul class="nav_tabs wd4 fl_wrap">
+						<li class="on">
+							<a href="#" >고용노동부직무교육</a>
+						</li>
+						<li>
+							<a href="#" >고용교육</a>
+						</li>
+						<li>
+							<a href="#">노사관계교육</a>
+						</li>
+						<li>
+							<a href="#">권리보호교육</a>
+						</li>
+						<li>
+							<a href="#">전문강사양성교육</a>
+						</li>
+						<li>
+							<a href="#">이러닝 교육</a>
+						</li>
+					</ul>
+					<div class="c_search sr_03">
+						<select>
+							<option>유료</option>
+						</select>
+						<select>
+							<option>수강신청중</option>
+						</select>
+						<select>
+							<option>이러닝</option>
+						</select>
+						<div class="in_search">
+							<input type="text" title="검색창" placeholder="검색어를 입력하세요 ">
+							<a href="#" class="b_sh_or">검색</a>
+						</div>
+					</div>
+					<div id="c_01">
+						<div class="edu_wrap">
+							<div class="dt_bar">
+								<div class="info">
+									<span>전체 <em class="count">11</em>건</span>
+									<span>현재 <em class="count bk">1</em>/2</span>
+								</div>
+								<ul class="align_li">
+									<li class="on">
+										<a href="#" class="grid" title="갤러리형"><span class="sr_only">갤러리형</span><span class="sr_only">선택됨</span></a>
+									</li>
+									<li>
+										<a href="#" class="list" title="웹진형"><span class="sr_only">웹진형</span></a>
+									</li>
+								</ul>
+							</div>
+							<div class="edu_sd">
+								<div class="sub_edu_col li_img">
+									<div>
+										<div class="inner">
+											<div class="ct">
+												<div class="img">
+													<img src="../../images/www/temp/main_edu_01.png">
+												</div>
+											</div>
+											<div class="cm">
+												<div class="sort">
+													<span class="c_badge blue">수강신청 중</span>
+													<span class="stand">집체</span>
+													<span class="pay">유료</span>
+													<span class="time">2시간 30분</span>
+												</div>
+												<div class="info">
+													<div class="sub">
+														<p class="name">교원공무직 인사노무관리교원공무직 인사노무관리교원공무직 인사노무관리</p>
+													</div>
+													<ul class="date">
+														<li>
+															<span class="lab">신청기간</span>
+															<span class="val">상시</span>
+														</li>
+														<li>
+															<span class="lab">학습기간</span>
+															<span class="val">상시</span>
+														</li>
+														<li class="t_02">
+															<span class="lab">교육대상</span>
+															<span class="val">이직예정근로자</span>
+														</li>
+														<li class="t_02">
+															<span class="lab">교육인원</span>
+															<span class="val">제한 없음</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="bar">
+												<a href="#" class="c_btn blue">신청하기</a>
+												<a href="#" class="c_btn">과정상세</a>
+											</div>
+										</div>
+									</div>
+									
+									<div>
+										<div class="inner">
+											<div class="ct">
+												<div class="img">
+													<img src="../../images/www/temp/main_edu_02.png">
+												</div>
+											</div>
+											<div class="cm">
+												<div class="sort">
+													<span class="c_badge blue">수강신청 중</span>
+													<span class="stand">집체</span>
+													<span class="pay">유료</span>
+													<span class="time">2시간 30분</span>
+												</div>
+												<div class="info">
+													<div class="sub">
+														<p class="name">교원공무직 인사노무관리교원공무직 인사노무관리교원공무직 인사노무관리</p>
+													</div>
+													<ul class="date">
+														<li>
+															<span class="lab">신청기간</span>
+															<span class="val">상시</span>
+														</li>
+														<li>
+															<span class="lab">학습기간</span>
+															<span class="val">상시</span>
+														</li>
+														<li class="t_02">
+															<span class="lab">교육대상</span>
+															<span class="val">이직예정근로자</span>
+														</li>
+														<li class="t_02">
+															<span class="lab">교육인원</span>
+															<span class="val">제한 없음</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="bar">
+												<a href="#" class="c_btn blue">신청하기</a>
+												<a href="#" class="c_btn">과정상세</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+						<div class="paginate">
+							<div class="inner">
+								<!-- <a href="#" class="img start"><span class="sr_only">처음</span></a> -->
+								<a href="#" class="img prev dis"><span class="sr_only">이전</span></a>
+								<div>
+									<a class="on">01</a>
+									<a href="#">02</a>
+									<a href="#">03</a>
+									<a href="#">04</a>
+									<a href="#">05</a>
+								</div>
+								<a href="#" class="img next"><span class="sr_only">다음</span></a>
+								<!-- <a href="#" class="img end"><span class="sr_only">마지막</span></a> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	
+	<div class="ct_dialog" style="display:none;">
+		<div class="tb">
+			<div class="inner">
+				<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+					<div class="top">
+						<div class="bowl">
+							<p class="title">댓글 수정</p>
+							<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+						</div>
+					</div>
+					<div class="ct">
+						<!-- 콘텐츠 -->
+						<div class="fx_box sm">
+							<div class="txt_box">
+								<textarea title="댓글 입력창" placeholder="댓글을 입력하세요">댓글 수정</textarea>
+								<div class="b_box">
+									<a href="#" class="c_btn blue">수정</a>
+									<a href="#" class="c_btn">닫기</a>
+								</div>
+							</div>
+						</div>
+						<!-- //콘텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
