@@ -15,6 +15,18 @@ $(function(){
          }
      }); 
 
+    //  nav-toggler
+    $(".nav-toggler").click(function(){
+      if(!$("body").hasClass("nav-active")){
+        $("body").addClass("nav-active");
+      } else{
+        $("body").removeClass("nav-active");
+      }
+    })
+    $("nav .nav-link").click(function(){
+      $("body").removeClass("nav-active");
+    });
+
     //dialog-close
     $(".dialog-close").click(function(){
         $(".dialog").fadeOut();
@@ -40,11 +52,11 @@ $(function(){
   
         $('html,body').scroll(function(){
             var srt = $('body').scrollTop()
-            var topHe = $('.top-menu').height();
+            var topHe = $('#header').height();
             if(srt > topHe){
-              $('.top-menu').addClass('menu-scroll')
+              $('#header').addClass('menu-scroll')
             } else{
-              $('.top-menu').removeClass('menu-scroll')
+              $('#header').removeClass('menu-scroll')
             }
         })
   
