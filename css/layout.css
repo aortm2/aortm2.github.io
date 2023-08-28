@@ -203,6 +203,12 @@ section{position: relative;height: calc(100vh - 65px);padding-top:130px;}
 
 }
 
+@media all and (max-width: 600px) {
+    /* layout */
+    .nav-active nav{right:50px;}
+    .nav-active .contents{transform: translateX(-100%);}
+}
+
 @media all and (max-width: 500px) {
   #project .project-article > div{width: calc(100%);}
   
