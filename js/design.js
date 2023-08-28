@@ -19,11 +19,54 @@ $(function(){
     $(".dialog-close").click(function(){
         $(".dialog").fadeOut();
     });
+
+    var typingBool = false;
+        var typingIdx = 0;
+        var typingTxt = "PORTFOLIO"
+        typingTxt=typingTxt.split("");
+        if(typingBool==false){
+           typingBool=true;
+           var tyInt = setInterval(typing,150);
+         }
+  
+         function typing(){
+           if(typingIdx<typingTxt.length){
+             $(".top-text h2").append(typingTxt[typingIdx]);
+             typingIdx++;
+           } else{
+             clearInterval(tyInt);
+           }
+         }
+  
+        $('html,body').scroll(function(){
+            var srt = $('body').scrollTop()
+            var topHe = $('.top-menu').height();
+            if(srt > topHe){
+              $('.top-menu').addClass('menu-scroll')
+            } else{
+              $('.top-menu').removeClass('menu-scroll')
+            }
+        })
+  
+        $(".btn-m-menu").click(function(){
+          $("#nav ul").css("right","0")
+          $(".bg-nav").show()
+        });
+        $(".bg-nav").click(function(){
+          $("#nav ul,.bg-nav").removeAttr("style")
+        });
+  
+          $(window).resize(function(){
+            var winW = $(window).width()
+            if(winW >789){
+              $("#nav ul,.bg-nav").removeAttr("style")
+            }
+          });
 	
 
     //tab
 	$(document).on('click','.nav_tabs a', function(){
-        e.preventDefault();
+        event.preventDefault();
         var idx = $(this).parent("li").index()
         var target = $(this).attr('href');
         $(this).parent().parent().find("li").removeClass("on");

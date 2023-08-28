@@ -8,6 +8,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+  <meta name="description" content="웹 퍼블리셔 문정현 포트폴리오" data-gatsby-head="true">
+  <meta name="keywords" content="웹 퍼블리셔, 경력 웹 퍼블리셔, 포트폴리오, 웹 퍼블리셔 포트폴리오, 웹 디자인, UI 디자이너, UX 디자이너, UI, UX, 문정현" data-gatsby-head="true">
+  <meta property="og:type" content="website" data-gatsby-head="true">
+  <meta property="og:url" content="https://aortm2.github.io/" data-gatsby-head="true">
+  <meta property="og:site_name" content="문정현 | 웹 포트폴리오" data-gatsby-head="true">
+  <meta property="og:title" content="문정현 | 웹 포트폴리오" data-gatsby-head="true">
+  <meta property="og:image" content="" data-gatsby-head="true">
 
   <title>JUNG HYUN | PORTFOLIO</title>
 
@@ -17,68 +24,23 @@
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/design.js"></script>
 
-  <script>
-    $(document).ready(function(){
-      var typingBool = false;
-      var typingIdx = 0;
-      var typingTxt = "PORTFOLIO"
-      typingTxt=typingTxt.split("");
-      if(typingBool==false){
-         typingBool=true;
-         var tyInt = setInterval(typing,150);
-       }
-
-       function typing(){
-         if(typingIdx<typingTxt.length){
-           $(".top-text h2").append(typingTxt[typingIdx]);
-           typingIdx++;
-         } else{
-           clearInterval(tyInt);
-         }
-       }
-
-      $('html,body').scroll(function(){
-          var srt = $('body').scrollTop()
-          var topHe = $('.top-menu').height();
-          if(srt > topHe){
-            $('.top-menu').addClass('menu-scroll')
-          } else{
-            $('.top-menu').removeClass('menu-scroll')
-          }
-      })
-
-      $(".btn-m-menu").click(function(){
-        $("#nav ul").css("right","0")
-        $(".bg-nav").show()
-      });
-      $(".bg-nav").click(function(){
-        $("#nav ul,.bg-nav").removeAttr("style")
-      });
-
-        $(window).resize(function(){
-          var winW = $(window).width()
-          if(winW >789){
-            $("#nav ul,.bg-nav").removeAttr("style")
-          }
-        });
-
-
-
-      });
-  </script>
 </head>
 
 <body>
   <!-- header -->
   <div id="header">
     <div class="top-menu">
-      <div id="nav">
+      
         <div class="rows">
           <h1><a href="/"><strong>JUNG</strong>HYUN</a></h1>
-          <div class="btn-m-menu fa fa-bars"></div>
+          <button class="nav-toggler on" title="모바일 메뉴">
+            <span class="nav-toggler-bar"></span>
+            <span class="nav-toggler-bar"></span>
+            <span class="nav-toggler-bar"></span>
+            <span class="nav-toggler-bar"></span>
+          </button>
         </div>
         <div class="bg-nav"></div>
-      </div>
     </div>
   </div>
   <!-- // header -->
@@ -128,7 +90,7 @@
         </div>
         <div class="section-footer animation-translate animation-item-4">
           <a class="section-next goto-section" href="#section_02">
-            <span class="section-next-counter">01/05</span>
+            <span class="section-next-counter">01/04</span>
             <span class="section-next-label">Next chapter</span>
             <span class="section-next-icon"></span>
           </a>
@@ -147,7 +109,7 @@
         </div>
         <div class="section-footer animation-translate animation-item-4">
           <a class="section-next goto-section" href="#section_02">
-            <span class="section-next-counter">02/05</span>
+            <span class="section-next-counter">02/04</span>
             <span class="section-next-label">Next chapter</span>
             <span class="section-next-icon"></span>
           </a>
@@ -199,7 +161,7 @@
         </div>
         <div class="section-footer animation-translate animation-item-4">
           <a class="section-next goto-section" href="#section_02">
-            <span class="section-next-counter">03/05</span>
+            <span class="section-next-counter">03/04</span>
             <span class="section-next-label">Next chapter</span>
             <span class="section-next-icon"></span>
           </a>
