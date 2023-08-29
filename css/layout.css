@@ -168,7 +168,7 @@ section{position: relative;height: calc(100vh - 65px);padding-top:130px;}
   /* dialog */
   .dialog .dialog-title{font-size:3rem;}
   .dialog .con{flex-direction: column-reverse;}
-  .dialog .con .img{margin-left:0;margin-bottom:40px;}
+  .dialog .con .img{margin-left:0;margin-bottom:20px;}
   .dialog .con .txt p{font-size: 1rem;}
   .dialog .index{width: 100%;overflow-x: auto;}
   .dialog .index table{width: 1200px;}
