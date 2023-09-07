@@ -219,6 +219,7 @@ section{position: relative;min-height: calc(100vh);padding-top:130px;}
 
 @media all and (max-width: 500px) {
   #project .project-article > div{width: calc(100%);}
+  #project .project-article > div:nth-child(2n){margin-left:0;}
   #contact .contact-wrap{flex-direction: column;}
   #contact .contact-wrap > div{width: 100%;}
   
