@@ -70,8 +70,11 @@ nav .nav-link:hover:not(.active):before {-webkit-transform: scaleX(1);-ms-transf
 nav .sections-nav-counter{display: inline-block;width: 24.5px;width: 1.75rem;font-weight: 400;font-size: 14px;font-size: 1rem;font-weight: bold;}
 
 /* section */
-section{position: relative;min-height: calc(100vh);padding-top:130px;}
+section{position: relative;min-height: calc(100vh);padding-top:130px;background: #fff;}
 .section-title{font-size:40px;color:var(--titColor);font-family: 'KBO-Dia-Gothic_bold';margin-bottom:40px;}
+
+#section_01{position: fixed;top:0;}
+#section_02{margin-top:100vh;}
 
 /* section-next */
 .section-footer{margin-top:40px;}
@@ -134,6 +137,18 @@ section{position: relative;min-height: calc(100vh);padding-top:130px;}
 .c_badge.teal{background: #58c9b5; border:1px solid #58c9b5;}
 .c_badge.blue{background:#3559c3;}
 
+/* object */
+
+
+
+@keyframes vibration {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(-1deg);
+  }
+}
 
 
 @keyframes cursor{
