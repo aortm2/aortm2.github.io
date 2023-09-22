@@ -97,7 +97,22 @@ $(function(){
     $("body").resize(Page_updateOffsetTop);
     $("body").scroll(Page_updateIndicatorActive);
     
-   
+    //로딩
+    const loader = document.querySelector('.loading');
+    const html = document.querySelector('html');
+
+    html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
+    window.addEventListener('load', () => {
+      setTimeout(() => { 
+        loader.style.opacity = '0';
+        html.style.overflow = 'auto';
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 200);
+
+      }, 500); // <-* 로딩속도 구현
+
+    })
 });
 
 function Page_updateIndicatorActive() {
