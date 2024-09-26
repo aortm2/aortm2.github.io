@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+html, body{overflow: hidden;}
+
+img{
+    -webkit-user-select: none; /* Chrome, Safari, Edge */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+    
+}
+
+.wrap {
+    position: relative;
+    max-width: 100%;
+    height: 100dvh;
+    
+}
+
+.wrap .bg{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+
+.container{
+    position: relative;
+    max-width: 100%;
+    height: 100dvh;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    aspect-ratio: 1634 / 919;
+    background-size: 100%;
+}
+
+.container.sel-01{
+    background-image: url(../img/content_01/bg.png);
+}
+
+.container.sel-02{
+    background-image: url(../img/content_02/bg.png);
+}
+
+.btn-top{
+    position: absolute;
+    top: 2%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+    z-index: 14;
+    /* pointer-events: none; */
+}
+
+.btn-top:hover{
+    transform: scale(1.1);
+}
+
+.btn-top{
+    width: 6.67%;
+    height: 12.41%;
+    background-size: 100% 100% !important;
+}
+
+.btn-top.btn-home{
+    right: 2%;
+    background: url(../img/icon/ico_home.png) center no-repeat;
+}
+.btn-top.btn-home:active{
+    right: 2%;
+    background: url(../img/icon/ico_home_click.png) center no-repeat;
+}
+
+
+.btn-top.btn-back{
+    right: 9%;
+    background: url(../img/icon/ico_back.png) center no-repeat;
+}
+
+.btn-top.btn-back:active{
+    right: 9%;
+    background: url(../img/icon/ico_back_click.png) center no-repeat;
+}
+
+/* main */
+
+.home {
+    background: url(../img/bg/bg_main.png) center no-repeat;
+}
+
+.home .btn-start {
+    position: absolute;
+    left: 50%;
+    bottom: 20.14%;
+    transform: translateX(-50%);
+    width: 21.61%;
+    height: 14.25%;
+    background: url(../img/icon/ico_play.png) no-repeat;
+    background-size: 100% !important;
+}
+
+.home .btn-start:hover{
+    background: url(../img/icon/ico_play_on.png) no-repeat;
+
+}
+
+.home .btn-start:active{
+    background: url(../img/icon/ico_play_active.png) no-repeat;
+
+}
+
+/* select */
+.select{
+    background: url(../img/bg/bg_select.png) center no-repeat;
+}
+
+
+.btn-select{
+    width: 24.37%;
+    height: 43.63%;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+.btn-select:hover,
+.btn-select:active{
+    top: 45%;
+    transform: translateY(-50%) scale(1.4);
+}
+
+
+.btn-select.btn-select-01{
+    left: 21%;
+    background-image: url(../img/icon/ico_select_01.png);
+}
+
+.btn-select.btn-select-01:hover{
+    top: 48%;
+    left: 25%;
+    background-image: url(../img/icon/ico_select_01_hover.png);
+}
+
+.btn-select.btn-select-01:active{
+    background-image: url(../img/icon/ico_select_01_click.png);
+}
+
+.btn-select.btn-select-02{
+    right: 21%;
+    background-image: url(../img/icon/ico_select_02.png);
+}
+
+.btn-select.btn-select-02:hover{
+    top: 48%;
+    right: 25%;
+    background-image: url(../img/icon/ico_select_02_hover.png);
+}
+
+.btn-select.btn-select-02:active{
+     background-image: url(../img/icon/ico_select_02_click.png);
+}
+
+/* finish */
+.finish{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    /* background-color: rgba(0,0,0,0.68); */
+    z-index: 10;
+    aspect-ratio: 1634 / 919;
+}
+
+.finish-animation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: finish 2s ease-out 1 forwards;
+    background-position: center;
+    z-index: 11;
+}
+
+.flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.finish-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.finish-wrap .flex-box{
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 10%;
+}
+
+
+.finish-wrap.type-1 .flex-box{
+    padding-top: 10%;
+}
+.finish-wrap .bg-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: rgba(0,0,0,0.4);
+    animation: finishTxt 2s forwards ;
+}
+.finish-wrap .txt{
+    position: absolute;
+    animation-delay: 2s;
+    z-index: 3;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: scale(1.4) translate(-30%, -50%);
+}
+.finish-wrap .txt .bg-black{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.pointer-none{
+    pointer-events: none;
+}
+
+@keyframes finishTxt {
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+.finish-wrap .txt img{
+    width: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.finish-wrap .txt{
+    /* position: relative; */
+    pointer-events: none;
+}
+
+.finish-wrap .txt .finish-animation{
+   top: 20%;
+   width: 80%;
+   height: 80%;
+   background-size: 100%;
+   aspect-ratio: 360 / 360;
+}
+
+.finish-wrap .finish-box{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.finish-wrap .finish-box.type-2{
+    margin:0 auto;
+    max-width: 74%;
+}
+
+.btn-wrap{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    height: 10.74%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    z-index: 10;
+}
+.btn-wrap a{
+    width: 16%;
+    display: block;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.btn-wrap a:nth-child(1){
+    
+    background-image: url("../img/icon/ico_more.png");
+}
+
+.btn-wrap a:nth-child(1):active{
+    background-image: url("../img/icon/ico_more_click.png");
+}
+
+.btn-wrap a:nth-child(1):hover{
+    background-image: url("../img/icon/ico_more_over.png");
+}
+
+
+.btn-wrap a:nth-child(2){
+    background-image: url("../img/icon/ico_exit.png");
+}
+
+.btn-wrap a:nth-child(2):hover{
+    background-image: url("../img/icon/ico_exit_over.png");
+}
+
+.btn-wrap a:nth-child(2):active{
+    background-image: url("../img/icon/ico_exit_click.png");
+}
+
+.btn-wrap a:hover img{
+    transform: scale(1.1);
+}
+
+.btn-hover:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* dialog */
+.dialog{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 15;
+    max-width: 100%;    
+    aspect-ratio: 1634 / 919;
+}
+
+.dialog .container{
+    padding-top:1%;
+    background: rgba(255,255,255,0.6);
+}
+
+.dialog .img {
+    position: relative;
+    width: 94.17%;
+    height: 72.59%;
+    margin:0 auto;
+}
+
+.dialog .dialog-close{
+    position: absolute;
+    top: 6%;
+    right: 2.5%;
+    width: 5.2%;
+    height: 8.7%;
+}
+
+.dialog .img-char{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 29.27%;
+    height: 48.15%;
+    left: 1rem;
+    bottom: 0;
+    overflow: hidden;
+    background-size: 100%;
+    pointer-events: none;
+    background-image: url(../img/content_01/dialog_char.png);
+}
+
+.dialog .img-char img{
+    object-fit: contain;
+}
+
+.dialog .img-char.girl{
+    left: auto;
+    right: 2%;
+    background-image: url(../img/content_02/dialog_char.png);
+}
+
+.dialog .dialog-slide{
+    width: 100%;
+    height: 100%;
+}
+
+.dialog .dialog-slide .btn-controls {
+    position: absolute;
+    display: block;
+    top:50%;
+    width: 5.68%;
+    height: 15.30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.dialog .dialog-slide .btn-controls.next {
+    right: 4%;
+}
+
+.dialog .dialog-slide .btn-controls.prev {
+    left: 4%;
+}
+.dialog .dialog-slide .sd{
+    width: 100%;
+    height: 100%;
+}
+.dialog .dialog-slide .sd > div{
+    display: none;
+
+}
+
+.dialog .dialog-slide .sd > div.active{
+    display: block;
+}
+
+.dialog .btn-dialog{
+    position: absolute;
+    left: 51%;
+    bottom: 10.5%;
+    display: flex;
+    width: 15.31%;
+    height: 17.04%;
+}
+
+.dialog .btn-dialog a{
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.dialog .btn-dialog a + a{
+    margin-left: 10%;
+}
+
+.dialog .btn-dialog .btn-muisc{
+    background-image: url(../img/icon/ico_sound.png);
+}
+.dialog .btn-dialog .btn-muisc:active{
+    background-image: url(../img/icon/ico_sound_click.png);
+}
+
+.dialog .btn-dialog .btn-youtube{
+    background-image: url(../img/icon/ico_youtube.png);
+}
+.dialog .btn-dialog .btn-youtube:active{
+    background-image: url(../img/icon/ico_youtube_click.png);
+}
+
+.btn-controls.next {
+    background-image: url(../img/icon/ico_next.png);
+}
+
+.btn-controls.prev {
+    background-image: url(../img/icon/ico_prev.png);
+}
+
+.btn-controls.next:hover {
+    background-image: url(../img/icon/ico_next_on.png);
+}
+
+.btn-controls.prev:hover {
+    background-image: url(../img/icon/ico_prev_on.png);
+}
+ 
+@keyframes finish {
+    0% {
+        background-image: url(../img/effect/effect_01.png);
+    }
+    9% {
+        background-image: url(../img/effect/effect_02.png);
+    }
+
+    18% {
+        background-image: url(../img/effect/effect_03.png);
+    }
+
+    27% {
+        background-image: url(../img/effect/effect_04.png);
+    }
+
+    36% {
+        background-image: url(../img/effect/effect_05.png);
+    }
+
+    45% {
+        background-image: url(../img/effect/effect_06.png);
+    }
+
+    54% {
+        background-image: url(../img/effect/effect_07.png);
+    }
+
+    63% {
+        background-image: url(../img/effect/effect_08.png);
+    }
+
+    72% {
+        background-image: url(../img/effect/effect_09.png);
+    }
+
+    81% {
+        background-image: url(../img/effect/effect_10.png);
+    }
+
+    90% {
+        background-image: url(../img/effect/effect_11.png);
+    }
+    100% {
+        opacity: 0;
+        background-image: url(../img/effect/effect_11.png);
+    }
+}
+
+@media screen and (max-width: 1919px) {
+
+}
+
+
+@media screen and (max-width: 1633px) {
+    .container,.dialog{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+}
