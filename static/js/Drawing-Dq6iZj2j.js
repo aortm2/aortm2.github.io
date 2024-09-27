@@ -1,0 +1,1 @@
+import{c as a,o as r,a as e}from"./index-C9-6fuiT.js";const s={class:"iframe-wrap"},i=[e("iframe",{src:"/drawing/index.html",frameborder:"0"},null,-1)],m={__name:"Drawing",setup:e=>(e,m)=>(r(),a("div",s,i))};export{m as default};
